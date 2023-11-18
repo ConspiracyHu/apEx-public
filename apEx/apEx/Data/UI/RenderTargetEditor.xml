@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="RenderTargetEditor">
+	<box id="mainbox">
+	  <fieldset text="RenderTargets">
+		<box class="contentbox">
+        	<box id="buttonbox">
+          	<button id="newrt" text="New"/>
+          	<button id="deletert" text="Delete"/>
+        	</box>
+        	<list id="rtlist"/>
+			<dropdown id="pixelformat"/>
+	    	<button id="relativeres" text="Absolute Resolution"/>
+        	<button id="hiddenfromtimeline" text="Hidden From Timeline"/>
+	    	<button id="cubemap" text="Cubemap"/>
+	    	<trackbar id="xres" minimum="0" maximum="7" default="0"/>
+	    	<trackbar id="yres" minimum="0" maximum="7" default="0" />
+	    	<trackbar id="zres" minimum="0" maximum="7" default="0" />
+		</box>
+	  </fieldset>
+	  <fieldset text="RenderLayers">
+        <box id="layerlayout">
+          <box id="buttonbox">
+            <button id="newrl" text="New"/>
+            <button id="deleterl" text="Delete"/>
+          </box>
+          <list id="rllist"/>
+		  <label text="rendertargets"/>
+          <box id="lbuttonbox">
+            <button id="addrt" text="Add RT"/>
+            <button id="removert" text="Remove RT"/>
+          </box>
+          <list id="rltlist"/>
+		  <button id="omitdepth" text="No depth buffer"/>
+		  <button id="voxelizer" text="Voxelizer Layer"/>
+		  <button id="isclickable" text="Mouse Object Picking"/>
+		  <button id="clearrendertargets" text="Clear rendertargets"/>
+		  <button id="nogrid" text="Ignore Helper Objects"/>
+        </box>
+	  </fieldset>
+	</box>
+  </gui>
+</guidescriptor>

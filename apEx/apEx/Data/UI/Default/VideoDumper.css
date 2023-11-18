@@ -1,0 +1,124 @@
+button
+{
+	height:15px;
+	width:50px;
+	bottom:1px;
+}
+
+#Start
+{
+	left:1px;	
+}
+
+#Exit
+{
+	width:80px;
+	right:1px;
+}
+
+#DisplayBox
+{
+	margin:1px;
+	border:1px;
+	bottom:33px;
+}
+
+textbox
+{
+	border:1px;
+	height:15px;
+	width:60px;
+	padding:1px;
+	padding-top:0px;
+}
+
+#DataBox
+{
+	width:100%-2px;
+	bottom:17px;
+	height:15px;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-layout:vertical;
+	child-spacing:1px;
+}
+
+label
+{
+	width:65px;
+	height:15px;
+	text-align:right;
+	padding-right:5px;
+}
+
+#lx
+{
+	width:40px;
+}
+
+#ly
+{
+	width:42px;
+}
+
+#fr
+{
+	width:64px;
+}
+
+#sf
+{
+	width:73px;
+}
+
+#ef
+{
+	width:61px;
+}
+
+
+#DataBox box
+{
+	padding:0px;
+	child-fill-y:true;
+	child-align-x:center;
+	child-layout:horizontal;
+}
+
+#pt
+{
+	width:36px;
+	bottom:1px;
+	left:52px;
+}
+
+#hbox2
+{
+	child-spacing:1px;
+}
+
+#Path
+{
+	width:100%-272px;
+	left:88px;
+	bottom:1px;
+}
+
+#ChangePath
+{
+	bottom:1px;
+	right:133px;
+}
+
+#pngtoggle
+{
+	bottom:1px;
+	right:82px;
+}
+
+
+#Progress
+{
+	margin:0px;
+	text-align:center;
+}

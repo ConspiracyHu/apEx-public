@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="ModelList">
+    <box id="buttonbox">
+      <button id="newmodel" text="New"/>
+      <button id="deletemodel" text="Delete"/>
+    </box>
+    <list id="modellist"/>
+	<button id="copymodel" text="Copy"/>
+  </gui>
+</guidescriptor>

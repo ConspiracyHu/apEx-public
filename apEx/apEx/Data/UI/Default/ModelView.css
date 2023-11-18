@@ -1,0 +1,117 @@
+button
+{
+	width:14px;
+	height:14px;
+	top:2px;
+}
+
+modeldisplay
+{
+	margin:0px;
+	opacity:1;
+}
+
+#maximizebutton
+{
+	top:2px;
+	left:2px;
+	background: skin(maximize) center middle;
+}
+
+#maximizebutton: active
+{
+	background: skin(fullscreen) center middle;
+}
+
+#gridbutton
+{
+	top:18px;
+	left:2px;
+	background: skin(grid) center middle;
+}
+
+#tintbutton
+{
+	left:2px;
+	top:34px;
+}
+
+#cameraselector
+{
+	left:18px;
+	width:85px;
+	height:14px;
+}
+
+#rtselector
+{
+	left:18px;
+	top:18px;
+	width:85px;
+	height:14px;
+}
+
+#scalebutton
+{
+	right:2px;
+	background: skin(scale) center middle;
+}
+
+#movebutton
+{
+	right:34px;
+	background: skin(translate) center middle;
+}
+
+#rotatebutton
+{
+	right:18px;
+	background: skin(rotate) center middle;
+}
+
+#objspacebutton
+{
+	right:2px;
+	top:18px;
+}
+
+#worldspacebutton
+{
+	right:2px;
+	top:34px;
+}
+
+#snapvalue
+{
+	top:2px;
+	right:50px;
+	height:14px;
+	width:50px;
+	border:1px;
+	padding-left:2px;
+	padding-top:0px;
+}
+
+#snaptext
+{
+	top:3px;
+	right:100px;
+	width:auto;
+	height:13px;
+	opacity:0.3;
+}
+
+#tricount
+{
+	bottom:-1px;
+	left:3px;
+	text-align:left;
+	width:163px;
+	height:13px;
+	opacity:0.7;
+}
+
+#wfbutton
+{
+	left:105px;
+}

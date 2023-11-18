@@ -1,0 +1,80 @@
+#splinelist
+{
+	width:120px;
+	top:1px;
+	bottom:1px;
+	left:1px;
+}
+
+#splineeditor
+{
+	width:100%-123px;
+	top:21px;
+	bottom:1px;
+	right:1px;
+	border:1px;
+	background:#ff000000;
+}
+
+#toolbox
+{
+	width:100%-123px;
+	top:1px;
+	right:1px;
+	border:1px;
+	height:19px;
+	child-layout:horizontal;
+	child-spacing:1px;
+	child-fill-y:true;
+	padding:1px;
+}
+
+#autokey
+{
+	width:60px;
+}
+
+#autokey: active
+{
+	background:#cc0025;
+}
+
+#snaptogrid
+{
+	width:75px;
+}
+
+label
+{
+	width:61px;
+	padding-left:4px;
+}
+
+#waveform
+{
+	width:75px;
+}
+
+textbox
+{
+	height:14px;
+	width:50px;
+	border:1px;
+	padding-left:2px;
+	padding-top:0px;
+}
+
+numpad
+{
+	width:120px;
+}
+
+#multiplicative
+{
+	width:80px;
+}
+
+#limitsubscene
+{
+	width:150px;
+}

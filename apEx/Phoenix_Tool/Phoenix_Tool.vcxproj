@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Adultery.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\AllPass.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\AllPassDelay.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\BiquadFilter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Cathedral.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Chamber.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Comb.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Crusher.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\DelayBuffer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Device.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Echo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Envelope.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Falcon.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\GmDls.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Helpers.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Leveller.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\MxcsrFlagGuard.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\ResampleBuffer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\SamplePlayer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Scissor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Slaughter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Smasher.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Specimen.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\StateVariableFilter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\SynthDevice.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Thunder.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Twister.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\CriticalSection.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\DirectSoundRenderThread.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\IPlayer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\PreRenderPlayer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\RealtimePlayer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\SongRenderer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\SongRenderer.Track.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\WavWriter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="apxFloat16.cpp" />
+    <ClCompile Include="apxPhoenix.cpp" />
+    <ClCompile Include="apxProject.cpp" />
+    <ClCompile Include="Audio\phxSongV2M.cpp" />
+    <ClCompile Include="Audio\phxSongWaveSabre.cpp" />
+    <ClCompile Include="BasePCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</MultiProcessorCompilation>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="GUID.cpp" />
+    <ClCompile Include="Material_Tool.cpp" />
+    <ClCompile Include="Model_Tool.cpp" />
+    <ClCompile Include="Audio\phxSound.cpp" />
+    <ClCompile Include="phxResource.cpp" />
+    <ClCompile Include="Audio\phxSongBase.cpp" />
+    <ClCompile Include="Audio\phxSongMVM.cpp" />
+    <ClCompile Include="Audio\phxSongOGG.cpp" />
+    <ClCompile Include="phxSplineExt.cpp" />
+    <ClCompile Include="RenderLayer.cpp" />
+    <ClCompile Include="RenderTargets.cpp" />
+    <ClCompile Include="Scene_tool.cpp" />
+    <ClCompile Include="TexgenPage.cpp" />
+    <ClCompile Include="Texgen_tool.cpp" />
+    <ClCompile Include="Timeline_tool.cpp" />
+    <ClCompile Include="TreeSpecies.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Phoenix\Phoenix.vcxproj">
+      <Project>{d783d8f0-d5cf-419a-be91-6b4ae2e6aa46}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Adultery.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\AllPass.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\AllPassDelay.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\BiquadFilter.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Cathedral.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Chamber.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Comb.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Crusher.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\DelayBuffer.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Device.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Devices.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Echo.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Envelope.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Falcon.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\GmDls.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Helpers.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Leveller.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\MxcsrFlagGuard.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\ResampleBuffer.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\SamplePlayer.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Scissor.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Slaughter.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Smasher.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Specimen.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\StateVariableFilter.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\SynthDevice.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Thunder.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\include\WaveSabreCore\Twister.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\include\WaveSabrePlayerLib.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\include\WaveSabrePlayerLib\CriticalSection.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\include\WaveSabrePlayerLib\DirectSoundRenderThread.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\include\WaveSabrePlayerLib\IPlayer.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\include\WaveSabrePlayerLib\PreRenderPlayer.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\include\WaveSabrePlayerLib\RealtimePlayer.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\include\WaveSabrePlayerLib\SongRenderer.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\include\WaveSabrePlayerLib\WavWriter.h" />
+    <ClInclude Include="apxProject.h" />
+    <ClInclude Include="Audio\phxSongV2M.h" />
+    <ClInclude Include="Audio\phxSongWaveSabre.h" />
+    <ClInclude Include="BasePCH.h" />
+    <ClInclude Include="GUID.h" />
+    <ClInclude Include="apxPhoenix.h" />
+    <ClInclude Include="Material_Tool.h" />
+    <ClInclude Include="Model_Tool.h" />
+    <ClInclude Include="Audio\phxSound.h" />
+    <ClInclude Include="phxResource.h" />
+    <ClInclude Include="Audio\phxSongBase.h" />
+    <ClInclude Include="Audio\phxSongMVM.h" />
+    <ClInclude Include="Audio\phxSongOGG.h" />
+    <ClInclude Include="phxSplineExt.h" />
+    <ClInclude Include="RenderLayer.h" />
+    <ClInclude Include="RenderTargets.h" />
+    <ClInclude Include="Scene_tool.h" />
+    <ClInclude Include="TexgenPage.h" />
+    <ClInclude Include="Texgen_tool.h" />
+    <ClInclude Include="Timeline_tool.h" />
+    <ClInclude Include="TreeSpecies.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A07E6780-F52E-466C-8FEA-3ECC13B4C463}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Phoenix_Tool</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)include;..\ThirdParty\D3D\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(DXSDK_DIR)lib\x86;</LibraryPath>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)include;..\ThirdParty\D3D\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(DXSDK_DIR)lib\x86;</LibraryPath>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>BasePCH.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ShowIncludes>false</ShowIncludes>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\WaveSabre\WaveSabreCore\include;$(SolutionDir)Libraries\WaveSabre\WaveSabrePlayerLib\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderFile>BasePCH.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\WaveSabre\WaveSabreCore\include;$(SolutionDir)Libraries\WaveSabre\WaveSabrePlayerLib\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Bscmake>
+      <PreserveSBR>true</PreserveSBR>
+    </Bscmake>
+    <Lib>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

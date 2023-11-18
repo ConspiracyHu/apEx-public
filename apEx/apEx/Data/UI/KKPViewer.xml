@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="KKPViewer">
+  <box>
+    <box class="viewer">
+		<label text="Hex View"/>
+    	<kkpdisplay id="kkpview" class="kkpview"/>
+		<label text="Code View"/>
+		<list id="codeview"/>
+    </box>
+	<box class="toolbox">
+		<label text="Symbol List"/>
+		<box id="symbolsortbox">
+			<button text="Name" id="sortbyname"/>
+			<button text="Ofset" id="sortbyoffset"/>
+			<button text="Size" id="sortbysize"/>
+			<button text="FullSize" id="sortbyfullsize"/>
+			<button text="Ratio" id="sortbypackratio"/>
+		</box>
+		<list id="symbollist"/>
+		<button text="Export Symbol List" id="exportsymbollist"/>
+		<label text="File List"/>
+		<list id="filelist"/>
+		<box class="settings">
+			<button text="Load KKrunchy .kkp" id="openkkp"/>
+			<button text="Load Phoenix .sym" id="opensym"/>
+		</box>
+    </box>
+  </box>
+  </gui>
+</guidescriptor>

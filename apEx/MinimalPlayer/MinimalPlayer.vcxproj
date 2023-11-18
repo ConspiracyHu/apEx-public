@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Demo|Win32">
+      <Configuration>Debug Demo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Demo|Win32">
+      <Configuration>Release Demo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release 64k|Win32">
+      <Configuration>Release 64k</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E1B02EA0-31F3-40B0-8E1A-79049634EB83}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MinimalPlayer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\!Code\Conspiracy\apEx\Libraries\WaveSabre;..\..\Bedrock\UtilLib\ExternalLibraries\libogg132\include;..\..\Bedrock\UtilLib\ExternalLibraries\libvorbis134\include;$(DXSDK_DIR)include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;..\ThirdParty\D3D\Include\</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)lib\x86;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;..\ThirdParty\D3D\Lib\x86\;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\!Code\Conspiracy\apEx\Libraries\WaveSabre;..\..\Bedrock\UtilLib\ExternalLibraries\libogg132\include;..\..\Bedrock\UtilLib\ExternalLibraries\libvorbis134\include;$(DXSDK_DIR)include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;..\ThirdParty\D3D\Include\</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)lib\x86;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;..\ThirdParty\D3D\Lib\x86\;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <IncludePath>E:\!Code\Conspiracy\apEx\Libraries\WaveSabre;..\..\Bedrock\UtilLib\ExternalLibraries\libogg132\include;..\..\Bedrock\UtilLib\ExternalLibraries\libvorbis134\include;$(DXSDK_DIR)include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;..\ThirdParty\D3D\Include\</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)lib\x86;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;..\ThirdParty\D3D\Lib\x86\;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <IncludePath>E:\!Code\Conspiracy\apEx\Libraries\WaveSabre;..\..\Bedrock\UtilLib\ExternalLibraries\libogg132\include;..\..\Bedrock\UtilLib\ExternalLibraries\libvorbis134\include;$(DXSDK_DIR)include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;..\ThirdParty\D3D\Include\</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)lib\x86;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;..\ThirdParty\D3D\Lib\x86\;$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>PHX_MINIMAL_BUILD;MUSIC_IS_OGG;MINIMAL_BUILD;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4482</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\WaveSabre\WaveSabreCore\include;$(SolutionDir)Libraries\WaveSabre\WaveSabrePlayerLib\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <AdditionalDependencies>Shlwapi.lib;dsound.lib;msacm32.lib;Data/release.obj;winmm.lib;d3d11.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <BaseAddress>0x600000</BaseAddress>
+      <TurnOffAssemblyGeneration>false</TurnOffAssemblyGeneration>
+      <MergeSections>.rdata=.rtext</MergeSections>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>PHX_MINIMAL_BUILD;MUSIC_IS_OGG;MINIMAL_BUILD;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4482</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\WaveSabre\WaveSabreCore\include;$(SolutionDir)Libraries\WaveSabre\WaveSabrePlayerLib\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <AdditionalDependencies>Shlwapi.lib;dsound.lib;msacm32.lib;Data/release.obj;../libraries/mvx/mvxplayerlib_debug.lib;winmm.lib;d3d11.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <BaseAddress>0x600000</BaseAddress>
+      <TurnOffAssemblyGeneration>false</TurnOffAssemblyGeneration>
+      <MergeSections>.rdata=.rtext</MergeSections>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MinSpace</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>PHX_MINIMAL_BUILD;MINIMAL_BUILD;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CallingConvention>FastCall</CallingConvention>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <BrowseInformation>true</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4482</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\WaveSabre\WaveSabreCore\include;$(SolutionDir)Libraries\WaveSabre\WaveSabrePlayerLib\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>msvcrt_mini.lib;Shlwapi.lib;uuid.lib;Ole32.lib;OleAut32.lib;d3dx10.lib;d3dx11.lib;dsound.lib;msacm32.lib;Data/release.obj;winmm.lib;d3d11.lib;glu32.lib;kernel32.lib;user32.lib;Shell32.lib;gdi32.lib;</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <GenerateMapFile>true</GenerateMapFile>
+      <BaseAddress>0x600000</BaseAddress>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <TurnOffAssemblyGeneration>false</TurnOffAssemblyGeneration>
+      <MergeSections>.rdata=.rtext</MergeSections>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSBR>true</PreserveSBR>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MinSpace</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>PHX_MINIMAL_BUILD;MUSIC_IS_OGG;MINIMAL_BUILD;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <CallingConvention>FastCall</CallingConvention>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <BrowseInformation>true</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4482</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\WaveSabre\WaveSabreCore\include;$(SolutionDir)Libraries\WaveSabre\WaveSabrePlayerLib\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>dxgi.lib;Shlwapi.lib;Ole32.lib;OleAut32.lib;dsound.lib;msacm32.lib;Data/release.obj;winmm.lib;d3d11.lib;glu32.lib;kernel32.lib;user32.lib;Shell32.lib;gdi32.lib;</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateMapFile>true</GenerateMapFile>
+      <BaseAddress>0x600000</BaseAddress>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <TurnOffAssemblyGeneration>false</TurnOffAssemblyGeneration>
+      <MergeSections>.rdata=.rtext</MergeSections>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Bscmake>
+      <PreserveSBR>true</PreserveSBR>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Adultery.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\AllPass.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\AllPassDelay.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\BiquadFilter.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Cathedral.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Chamber.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Comb.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Crusher.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\DelayBuffer.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Device.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Echo.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Envelope.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Falcon.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\GmDls.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Helpers.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Leveller.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\MxcsrFlagGuard.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\ResampleBuffer.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\SamplePlayer.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Scissor.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Slaughter.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Smasher.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Specimen.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\StateVariableFilter.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\SynthDevice.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Thunder.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Twister.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\CriticalSection.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\DirectSoundRenderThread.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\IPlayer.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\PreRenderPlayer.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\RealtimePlayer.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\SongRenderer.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\SongRenderer.Track.cpp">
+      <EnableEnhancedInstructionSet Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">Fast</FloatingPointModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="MinimalPlayer.cpp" />
+    <ClCompile Include="MusicPlayer.cpp" />
+    <ClCompile Include="SetupDialog.cpp" />
+    <ClCompile Include="WindowHandler.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibCTiny\LibCTiny.vcxproj">
+      <Project>{ebc9da84-c9d1-4f85-adb9-f79a584640e7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Phoenix\Phoenix_minimal.vcxproj">
+      <Project>{7b1e9146-bfaf-41db-a83c-a9947edfb161}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Libraries\MVX\mvx.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Adultery.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\AllPass.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\AllPassDelay.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\BiquadFilter.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Cathedral.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Chamber.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Comb.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Crusher.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\DelayBuffer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Device.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Echo.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Envelope.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Falcon.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\GmDls.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Helpers.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Leveller.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\MxcsrFlagGuard.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\ResampleBuffer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\SamplePlayer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Scissor.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Slaughter.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Smasher.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Specimen.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\StateVariableFilter.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\SynthDevice.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Thunder.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Twister.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\CriticalSection.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\DirectSoundRenderThread.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\IPlayer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\PreRenderPlayer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\RealtimePlayer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\SongRenderer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="MinimalPlayer.h" />
+    <ClInclude Include="MusicPlayer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SetupDialog.h" />
+    <ClInclude Include="WindowHandler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CNSLogo.ico" />
+    <None Include="Data\asm.bat" />
+    <None Include="Data\precalc.64k" />
+    <None Include="Data\release.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MinimalPlayer.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Demo|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release 64k|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release Demo|Win32'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\MVX\MVXLibrary.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

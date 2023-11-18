@@ -1,0 +1,43 @@
+#resetpos
+{
+	width:100%-2px;
+	height:13px;
+}
+
+label
+{
+	height:13px;
+}
+
+#layoutbox
+{
+	margin:0px;
+	padding:1px;
+	child-layout:vertical;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:2px;
+}
+
+.columns
+{
+	child-layout:horizontal;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:1px;
+	height:15px;
+}
+
+textbox
+{
+	border:1px;
+	padding:1px;
+	text-transform:none;
+}
+
+.rows textbox
+{
+	border:1px;
+	padding:1px;
+}
+

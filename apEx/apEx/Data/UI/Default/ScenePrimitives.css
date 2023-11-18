@@ -1,0 +1,24 @@
+box
+{
+	margin:0px;
+	padding:1px;
+	child-layout:vertical;
+	child-spacing:1px;
+	child-fill-x:true;
+	child-fill-y:true;
+}
+
+button
+{
+	height:15px;
+}
+
+.swapbox
+{
+	height:17px;
+	padding:0px;
+	child-layout:horizontal;
+	child-spacing:4px;
+	child-fill-x:true;
+	child-fill-y:true;	
+}

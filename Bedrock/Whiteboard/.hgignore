@@ -1,0 +1,10 @@
+syntax: glob
+*.log
+*.*old*
+*.vcxproj.user
+*.*backup*
+*/Release*/*
+*/Debug*/*
+*Release*/*
+*Debug*/*
+*.*sdf

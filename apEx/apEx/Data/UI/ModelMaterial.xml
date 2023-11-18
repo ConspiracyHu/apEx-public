@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="ModelMaterial">
+	<box id="main">
+		<button id="selectmaterial" text="Select Material" class="dropdown"/>
+		<box id="materialparams"/>
+	</box>
+  </gui>
+  <guitemplate id="texturetemplate" class="parambox textureselect">
+	<label id="paramname" text="paramname"/>
+	<box class="buttonlist">
+		<button id="textureselector" text="Select Texture" class="dropdown"/>
+		<button id="texturelocator" text="->" class=""/>
+	</box>
+  </guitemplate>
+  <guitemplate id="blendtemplate" class="parambox blendselect">
+	<label id="paramname" text="paramname"/>
+	<box id="blendbox">
+		<box class="blendlist">
+			<label text="Source Factor"/>
+			<dropdown id="srcblend">
+				<listitem name="Zero"/>
+				<listitem name="One"/>
+				<listitem name="Src Color"/>
+				<listitem name="1-Src Color"/>
+				<listitem name="Src Alpha"/>
+				<listitem name="1-Src Alpha"/>
+				<listitem name="Dst Alpha"/>
+				<listitem name="1-Dst ALpha"/>
+				<listitem name="Dst Color"/>
+				<listitem name="1-Dst Color"/>
+			</dropdown>
+		</box>
+		<box class="blendlist">
+			<label text="Dest Factor"/>
+			<dropdown id="dstblend">
+				<listitem name="Zero"/>
+				<listitem name="One"/>
+				<listitem name="Src Color"/>
+				<listitem name="1-Src Color"/>
+				<listitem name="Src Alpha"/>
+				<listitem name="1-Src Alpha"/>
+				<listitem name="Dst Alpha"/>
+				<listitem name="1-Dst ALpha"/>
+				<listitem name="Dst Color"/>
+				<listitem name="1-Dst Color"/>
+			</dropdown>
+		</box>
+	</box>
+  </guitemplate>
+  <guitemplate id="floattemplate" class="parambox floatselect">
+	<trackbar id="float" minimum="0" maximum="255"/>
+  </guitemplate>
+  <guitemplate id="prioritytemplate" class="parambox floatselect">
+	<trackbar id="renderpriority" minimum="0" maximum="255"/>
+  </guitemplate>
+  <guitemplate id="colortemplate" class="parambox colorselect">
+	<label id="paramname" text="paramname"/>
+	<trackbar id="red" minimum="0" maximum="255"/>
+	<trackbar id="green" minimum="0" maximum="255"/>
+	<trackbar id="blue" minimum="0" maximum="255"/>
+	<trackbar id="alpha" minimum="0" maximum="255"/>
+  </guitemplate>
+  <guitemplate id="culltemplate" class="parambox cullselect">
+	<label id="paramname" text="paramname"/>
+	<dropdown id="culllist">
+		<listitem name="No Culling"/>
+		<listitem name="Cull Front Faces"/>
+		<listitem name="Cull Back Faces"/>
+	</dropdown>
+  </guitemplate>
+  <guitemplate id="filltemplate" class="parambox fillselect">
+	<button id="wireframe" text="Wireframe"/>
+  </guitemplate>
+  <guitemplate id="zfuncttemplate" class="parambox zfunctselect">
+	<label id="paramname" text="paramname"/>
+	<dropdown id="zfunctlist">
+		<listitem name="Never"/>
+		<listitem name="Less"/>
+		<listitem name="Equal"/>
+		<listitem name="Less Equal"/>
+		<listitem name="Greater"/>
+		<listitem name="Not Equal"/>
+		<listitem name="Greater Equal"/>
+		<listitem name="Always"/>
+	</dropdown>
+  </guitemplate>
+  <guitemplate id="zmodetemplate" class="parambox zmodeselect">
+	<box id="blendbox" class="zmodebox">
+		<button id="zenable" text="Depth Test"/>
+		<button id="zwrite" text="Z Write"/>
+	</box>
+  </guitemplate>
+</guidescriptor>

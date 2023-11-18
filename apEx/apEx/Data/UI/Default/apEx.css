@@ -1,0 +1,503 @@
+* 
+{
+	font:UniFont;
+	text-transform:uppercase;
+	scrollbar-size:11px;
+	scrollbar-button-size:11px;
+	scrollbar-thumb-minimum-size:16px;
+	scrollbar-background-horizontal:skin(sb_h_b);
+	scrollbar-background-vertical:skin(sb_v_b);
+	scrollbar-thumb-horizontal:skin(thumb_horizontal_normal);
+	scrollbar-thumb-vertical:skin(thumb_vertical_normal);
+	scrollbar-up:skin(sb_u_n);
+	scrollbar-down:skin(sb_d_n);
+	scrollbar-left:skin(sb_l_n);
+	scrollbar-right:skin(sb_r_n);
+}
+
+*:hover
+{
+	scrollbar-thumb-horizontal:skin(thumb_horizontal_hover);
+	scrollbar-thumb-vertical:skin(thumb_vertical_hover);
+	scrollbar-up:skin(sb_u_h);
+	scrollbar-down:skin(sb_d_h);
+	scrollbar-left:skin(sb_l_h);
+	scrollbar-right:skin(sb_r_h);	
+}
+
+*:active
+{
+	scrollbar-up:skin(sb_u_a);
+	scrollbar-down:skin(sb_d_a);
+	scrollbar-left:skin(sb_l_a);
+	scrollbar-right:skin(sb_r_a);	
+}
+
+apexwindow
+{       	
+	border:0px;
+	border-color:none;
+	opacity:1;
+	padding:3px;
+	padding-top:15px;	
+	background:skin(window_normal);
+	background-color:none;
+}
+
+apexwindow:hover
+{
+	border:1px;
+	border-color:#707070;
+}
+
+apexwindow:active
+{
+	background:skin(window_active);
+}
+
+apexwindow:title
+{
+	top:3px;
+	left:15px;
+	right:15px;
+	height:11px;
+}
+
+apexwindow:title:active
+{
+}
+
+apexwindow:close
+{
+	top:3px;
+	right:3px;
+	width:11px;
+	height:11px;
+	background:#2d2d30;
+}
+
+apexwindow:close:active
+{
+	background:#1c97ea;
+}
+
+apexwindow:close:hover
+{
+	background:#3e3e40;
+}
+
+texgennewopwindow
+{
+	padding:3px;
+	background:skin(window_notitle_normal);
+}
+
+texgennewopwindow:active
+{
+	padding:3px;
+	background:skin(window_notitle_active);
+}
+
+list:listitem
+{
+	height:12px;
+	text-align:left;
+	padding-left:2px;
+	vertical-align:center;
+	background:#1e1e1e;
+}
+
+extendedlist:listitem
+{
+	height:12px;
+	text-align:left;
+	padding-left:2px;
+	vertical-align:center;
+	background:#1e1e1e;
+}
+
+list:listitem:hover
+{
+	background:#3f3f46;
+}
+
+extendedlist:listitem:hover
+{
+	background:#3f3f46;
+}
+
+list:listitem:active
+{
+	background:#3399ff;
+}
+
+extendedlist:listitem:active
+{
+	background:#3399ff;
+}
+
+button
+{
+	height:15px;
+}
+
+button:hover
+{
+}
+
+dropdown
+{
+	height:15px;
+	padding-right:14px;
+	background:skin(dropdown_normal);
+}
+
+dropdown:hover
+{
+	background:skin(dropdown_hover);
+}
+
+dropdown:active
+{
+	background:skin(dropdown_focus);
+}
+
+dropdown:disabled
+{
+	background:skin(dropdown_disabled);
+}
+
+.dropdown
+{
+	height:15px;
+	padding-right:14px;
+	background:skin(dropdown_normal);
+}
+
+.dropdown:hover
+{
+	background:skin(dropdown_hover);
+}
+
+.dropdown:active
+{
+	background:skin(dropdown_focus);
+}
+
+.dropdown:disabled
+{
+	background:skin(dropdown_disabled);
+}
+
+textbox
+{
+}
+
+.root
+{
+	margin:0px;
+	child-layout:vertical;
+	child-spacing:0px;
+	child-fill-y:true;
+	child-align-x:center;
+}
+.topmenu
+{
+	padding-left:3px;
+	padding-right:3px;
+	height:29px;
+	width:100%;
+	child-layout:horizontal;
+	child-spacing:1px;
+	child-fill-x:true;
+	child-align-y:center;
+}
+.topmenu button
+{
+	width:auto;
+	padding-top:3px;
+	padding-left:6px;
+	padding-right:6px;
+	height:15px;
+	background:none;
+}
+#workbenchlist
+{
+	height:100%;
+	child-align-x:center;
+	child-align-y:center;
+	child-layout:horizontal;
+}
+#workbenchlist button
+{
+	width:auto;
+	height:100%;
+	padding-left:9px;
+	padding-right:9px;
+	padding-top:1px;
+	background-image:none;
+	border-top:2px;
+	background-color:rgba(0,0,0,0);
+	border-color:rgba(0,0,0,0);
+}
+
+#workbenchlist button:active
+{
+	font-color:#fffed5;
+	background-color:#171f22;
+	border-color:#ff5836;
+}
+
+.builddata
+{
+	width:180px;
+	height:100%;
+}
+
+#apexlogo
+{
+	right:77px;
+	top:5px;
+	background-image:skin(apexlogosmall);
+	width:100px;
+	height:23px;
+}
+
+#apexlogoline
+{
+	border-right:1px;
+	right:77px;
+	top:3px;
+	width:100px;
+	height:23px;
+	border-color:#546b73;
+}
+
+#buildid
+{
+	font-color:#587a80;
+	right:6px;
+	top:15px;
+	width:65px;
+	height:10px;
+	text-align:left;
+}
+
+#buildtext
+{
+	right:15px;
+	top:5px;
+	width:56px;
+	height:8px;
+	background-image:skin(buildtext);
+}
+
+#workbench
+{
+	border:1px;
+	border-color:#313e44;
+	left:3px;
+	right:3px;
+	padding:10px;
+}
+
+.statusbar
+{
+	height:27px;
+	width:100%;
+}
+
+#statusbartext
+{
+	margin:0px;
+}
+
+#generatorstatus
+{
+	top:0px;
+	bottom:0px;
+	right:0px;
+	width:300px;
+	padding-right:12px;
+	padding-bottom:10px;
+	text-align:right;
+}
+
+#fpscounter
+{
+	top:0px;
+	bottom:0px;
+	right:0px;
+	width:300px;
+	padding-right:12px;
+	padding-top:10px;
+	text-align:right;
+}
+
+
+#colorpickquad
+{
+	top:8px;
+	bottom:9px;
+	left:3px;
+	width:30px;
+	background:#000000;
+}
+
+#colorpicktext
+{
+	top:0px;
+	bottom:0px;
+	left:0px;
+	width:300px;
+	padding-left:38px;
+	padding-top:0px;
+	text-align:left;
+}
+
+.addworkbenchbutton
+{
+	padding-right:7px;
+	padding-bottom:1px;
+	width:16px;
+}
+
+workbench
+{
+	margin:0px;
+}
+
+#workbench
+{
+	width:100%;
+}
+
+.console
+{
+	width:100%;
+	height:40%;
+	top:0px;
+	background-color:rgba(0,0,0,0.7);
+	child-layout:vertical;
+	child-fill-x:true;
+	child-fill-y:true;
+}
+
+#consoleinput
+{
+	height:17px;
+	border:0px;
+	border-top:1px;
+	border-bottom:1px;
+}
+
+.WorkbenchRenamer
+{
+	width:auto;
+	height:100%;
+	padding-left:8px;
+	padding-right:1px;
+	padding-top:6px;
+	background-image:none;
+	border-top:2px;
+	background-color:#171f22;
+	border-color:#ff5838;
+}
+
+contextmenu
+{
+}
+
+contextmenu:hover
+{
+}
+
+contextmenu:active
+{
+}
+
+contextmenu:separator
+{
+}
+
+numpad
+{
+	height:16px;
+}
+
+numpad:bar
+{
+	height:100%;
+	width:100%-56px;
+	border:1px;
+	left:0px;
+	border-color:#324148;
+	foreground-color:#30646f;
+	background-color:#252e33;
+}
+
+numpad:incbutton,numpad:decbutton
+{
+	width:17px;
+	height:50%-1px;
+	right:0px;
+	background-position:center middle;
+}
+
+numpad:incbutton
+{
+	top:2px;
+	background:skin(button_increase_normal);
+}
+
+numpad:decbutton
+{
+	bottom:1px;
+	background:skin(button_decrease_normal);
+}
+
+numpad:incbutton:hover
+{
+	background:skin(button_increase_hover);
+}
+
+numpad:decbutton:hover
+{
+	background:skin(button_decrease_hover);
+}
+
+numpad:wrapper
+{
+	border-color:#324148;
+	border:1px;
+	height:100%;
+	right:0px;
+	width:52px;	
+}
+
+numpad textbox
+{
+	width:38px;
+	right:14px;
+	height:100%;
+	padding-bottom:0px;
+	border:0px;
+}
+
+apexdocker
+{
+	margin:0px;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:5px;
+}
+
+apexdocker apexwindow
+{
+}
+
+textboxhlsl
+{
+  font:ProFont;
+  text-transform:none;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="MaterialList">
+    <box id="buttonbox">
+      <button id="newmaterial" text="New"/>
+      <button id="deletematerial" text="Delete"/>
+    </box>
+    <list id="materiallist"/>
+  </gui>
+</guidescriptor>

@@ -1,0 +1,23 @@
+box
+{
+	margin:2px;
+	child-layout: horizontal;
+	child-spacing: 2px;
+}
+
+button
+{
+	width:14px;
+	height:14px;
+}
+
+#maximizebutton
+{
+	background: skin(maximize) center middle;
+}
+
+#maximizebutton: active
+{
+	background: skin(fullscreen) center middle;
+}
+

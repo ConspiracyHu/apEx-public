@@ -1,0 +1,22 @@
+.xmlnote
+{
+    margin: 1px;
+    bottom: auto;
+    height: 29px;
+    child-layout: vertical;
+    child-fill-x: true;
+}
+
+.xmlnote label
+{
+    height:9px;
+}
+
+#xmleditor
+{
+    margin: 1px;
+    border: 1px;
+    top: 33px;
+    font: ProFont;
+	text-transform:none;
+}

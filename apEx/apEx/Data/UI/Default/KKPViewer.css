@@ -1,0 +1,84 @@
+list:listitem:hover
+{
+	background:#3f3f46;
+}
+
+list:listitem:active
+{
+	background:#3f3f46;
+}
+
+list
+{
+	font: ProFont;
+	text-transform:none;
+}
+
+box
+{
+	margin:0px;
+	child-layout:horizontal;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:1px;
+}
+
+.viewer
+{
+	margin:0px;
+	child-layout:vertical;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:1px;
+	width:60%;
+}
+
+.toolbox
+{
+	border:1px;	
+	child-layout:vertical;
+}
+
+label
+{
+	height:14px;
+}
+
+.settings
+{
+	height:20%;
+}
+
+.settings button
+{
+	height:15px;
+}
+
+.kkpview
+{
+	border:1px;
+	margin:0px;
+	font: ProFont;
+}
+
+#codeview
+{
+	height:40%;
+	font: ProFont;
+	text-transform:none;
+}
+
+#symbollist
+{
+	height:70%;
+}
+
+.settings
+{
+	height:15px;
+}
+
+#symbolsortbox
+{
+	height:15px;
+}

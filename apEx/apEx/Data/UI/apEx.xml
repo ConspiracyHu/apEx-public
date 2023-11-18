@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="apEx">
+	<box class="root">
+		<box class="topmenu">
+			<button text="FILE" id="filemenu"/>
+			<button text="VIEW" id="viewmenu"/>
+			<button text="HELP" id="helpmenu"/>
+			<box id="workbenchlist"/>
+			<box class="builddata">
+				<box id="apexlogo"/>
+				<box id="apexlogoline"/>
+				<label id="buildtext" text=""/>
+				<label id="buildid" text=""/>
+			</box>
+		</box>
+		<box id="workbench">
+		</box>
+		<box class="statusbar">
+			<label text="" id="statusbartext"/>
+			<label text="" id="generatorstatus"/>
+			<label text="" id="fpscounter"/>
+			<label id="colorpickquad"/>
+			<label text="Shift To ColorPick" id="colorpicktext"/>
+		</box>
+	</box>
+	<box id="console" class="console" >
+		<console/>
+		<consoleinput id="consoleinput"/>
+	</box>
+  </gui>
+</guidescriptor>

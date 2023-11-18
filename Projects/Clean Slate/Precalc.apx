@@ -1,0 +1,2348 @@
+<apExProject build="0479_19468r">
+  <AspectX>16</AspectX>
+
+  <AspectY>9</AspectY>
+
+  <Framerate>120</Framerate>
+
+  <Title></Title>
+
+  <Group></Group>
+
+  <www></www>
+
+  <pouet></pouet>
+
+  <facebook></facebook>
+
+  <youtube></youtube>
+
+  <share></share>
+
+  <gridbpm>100</gridbpm>
+
+  <gridprimaryhighlight>32</gridprimaryhighlight>
+
+  <gridsecondaryhighlight>8</gridsecondaryhighlight>
+
+  <texturefilter>
+    <GUID>0FA2382E547416A2280FCE0B374F6E6C</GUID>
+    <Name>New Texture Filter</Name>
+    <Code>cbuffer b { float4 a,b; };
+
+float4 p(float4 p:TEXCOORD0) : SV_TARGET0
+{
+ return float4(fmod(p.x*256+p.y*256-1,2.0f),p.x,p.y,1);
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable></texturefilter>
+
+  <rendertarget>
+    <GUID>B804E9F623AABCBA232F247216EE216B</GUID>
+    <Name>Backbuffer</Name>
+  
+    <ResolutionDescriptor>128</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>0</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>A277553146FC64CF028CD78429CB0C26</GUID>
+    <Name>Albedo and Metalness</Name>
+  
+    <ResolutionDescriptor>128</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>66B8BAA646D228338C523F1351543A11</GUID>
+    <Name>Back X/2 Y/1</Name>
+  
+    <ResolutionDescriptor>136</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>ABE9AC938257A0207A4C164AF72306A0</GUID>
+    <Name>Back X/2 Y/2</Name>
+  
+    <ResolutionDescriptor>137</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>672E7FB08DEB05C9B52B4F78FC2B30F4</GUID>
+    <Name>Back X/4 Y/2</Name>
+  
+    <ResolutionDescriptor>145</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>290A7AC85C535BCB4E3FA01128C3433B</GUID>
+    <Name>Back X/4 Y/4</Name>
+  
+    <ResolutionDescriptor>147</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>BE215926557E4997FE98ABB3D6817364</GUID>
+    <Name>Back X/8 Y/4</Name>
+  
+    <ResolutionDescriptor>154</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>D2375BBF84EB0121216AE6397E0E31C4</GUID>
+    <Name>Back X/8 Y/8</Name>
+  
+    <ResolutionDescriptor>155</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>9DE2A20DCA6371A7D7731C30E7A870A1</GUID>
+    <Name>Internal</Name>
+  
+    <ResolutionDescriptor>128</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>777C0EC1778502D5674EEA52BFD29691</GUID>
+    <Name>Shadow Map</Name>
+  
+    <ResolutionDescriptor>128</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>1</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <renderlayer>
+    <GUID>0B660A129B4CFDA2A5A2D3E4E0949FA6</GUID>
+    <Name>Solid Layer</Name>
+    <OmitDepthBuffer>0</OmitDepthBuffer>
+    <ClearRenderTargets>1</ClearRenderTargets>
+    <Voxelizer>0</Voxelizer>
+    <IgnoreHelperObjects>0</IgnoreHelperObjects>
+    <Pickable>1</Pickable>
+    <RenderTarget>B804E9F623AABCBA232F247216EE216B</RenderTarget></renderlayer>
+
+  <renderlayer>
+    <GUID>FCE6163CC00DB65A95211DB17ADD9460</GUID>
+    <Name>Shadow Layer</Name>
+    <OmitDepthBuffer>0</OmitDepthBuffer>
+    <ClearRenderTargets>1</ClearRenderTargets>
+    <Voxelizer>0</Voxelizer>
+    <IgnoreHelperObjects>1</IgnoreHelperObjects>
+    <Pickable>0</Pickable>
+    <RenderTarget>777C0EC1778502D5674EEA52BFD29691</RenderTarget></renderlayer>
+
+  <renderlayer>
+    <GUID>0BE1808FCCA5B61BC690EAC74EADDEA5</GUID>
+    <Name>Lighting Layer</Name>
+    <OmitDepthBuffer>1</OmitDepthBuffer>
+    <ClearRenderTargets>0</ClearRenderTargets>
+    <Voxelizer>0</Voxelizer>
+    <IgnoreHelperObjects>1</IgnoreHelperObjects>
+    <Pickable>0</Pickable>
+    <RenderTarget>B804E9F623AABCBA232F247216EE216B</RenderTarget></renderlayer>
+
+  <renderlayer>
+    <GUID>1424586010B909EA488C988A1F5021F9</GUID>
+    <Name>Transparent Layer</Name>
+    <OmitDepthBuffer>0</OmitDepthBuffer>
+    <ClearRenderTargets>0</ClearRenderTargets>
+    <Voxelizer>0</Voxelizer>
+    <IgnoreHelperObjects>1</IgnoreHelperObjects>
+    <Pickable>0</Pickable>
+    <RenderTarget>B804E9F623AABCBA232F247216EE216B</RenderTarget></renderlayer>
+
+  <rendertechnique>
+    <GUID>2EC2AE23E3AA634D2FD7277D3C18D797</GUID>
+    <Name>[Base Material]</Name>
+    <Type>0</Type>
+    <TargetLayer>0B660A129B4CFDA2A5A2D3E4E0949FA6</TargetLayer>
+  
+    <Pass>
+      <Name>Solid Pass</Name>
+      <Code>Texture2D t_0:register(t0);
+Texture2D t_1:register(t1);
+Texture2D t_2:register(t2);
+SamplerState Sampler:register(s0);
+
+struct lightdata
+{
+	float4 pos;
+	float4 ambient;
+	float4 diffuse;
+	float4 specular;
+	float4 spotdirection;
+	float4 sda;
+};
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+	float4 lightcount;
+	lightdata lights[8];
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 specularcolor;
+	float4 specularpower;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float3 Normal: TEXCOORD1;
+	float2 uv:TEXCOORD0;
+	float3 p:TEXCOORD2;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;
+	
+	k.p=mul(worldmat,float4(x.Position,1)).xyz;
+	k.Normal=mul(itworldmat,float4(x.Normal,0)).xyz;
+	k.Position=mul(projmat,mul(viewmat,float4(k.p,1)));
+	k.uv=x.UV.xy;
+	return k;
+}
+
+float4 getenvmap(VSOUT v)
+{
+	float3 r=reflect(normalize(mul(viewmat,float4(v.p,1)).xyz),
+                     normalize(mul(viewmat,float4(v.Normal,0)).xyz));
+	float m = 2.0 * sqrt( r.x*r.x + r.y*r.y + (r.z+1.0)*(r.z+1.0) );
+	float2 env=r.xy/m+0.5;
+	return t_1.Sample(Sampler,env);
+}
+
+float3 calculatespecular(float3 po, float3 n, float3 lightdir)
+{	//blinn-phong
+    float3 H=normalize(-normalize(po)+normalize(lightdir));
+	//float3 incoming=reflect(lightdir,H);
+
+	return pow(saturate(dot(normalize(n),H)),40);
+}
+
+void GetLightData( lightdata l, float3 pos, out float3 dir, out float distance, inout float spotcutoff)
+{
+	if (l.pos.w)
+	{
+		dir=l.pos.xyz-pos;
+		distance=length(dir);
+		dir/=distance;
+		if (l.sda.y)
+		{
+			spotcutoff=dot(-l.spotdirection.xyz,dir);
+			spotcutoff=(spotcutoff-l.sda.y)/(1-l.sda.y);
+			if (spotcutoff&gt;0)
+				spotcutoff=pow(abs(saturate(spotcutoff)),l.sda.x);
+			else spotcutoff=0;
+		}
+	}
+	else
+	{
+		dir=normalize(l.pos.xyz);
+		distance=1;
+	}	
+}
+
+float3 lighting(float3 diff, float3 pos, float3 normal)
+{
+	float3 result=0;
+	for (int x=0; x&lt;lightcount[0]; x++)
+	{
+		lightdata l=lights[x];
+		float3 dir;
+		float dist;
+		float spotcutoff=1;
+		GetLightData(l,pos,dir,dist,spotcutoff);
+    	float3 H=normalize(-normalize(pos-campos.xyz)+dir.xyz);
+
+		float3 ambient=l.ambient.xyz;
+		float3 diffuse=l.diffuse.xyz*saturate(dot(dir,normal))*spotcutoff;
+		float3 specular=l.specular.xyz*spotcutoff*
+						pow(saturate(dot(normal,H)),1/(specularpower.x+0.000001));
+		float att=1+dist*(l.sda.z+l.sda.w*l.sda.w);
+
+		result+=(diff*ambient+diff*diffuse+specular*specularcolor.xyz)/att;
+	}
+	return result;
+}
+
+float3 perturb_normal(float3 N, float3 p, float2 uv, float3 map)
+{
+    float3 dp1 = ddx( p );
+    float3 dp2 = ddy( p );
+    float2 duv1 = ddx( uv );
+    float2 duv2 = ddy( uv );
+ 
+    // solve the linear system
+    float3 dp2perp = cross( dp2, N );
+    float3 dp1perp = cross( N, dp1 );
+    float3 T = dp2perp * duv1.x + dp1perp * duv2.x;
+    float3 B = dp2perp * duv1.y + dp1perp * duv2.y;
+ 
+    // construct a scale-invariant frame 
+    float invmax = rsqrt( max( dot(T,T), dot(B,B) ) );
+
+	float3x3 tangentFrame=float3x3( T * invmax, B * invmax, N );
+	
+	if (dot(map,map)==0) map=float3(0.5,0.5,1); //hack to fix not selected texture
+	
+	map=map*2-1;
+
+	return normalize( mul( map, tangentFrame ) );
+}
+
+struct PSOUT
+{
+	float4 c:SV_TARGET0;
+	float4 am:SV_TARGET1;
+	float4 nr:SV_TARGET2;
+};
+
+PSOUT p(VSOUT v)
+{ 
+	float normmult=1;
+	if (specularpower.y&gt;0.5) normmult=-1;
+
+	float4 tc=t_0.Sample(Sampler,v.uv.xy);
+	float4 normalMap=t_2.Sample(Sampler,v.uv.xy);
+
+	float3 normal=perturb_normal(normalize(v.Normal)*normmult,v.p,v.uv.xy,normalMap.xyz);
+	
+	float3 env=getenvmap(v).xyz;
+	
+	PSOUT p;
+	p.c.xyz=lighting(tc.xyz+env,v.p,normal);
+	p.c.w=tc.w;
+	p.am=tc;
+	p.nr=float4(normal,0);
+	
+	return p;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>8B8A33FF2B0E726DDD928D6754D0C3BE</GUID>
+        <Name>Texture</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>60D36B9B1E2FC14A3AE82401A0380F09</GUID>
+        <Name>Envmap</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>8</Type>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>6DD97B71C15690B7FBFE0F10E38F7183</GUID>
+        <Name>NormalMap</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>9</Type>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>2EC96BF15C044BADD08ED544F29357E9</GUID>
+        <Name>Specular Color</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>1</Type>
+      
+        <DefaultValue>AACAPwAAgD8AAIA/AACAPw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>9178888EFE6DA3ADF1608D6B34F67F3E</GUID>
+        <Name>Specular</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <DefaultValue>4eDgPAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>661B7206873613BD6B1FC5B0F2507399</GUID>
+        <Name>Invert Normals</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>0C49E60577805ED5575956E51B068058</GUID>
+        <Name>Culling</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>5</Type>
+      
+        <DefaultValue>AwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>A2ADA781DC8D5CC56F03406A1763606C</GUID>
+        <Name>ZMode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>2</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>3FFF1538DC7EC0DA6733724C0BA075CB</GUID>
+        <Name>Render Priority</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>6</Type>
+      
+        <DefaultValue>fwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>EC7AB2D739B31F05173BDE45C0D35EBF</GUID>
+        <Name>Blending</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>15</Type>
+      
+        <DefaultValue>AQAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>E398C0C938180A8EE97E87517E6E986B</GUID>
+    <Name>[PBR Mixed Rendering]</Name>
+    <Type>0</Type>
+    <TargetLayer>0B660A129B4CFDA2A5A2D3E4E0949FA6</TargetLayer>
+  
+    <Pass>
+      <Name>Solid Pass</Name>
+      <Code>Texture2D t_0:register(t0);
+Texture2D t_1:register(t1);
+SamplerState Sampler:register(s0);
+
+struct lightdata
+{
+	float4 pos;
+	float4 ambient;
+	float4 diffuse;
+	float4 specular;
+	float4 spotdirection;
+	float4 sda;
+};
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+	float4 lightcount;
+	lightdata lights[8];
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 data;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float3 Normal: TEXCOORD1;
+	float4 uv:TEXCOORD0;
+	float3 p:TEXCOORD2;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;
+	k.p=mul(worldmat,float4(x.Position,1)).xyz;
+	k.Normal=mul(itworldmat,float4(x.Normal,0)).xyz;
+	k.Position=mul(projmat,mul(viewmat,float4(k.p,1)));
+	k.uv=x.UV;
+	return k;
+}
+
+#define PI 3.14159265
+
+float3 fresnelSchlick(float cosTheta, float3 F0)
+{
+    return F0 + (1.0 - F0) * pow(1.0 - cosTheta, 5.0);
+}  
+
+float GeometrySchlickGGX(float NdotV, float roughness)
+{
+    float r = (roughness + 1.0);
+    float k = (r*r) / 8.0;
+
+    float num   = NdotV;
+    float denom = NdotV * (1.0 - k) + k;
+	
+    return num / denom;
+}
+
+float GeometrySmith(float3 N, float3 V, float3 L, float roughness)
+{
+    float NdotV = max(dot(N, V), 0.0);
+    float NdotL = max(dot(N, L), 0.0);
+    float ggx2  = GeometrySchlickGGX(NdotV, roughness);
+    float ggx1  = GeometrySchlickGGX(NdotL, roughness);
+	
+    return ggx1 * ggx2;
+}
+
+float DistributionGGX(float3 N, float3 H, float roughness)
+{
+    float a      = roughness*roughness;
+    float a2     = a*a;
+    float NdotH  = max(dot(N, H), 0.0);
+    float NdotH2 = NdotH*NdotH;
+	
+    float num   = a2;
+    float denom = (NdotH2 * (a2 - 1.0) + 1.0);
+    denom = PI * denom * denom;
+	
+    return num / denom;
+}
+
+float3 perturb_normal(float3 N, float3 p, float2 uv, float3 map)
+{
+    float3 dp1 = ddx( p );
+    float3 dp2 = ddy( p );
+    float2 duv1 = ddx( uv );
+    float2 duv2 = ddy( uv );
+ 
+    // solve the linear system
+    float3 dp2perp = cross( dp2, N );
+    float3 dp1perp = cross( N, dp1 );
+    float3 T = dp2perp * duv1.x + dp1perp * duv2.x;
+    float3 B = dp2perp * duv1.y + dp1perp * duv2.y;
+ 
+    // construct a scale-invariant frame 
+    float invmax = rsqrt( max( dot(T,T), dot(B,B) ) );
+
+	float3x3 tangentFrame=float3x3( T * invmax, B * invmax, N );
+	
+	if (dot(map,map)==0) map=float3(0.5,0.5,1); //hack to fix not selected texture
+	
+	map=map*2-1;
+
+	return normalize( mul( map, tangentFrame ) );
+}
+
+float ApplyModifier( float value, float modifier )
+{
+	if (modifier&lt;=127/255.0)
+		return value*modifier/(127/255.0);
+	else
+		return lerp(value,1,(modifier-127/255.0)/(128/255.0));	
+}
+
+struct PSOUT
+{
+	float4 c:SV_TARGET0;
+	float4 am:SV_TARGET1;
+	float4 nr:SV_TARGET2;
+};
+
+void GetLightData( lightdata l, float3 pos, out float3 dir, out float distance, inout float spotcutoff)
+{
+	if (l.pos.w)
+	{
+		dir=l.pos.xyz-pos;
+		distance=length(dir);
+		dir/=distance;
+		if (l.sda.y)
+		{
+			spotcutoff=dot(-l.spotdirection.xyz,dir);
+			spotcutoff=(spotcutoff-l.sda.y)/(1-l.sda.y);
+			if (spotcutoff&gt;0)
+				spotcutoff=pow(abs(saturate(spotcutoff)),l.sda.x);
+			else spotcutoff=0;
+		}
+	}
+	else
+	{
+		dir=normalize(l.pos.xyz);
+		distance=1;
+	}	
+}
+
+PSOUT p(VSOUT v)
+{
+	float normmult=1;
+	if (data.z&gt;0.5) normmult=-1;
+
+	float4 albedo=t_0.Sample(Sampler,v.uv.xy);
+	float4 normalMap=t_1.Sample(Sampler,v.uv.xy);
+
+	float3 N=perturb_normal(normalize(v.Normal)*normmult,v.p,v.uv.xy, normalMap.xyz);
+	float3 V=normalize(campos.xyz-v.p);
+	
+	float3 F0 = 0.04;
+	float metallic=ApplyModifier(albedo.w,data.y);
+	float roughness=ApplyModifier(normalMap.w,data.x);
+    F0 = lerp(F0, albedo.xyz, metallic);
+	
+	float3 Lo = 0;
+    for(int i = 0; i &lt; lightcount[0]; ++i)
+    {
+		lightdata l=lights[i];
+		float3 L;
+		float distance;
+		float spotcutoff=1;
+		GetLightData(l,v.p,L,distance,spotcutoff);
+
+		// calculate per-light radiance
+        float3 H = normalize(V + L);
+        //float distance    = length(l.pos.xyz - v.p);
+        float attenuation = 1.0 / (distance * distance);
+        float3 radiance     = l.diffuse.xyz * attenuation * spotcutoff;
+        
+        // cook-torrance brdf
+        float NDF = DistributionGGX(N, H, roughness);        
+        float G   = GeometrySmith(N, V, L, roughness);      
+        float3 F  = fresnelSchlick(max(dot(H, V), 0.0), F0);       
+        
+        float3 kS = F;
+        float3 kD = 1 - kS;
+        kD *= 1.0 - metallic;	  
+        
+        float3 numerator    = NDF * G * F;
+        float denominator = 4.0 * max(dot(N, V), 0.0) * max(dot(N, L), 0.0);
+        float3 specular     = numerator / max(denominator, 0.001);  
+            
+        // add to outgoing radiance Lo
+        float NdotL = max(dot(N, L), 0.0);                
+        Lo += (kD * albedo.xyz / PI + specular) * radiance * NdotL; 
+    }   
+  
+	PSOUT p;
+	p.c=float4(Lo, 1.0);
+	p.nr=float4(N,roughness);
+	p.am=float4(albedo.xyz,metallic);
+	
+	return p;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>8B8A33FF2B0E726DDD928D6754D0C3BE</GUID>
+        <Name>Albedo Map (alpha is Metalness)</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>6DD97B71C15690B7FBFE0F10E38F7183</GUID>
+        <Name>Normal Map (Alpha is Roughness)</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>8</Type>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>87DEFF81A095115449BCA9B089FB5B2A</GUID>
+        <Name>Roughness Modifier</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <DefaultValue>//7+PgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>7286301357B2FEC56EBEC87B4A7B704B</GUID>
+        <Name>Metalness Modifier</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <DefaultValue>//7+PgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>4EC3695F84FCBD9FF5FE4F6DC6287871</GUID>
+        <Name>Invert Normals</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>3CAD412881630D9D5721BF4D1D4B8A0C</GUID>
+        <Name>Culling</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>5</Type>
+      
+        <DefaultValue>AwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>1F02CDB955E0799D4359A5ABEF7024C2</GUID>
+        <Name>ZMode</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>2</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>1BE5E7844E799944F2F51B6E223244FB</GUID>
+        <Name>Render Priority</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>6</Type>
+      
+        <DefaultValue>fwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>2C884AF8578B8F54E03AFC52C9BF29E8</GUID>
+        <Name>Blending</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AQAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>DD2ED55A6A7511D4AE7A47FC3A9561F4</GUID>
+    <Name>[PBR Pure Deferred]</Name>
+    <Type>0</Type>
+    <TargetLayer>0B660A129B4CFDA2A5A2D3E4E0949FA6</TargetLayer>
+  
+    <Pass>
+      <Name>Solid Pass</Name>
+      <Code>Texture2D t_0:register(t0);
+Texture2D t_1:register(t1);
+SamplerState Sampler:register(s0);
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 data;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float3 Normal: TEXCOORD1;
+	float4 uv:TEXCOORD0;
+	float3 p:TEXCOORD2;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;
+	
+	k.p=mul(worldmat,float4(x.Position,1)).xyz;
+	k.Normal=mul(itworldmat,float4(x.Normal,0)).xyz;
+	k.Position=mul(projmat,mul(viewmat,float4(k.p,1)));
+	k.uv=x.UV;
+	return k;
+}
+
+float3 perturb_normal(float3 N, float3 p, float2 uv, float3 map)
+{
+    float3 dp1 = ddx( p );
+    float3 dp2 = ddy( p );
+    float2 duv1 = ddx( uv );
+    float2 duv2 = ddy( uv );
+ 
+    // solve the linear system
+    float3 dp2perp = cross( dp2, N );
+    float3 dp1perp = cross( N, dp1 );
+    float3 T = dp2perp * duv1.x + dp1perp * duv2.x;
+    float3 B = dp2perp * duv1.y + dp1perp * duv2.y;
+ 
+    // construct a scale-invariant frame 
+    float invmax = rsqrt( max( dot(T,T), dot(B,B) ) );
+
+	float3x3 tangentFrame=float3x3( T * invmax, B * invmax, N );
+	
+	if (dot(map,map)==0) map=float3(0.5,0.5,1); //hack to fix not selected texture
+	
+	map=map*2-1;
+
+	return normalize( mul( map, tangentFrame ) );
+}
+
+float ApplyModifier( float value, float modifier )
+{
+	if (modifier&lt;=127/255.0)
+		return value*modifier/(127/255.0);
+	else
+		return lerp(value,1,(modifier-127/255.0)/(128/255.0));	
+}
+
+struct PSOUT
+{
+	float4 am:SV_TARGET1;
+	float4 nr:SV_TARGET2;
+};
+
+PSOUT p(VSOUT v)
+{
+	float normmult=1;
+	if (data.z&gt;0.5) normmult=-1;
+
+	float4 albedo=t_0.Sample(Sampler,v.uv.xy);
+	float4 normalMap=t_1.Sample(Sampler,v.uv.xy);
+
+	float3 normal=perturb_normal(normalize(v.Normal)*normmult,v.p,v.uv.xy, normalMap.xyz);
+	albedo.w=ApplyModifier(albedo.w,data.y);
+	
+	PSOUT p;
+	p.nr=float4(normal,ApplyModifier(normalMap.w,data.x));
+	p.am=albedo;
+	return p;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>8B8A33FF2B0E726DDD928D6754D0C3BE</GUID>
+        <Name>Albedo Map (alpha is Metalness)</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>6DD97B71C15690B7FBFE0F10E38F7183</GUID>
+        <Name>Normal Map (Alpha is Roughness)</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>8</Type>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>AF6EBDB21D965C28DD6DDF6F15FCF98A</GUID>
+        <Name>Roughness Modifier</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <DefaultValue>//7+PgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>8E9D011E39D25D6F8498EA2ACFA0166D</GUID>
+        <Name>Metalness Modifier</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <DefaultValue>//7+PgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>EF6481AD72EAE8DFC127734421A52F5D</GUID>
+        <Name>Invert Normals</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>F22515E52761FD20D08534D1601EFE43</GUID>
+        <Name>Culling</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>5</Type>
+      
+        <DefaultValue>AwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>F36F69801B2768BFAC346009058E80FC</GUID>
+        <Name>ZMode</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>2</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>78EC329F9CDC749CDF9B0F8FBD7BE892</GUID>
+        <Name>Render Priority</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>6</Type>
+      
+        <DefaultValue>fwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>F03865288E732EB6A215C350DAC81D76</GUID>
+        <Name>Blending</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AQAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>E29A95A4D3FD630C418CF73778137606</GUID>
+    <Name>Colored Texture</Name>
+    <Type>0</Type>
+    <TargetLayer>0B660A129B4CFDA2A5A2D3E4E0949FA6</TargetLayer>
+  
+    <Pass>
+      <Name>New Pass</Name>
+      <Code>Texture2D t_0:register(t0);
+SamplerState Sampler:register(s0);
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 color;
+	float alphatest;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float3 Normal: TEXCOORD1;
+	float2 uv:TEXCOORD0;
+	float3 p:TEXCOORD2;
+};
+
+struct PSOUT
+{
+	float4 Color:SV_TARGET0;
+	float4 NormalZ:SV_TARGET1;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;
+
+	k.p=mul(worldmat,float4(x.Position,1)).xyz;
+	k.Position=mul(projmat,mul(viewmat,float4(k.p,1)));
+
+	k.uv=x.UV.xy;
+	k.Normal=0;
+	return k;
+}
+
+PSOUT p(VSOUT v)
+{
+	float4 t=t_0.Sample(Sampler,v.uv.xy);
+	if (alphatest&gt;t.a*255/256.0) discard;
+
+	PSOUT o;
+	o.Color=t*color;
+	o.NormalZ.xyz=normalize(v.Normal);
+	o.NormalZ=mul(viewmat,float4(v.p,1)).z;
+	return o;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>F6A1FAE63E1D9AFF3CC77BB727475DAC</GUID>
+        <Name>Texture</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>FA7D6F80E43F84F2F179364DD26A510F</GUID>
+        <Name>Color</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>1</Type>
+      
+        <DefaultValue>AACAPwAAgD8AAIA/AACAPw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>6CCC876B752C32F1E3FB58525273BDEB</GUID>
+        <Name>Cullmode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>5</Type>
+      
+        <DefaultValue>AwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>769B9183B0BCB2CDB21153B55233C194</GUID>
+        <Name>Zmode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>2</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>EBD1F97CAB311067A61F36467C5A39B6</GUID>
+        <Name>BlendMode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>15</Type>
+      
+        <DefaultValue>AQAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>1C1EC3A5D789F2E071A414B31E27A8B1</GUID>
+        <Name>AlphaTest</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>6FF5D701CFEA9FBEDDCBFAA3905EE337</GUID>
+        <Name>Render Priority</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>6</Type>
+      
+        <DefaultValue>fwAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>D9BCB25B70726C223C6F5F322777287C</GUID>
+    <Name>Default Particle</Name>
+    <Type>3</Type>
+    <TargetLayer>1424586010B909EA488C988A1F5021F9</TargetLayer>
+  
+    <Pass>
+      <Name>Particle pass</Name>
+      <Code>Texture2D t_0:register(t0);
+Texture2D t_1:register(t1);
+SamplerState Sampler:register(s0);
+SamplerState Smp:register(s1);
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 color;
+	float alphatest;
+}
+
+struct VSIN
+{
+	float4 Position : POSITION0;
+	float4 Data : TEXCOORD0;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float4 Color:TEXCOORD0;
+	float4 Data:TEXCOORD1;
+	float4 Size:TEXCOORD2;
+	float AlphaTest:TEXCOORD3;
+};
+
+struct GSOUT
+{
+	float4 Position : SV_POSITION;
+	float2 UV : TEXCOORD0;
+	float4 Data:TEXCOORD1;
+	float4 Color:TEXCOORD2;
+	float AlphaTest:TEXCOORD3;
+};
+
+[maxvertexcount(4)]
+void g(point VSOUT input[1], inout TriangleStream&lt;GSOUT&gt; OutputStream)
+{
+	float4 p=input[0].Position;
+	float4 scale=0.1*input[0].Size.x;
+	float r=0.1*input[0].Data.y;
+	float4 x=float4(sin(r),cos(r),0,0);
+	float4 y=float4(-x.y,x.x,0,0);
+
+	GSOUT vx[4];
+
+	vx[0].Position=mul(projmat,p+(-x-y)*scale);
+	vx[0].UV=float2(1,1);
+	vx[1].Position=mul(projmat,p+(x-y)*scale);
+	vx[1].UV=float2(1,0);
+	vx[2].Position=mul(projmat,p+(x+y)*scale);
+	vx[2].UV=float2(0,0);
+	vx[3].Position=mul(projmat,p+(-x+y)*scale);
+	vx[3].UV=float2(0,1);
+	
+	vx[0].Data=vx[1].Data=vx[2].Data=vx[3].Data=input[0].Data;
+	vx[0].Color=vx[1].Color=vx[2].Color=vx[3].Color=input[0].Color;
+	vx[0].AlphaTest=vx[1].AlphaTest=vx[2].AlphaTest=vx[3].AlphaTest=input[0].AlphaTest;
+
+	OutputStream.Append(vx[3]);
+	OutputStream.Append(vx[0]);
+	OutputStream.Append(vx[2]);
+	OutputStream.Append(vx[1]);
+
+	OutputStream.RestartStrip();	
+}
+
+float pdata(int id, float l)
+{
+	float t = 1-l;
+	float a = t_0.Load(int3(trunc(t*2048),id,0)).x;
+	float b = t_0.Load(int3(trunc(t*2048)+1,id,0)).x;
+	return lerp(a,b, frac(t*2048) );
+}
+
+float GetNoise(float tin)
+{
+ return frac(sin(tin*54.37)*17593.1317);
+}
+
+float pdatachaos(int id, int cid, float c, float l)
+{
+	return pdata(id,l)+pdata(cid,l)*GetNoise(c+cid);
+}
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;
+
+	k.Position=mul(viewmat,x.Position);
+
+	k.Data=x.Data;
+	k.Color.x=pdatachaos(0,5,x.Data.z,x.Data.x);
+	k.Color.y=pdatachaos(1,6,x.Data.z,x.Data.x);
+	k.Color.z=pdatachaos(2,7,x.Data.z,x.Data.x);
+	k.Color.w=pdatachaos(3,8,x.Data.z,x.Data.x);
+	k.Size=pdatachaos(4,9,x.Data.z,x.Data.x);
+	k.AlphaTest=pdata(10,x.Data.x);
+	return k;
+}
+
+float4 p(GSOUT v) : SV_TARGET0
+{
+	//return v.AlphaTest;
+	float4 t = t_1.Sample(Sampler,v.UV);
+	if (t.w&lt;v.AlphaTest)
+		discard;
+	return v.Color*t;// v.UV.xyxy;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>21804F8A15EED15B9F3461E5108EA527</GUID>
+        <Name>Culling</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>5</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>D718FFA06E9C1B9191BA62205F29CD51</GUID>
+        <Name>Z mode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>2</Type>
+      
+        <DefaultValue>AgAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>E8F2764E64204DE510CBA2CA47F3ADA2</GUID>
+        <Name>Blending</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>15</Type>
+      
+        <DefaultValue>VAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>898C7D2ADEA9EA9876C2729200AFC8D6</GUID>
+        <Name>Texture</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>8</Type>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>86C8C380A01ADAAF2341241322DCB75E</GUID>
+        <Name>Red</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <DefaultValue>AACAPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>7981A98594F21F0753ACD1921DDB2EAD</GUID>
+        <Name>Green</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <DefaultValue>AACAPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>A34D02E2C9BF19BE92547FDD64DB1597</GUID>
+        <Name>Blue</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <DefaultValue>AACAPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>0A46CB1EAF31C7AD6F5DD8E2AEE3FD11</GUID>
+        <Name>Alpha</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <DefaultValue>AACAPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>2B0FF4087D0ECFCD6FCBD138F1EF0B7E</GUID>
+        <Name>Size</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <DefaultValue>AACAPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>0730E7826620EE356815534D67C35161</GUID>
+        <Name>Red Chaos</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>ED46EA413D16A0BC90748ADD3216B65E</GUID>
+        <Name>Green Chaos</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>78C6F826000C5E3A31F01A87E18F7838</GUID>
+        <Name>Blue Chaos</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>EF92B48D5D6B83C61853CBE910C8DA60</GUID>
+        <Name>Alpha Chaos</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>7439552AFCCDD02D9F85BBFB7F65E7AF</GUID>
+        <Name>Size Chaos</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>9026CE0FB858C46E32A0F524E69ECE03</GUID>
+        <Name>alphatest</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>07D72FA094C9ACA3EA268BA044F3E496</GUID>
+    <Name>Deferred Ambient Light</Name>
+    <Type>0</Type>
+    <TargetLayer>0BE1808FCCA5B61BC690EAC74EADDEA5</TargetLayer>
+  
+    <Pass>
+      <Name>Sphere Light</Name>
+      <Code>Texture2D t_0:register(t0);
+Texture2D t_1:register(t1);
+Texture2D t_2:register(t7);
+SamplerState Sampler:register(s0);
+
+struct lightdata
+{
+	float4 pos;
+	float4 ambient;
+	float4 diffuse;
+	float4 specular;
+	float4 spotdirection;
+	float4 sda;
+};
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+	float4 lightcount;
+	lightdata lights[8];
+	float4 res;
+	float4x4 iviewmat;
+	float4x4 iprojmat;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 lightColor;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float2 uv:TEXCOORD0;
+	float4 pos:TEXCOORD1;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;	
+	k.Position=float4(x.Position.xzy*2,1);
+	k.pos.xyz=transpose(worldmat)[3].xyz;
+	k.pos.w=length(mul(worldmat,float4(0,1,0,0)));
+	k.uv=x.UV.xy;
+	return k;
+}
+
+float3 getWorldPos(float depth, float2 uv)
+{
+	float4 a=mul(iviewmat,mul(iprojmat, float4(uv*2-1,depth,1)));
+	return a.xyz/a.w;	
+}
+
+#define PI 3.14159265
+
+float3 fresnelSchlick(float cosTheta, float3 F0)
+{
+    return F0 + (1.0 - F0) * pow(1.0 - cosTheta, 5.0);
+}  
+
+float3 DiffuseIBL(float3 N, float3 V, float3 F0, float3 albedo, float metallic)
+{
+	float3 H = normalize(V + N);
+    float3 F = fresnelSchlick(max(dot(H, V), 0.0), F0);       
+	return (1 - F) * (1.0 - metallic)*lightColor.xyz*albedo/PI;
+}
+
+float4 p(VSOUT v) : SV_TARGET0
+{ 
+	float4 albedo=t_0.Load(int3(v.Position.xy,0));
+	float4 normal=t_1.Load(int3(v.Position.xy,0));
+	float depth=t_2.Load(int3(v.Position.xy,0)).x;
+
+	float roughness = normal.w;
+	float metallic = albedo.w;
+	
+	float3 N=normalize(normal.xyz);
+	float3 V=normalize(campos.xyz-getWorldPos(depth,v.uv));
+	
+	float3 F0 = 0.04;
+    F0 = lerp(F0, albedo.xyz, metallic);
+	
+	return float4(DiffuseIBL(N,V,F0,albedo.xyz,metallic),1); 
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>42CF2F5EF3C73DEDCFD6230C95C17391</GUID>
+        <Name>Blending</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>EQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>90AB32A60E19F15E6DCF5F41F77E94F1</GUID>
+        <Name>Culling</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>5</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>7D56C3615A56AF849133C49EDABE63BB</GUID>
+        <Name>Albedo and Metalness</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>7</Type>
+      
+        <TextureGUID>A277553146FC64CF028CD78429CB0C26</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>B61A66B408C0301A57445736695B71CB</GUID>
+        <Name>Normal and Roughness</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>8</Type>
+      
+        <TextureGUID>2EAC5AF0314990354101A913294D674C</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>FB01F4A2B6AD6037BC0FF467F561B032</GUID>
+        <Name>Depth</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>25</Type>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>56CB4BD94488A27472D1817E2180C79C</GUID>
+        <Name>Light Color</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>1</Type>
+      
+        <DefaultValue>AACAPwAAgD8AAIA/AACAPw==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>168625FA5DABA54CC9795DAE67349F4E</GUID>
+    <Name>Deferred Fake Cubemap</Name>
+    <Type>0</Type>
+    <TargetLayer>0BE1808FCCA5B61BC690EAC74EADDEA5</TargetLayer>
+  
+    <Pass>
+      <Name>Sphere Light</Name>
+      <Code>Texture2D t_0:register(t0);
+Texture2D t_1:register(t1);
+Texture2D t_2:register(t2);
+Texture2D t_3:register(t7);
+SamplerState Sampler:register(s0);
+
+struct lightdata
+{
+	float4 pos;
+	float4 ambient;
+	float4 diffuse;
+	float4 specular;
+	float4 spotdirection;
+	float4 sda;
+};
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+	float4 lightcount;
+	lightdata lights[8];
+	float4 res;
+	float4x4 iviewmat;
+	float4x4 iprojmat;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float2 uv:TEXCOORD0;
+	float4 pos:TEXCOORD1;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;	
+	k.Position=float4(x.Position.xzy*2,1);
+	k.pos.xyz=transpose(worldmat)[3].xyz;
+	k.pos.w=length(mul(worldmat,float4(0,1,0,0)));
+	k.uv=x.UV.xy;
+	return k;
+}
+
+float3 getWorldPos(float depth, float2 uv)
+{
+	float4 a=mul(iviewmat,mul(iprojmat, float4(uv*2-1,depth,1)));
+	return a.xyz/a.w;	
+}
+
+#define PI 3.14159265
+
+float3 fresnelSchlick(float cosTheta, float3 F0)
+{
+    return F0 + (1.0 - F0) * pow(1.0 - cosTheta, 5.0);
+}  
+
+float radicalInverse_VdC(uint bits) {
+     bits = (bits &lt;&lt; 16u) | (bits &gt;&gt; 16u);
+     bits = ((bits &amp; 0x55555555u) &lt;&lt; 1u) | ((bits &amp; 0xAAAAAAAAu) &gt;&gt; 1u);
+     bits = ((bits &amp; 0x33333333u) &lt;&lt; 2u) | ((bits &amp; 0xCCCCCCCCu) &gt;&gt; 2u);
+     bits = ((bits &amp; 0x0F0F0F0Fu) &lt;&lt; 4u) | ((bits &amp; 0xF0F0F0F0u) &gt;&gt; 4u);
+     bits = ((bits &amp; 0x00FF00FFu) &lt;&lt; 8u) | ((bits &amp; 0xFF00FF00u) &gt;&gt; 8u);
+     return float(bits) * 2.3283064365386963e-10; // / 0x100000000
+ }
+ // http://holger.dammertz.org/stuff/notes_HammersleyOnHemisphere.html
+ float2 Hammersley(uint i, uint N) {
+     return float2(float(i)/float(N), radicalInverse_VdC(i));
+ }
+
+float3 hemisphereSample_uniform(float u, float v) 
+{
+	float phi = v * 2.0 * PI;
+	float cosTheta = 1.0 - u;
+	float sinTheta = sqrt(1.0 - cosTheta * cosTheta);
+	return float3(cos(phi) * sinTheta, sin(phi) * sinTheta, cosTheta);
+}
+
+float2 DeCube( float3 uv )
+{
+	float3 absUV = abs(uv);
+	float maxAxis=max(max(absUV.x,absUV.y),absUV.z);
+	float2 uvc=uv.zy;
+	if ( maxAxis==absUV.y ) uvc=uv.xz;
+	if ( maxAxis==absUV.z ) uvc=uv.xy;
+	return 0.5*(uvc/maxAxis+1);
+}
+
+float3 ImportanceSampleGGX( float2 Xi, float Roughness, float3 N )
+{
+	float a = Roughness * Roughness;
+	float Phi = 2 * PI * Xi.x;
+	float CosTheta = sqrt( (1 - Xi.y) / ( 1 + (a*a - 1) * Xi.y ) );
+	float SinTheta = sqrt( 1 - CosTheta * CosTheta );
+	float3 H;
+	H.x = SinTheta * cos( Phi );
+	H.y = SinTheta * sin( Phi );
+	H.z = CosTheta;
+	float3 UpVector = abs(N.z) &lt; 0.999 ? float3(0,0,1) : float3(1,0,0);
+	float3 TangentX = normalize( cross( UpVector, N ) );
+	float3 TangentY = cross( N, TangentX );
+	// Tangent to world space
+	return TangentX * H.x + TangentY * H.y + N * H.z;
+}
+
+float GeometrySchlickGGX(float NdotV, float roughness)
+{
+    float r = (roughness + 1.0);
+    float k = (r*r) / 8.0;
+
+    float num   = NdotV;
+    float denom = NdotV * (1.0 - k) + k;
+	
+    return num / denom;
+}
+
+float GeometrySmith(float3 N, float3 V, float3 L, float roughness)
+{
+    float NdotV = max(dot(N, V), 0.0);
+    float NdotL = max(dot(N, L), 0.0);
+    float ggx2  = GeometrySchlickGGX(NdotV, roughness);
+    float ggx1  = GeometrySchlickGGX(NdotL, roughness);
+	
+    return ggx1 * ggx2;
+}
+
+float3 SpecularIBL( float3 SpecularColor , float Roughness, float3 N, float3 V )
+{
+	float3 SpecularLighting = 0;
+	const uint NumSamples = 32;
+	for( uint i = 0; i &lt; NumSamples; i++ )
+	{
+		float2 Xi = Hammersley( i, NumSamples );
+
+		float3 H = ImportanceSampleGGX( Xi, Roughness, N );
+		float3 L = 2 * dot( V, H ) * H - V;
+		float NoV = saturate( dot( N, V ) );
+		float NoL = saturate( dot( N, L ) );
+		float NoH = saturate( dot( N, H ) );
+		float VoH = saturate( dot( V, H ) );
+		if( NoL &gt; 0 )
+		{
+			float3 SampleColor = t_2.SampleLevel( Sampler , DeCube(L), 0 ).rgb;
+			float G = GeometrySmith( N, V, L, Roughness );
+			float Fc = pow( 1 - VoH, 5 );
+			float3 F = (1 - Fc) * SpecularColor + Fc;
+			// Incident light = SampleColor * NoL
+			// Microfacet specular = D*G*F / (4*NoL*NoV)
+			// pdf = D * NoH / (4 * VoH)
+			SpecularLighting += SampleColor * F * G * VoH / (NoH * NoV);
+		}
+	}
+	return SpecularLighting / NumSamples;
+}
+
+float3 DiffuseIBL(float3 N, float3 V, float3 F0, float3 albedo, float metallic)
+{
+	float3 H = normalize(V + N);
+    float3 F  = fresnelSchlick(max(dot(H, V), 0.0), F0);       
+	
+    float3 kD = 1 - F;
+    kD *= 1.0 - metallic;
+	
+	const uint NumSamples = 64;
+	
+	float3 smp=0;
+	
+	float3 tmp=float3(0,1,0);
+	if (abs(dot(tmp,N))&lt;0.1)
+		tmp=float3(1,0,0);
+	
+	float3 X=normalize(cross(N,tmp));
+	float3 Y=normalize(cross(X,N));
+	float3x3 mat=float3x3(X,Y,N);
+	
+	for( uint i = 0; i &lt; NumSamples; i++ )
+	{
+		float2 Xi = Hammersley( i, NumSamples );
+		float3 v = hemisphereSample_uniform(Xi.x, Xi.y);
+		float3 v2=mul(v,mat);
+		smp+=t_2.SampleLevel( Sampler , DeCube(v2), 8 ).rgb;
+	}
+	
+	return kD*(smp/NumSamples)*albedo/PI;
+}
+
+float4 p(VSOUT v) : SV_TARGET0
+{ 
+	float4 albedo=t_0.Load(int3(v.Position.xy,0));
+	float4 normal=t_1.Load(int3(v.Position.xy,0));
+	float depth=t_3.Load(int3(v.Position.xy,0)).x;
+
+	float roughness = normal.w;
+	float metallic = albedo.w;
+	
+	float3 N=normalize(normal.xyz);
+	float3 V=normalize(campos.xyz-getWorldPos(depth,v.uv));
+	
+	float3 F0 = 0.04;
+    F0 = lerp(F0, albedo.xyz, metallic);
+	
+	float3 light = DiffuseIBL(N,V,F0,albedo.xyz,metallic); 
+	light+=SpecularIBL(F0, roughness, N, V);
+	
+	return float4(light,1);
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>BD9E334A4732B0A557939451D328D1D2</GUID>
+        <Name>Blending</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>EQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>9EFA5A2D20A9FB53199F604F1020D358</GUID>
+        <Name>Culling</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>5</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>5609525ABA001495C6AC5DDBE6DB821A</GUID>
+        <Name>Albedo and Metalness</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>7</Type>
+      
+        <TextureGUID>A277553146FC64CF028CD78429CB0C26</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>61832A03E0FC4BA7653643A90F8E0776</GUID>
+        <Name>Normal and Roughness</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>8</Type>
+      
+        <TextureGUID>2EAC5AF0314990354101A913294D674C</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>93744B6F447A3D5B22F2737CDC4C4609</GUID>
+        <Name>Depth</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>25</Type>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>F37544CDAE35B589734DF51A60645618</GUID>
+        <Name>Envmap (non-cube)</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>9</Type>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>DF3B04D3DDCB67A835408CE58B6BA679</GUID>
+    <Name>PointSprites</Name>
+    <Type>0</Type>
+    <TargetLayer>1424586010B909EA488C988A1F5021F9</TargetLayer>
+  
+    <Pass>
+      <Name>New Pass</Name>
+      <Code>Texture2D t_0:register(t0);
+SamplerState Sampler:register(s0);
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 color;
+	float scale;
+	float offset;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+};
+
+float4 v(VSIN x) : SV_POSITION
+{
+	return mul(viewmat,float4(mul(worldmat,float4(x.Position,1)).xyz,1));
+}
+
+struct GSOUT
+{
+	float4 Position : SV_POSITION;
+	float2 UV : TEXCOORD0;
+};
+
+[maxvertexcount(4)]
+void g(triangle VSOUT input[3], inout TriangleStream&lt;GSOUT&gt; OutputStream)
+{
+	float4 p=(input[0].Position+input[1].Position+input[2].Position)/3.0f;
+	float3 a=normalize(input[0].Position.xyz-input[1].Position.xyz);
+	float3 b=normalize(input[2].Position.xyz-input[1].Position.xyz);
+	float3 n=cross(a,b);
+	p+=float4(n,0)*offset;
+
+	GSOUT vx[4];
+
+	vx[0].Position=mul(projmat,p+float4(-1,-1,0,0)*scale);
+	vx[0].UV=float2(0,0);
+	vx[1].Position=mul(projmat,p+float4(1,-1,0,0)*scale);
+	vx[1].UV=float2(1,0);
+	vx[2].Position=mul(projmat,p+float4(1,1,0,0)*scale);
+	vx[2].UV=float2(1,1);
+	vx[3].Position=mul(projmat,p+float4(-1,1,0,0)*scale);
+	vx[3].UV=float2(0,1);
+
+	OutputStream.Append(vx[3]);
+	OutputStream.Append(vx[0]);
+	OutputStream.Append(vx[2]);
+	OutputStream.Append(vx[1]);
+
+	OutputStream.RestartStrip();	
+}
+
+float4 p(GSOUT v) : SV_TARGET0
+{
+	return t_0.Sample(Sampler,v.UV.xy)*color;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>B60C314357C2E51CFD94C6FCC20502B2</GUID>
+        <Name>Cullmode</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>5</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>8BF7697D5A620EC7C2773D21F47EEE6B</GUID>
+        <Name>BlendMode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>15</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>C5900026C82CE9663762C6EFBEDF3EF1</GUID>
+        <Name>ZMode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>2</Type>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>C1466038720EB9D4632A99FF2226F5E0</GUID>
+        <Name>Texture</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>9FD2D533AD96F1D4C7ECB1723769E963</GUID>
+        <Name>Color</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>1</Type>
+      
+        <DefaultValue>AACAPwAAgD8AAIA/AACAPw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>4894D079E6BCF18E31A380C8BDF9A430</GUID>
+        <Name>Sprite Size</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <DefaultValue>0dBQPQAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>8BDCBCDFC913A5697498B22558B7E559</GUID>
+        <Name>Sprite offset</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <DefaultValue>ycjIPQAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>2A9BCBB81A1352D113B8B5BF0982D887</GUID>
+    <Name>Wireframe</Name>
+    <Type>0</Type>
+    <TargetLayer>0B660A129B4CFDA2A5A2D3E4E0949FA6</TargetLayer>
+  
+    <Pass>
+      <Name>Wireframe Pass</Name>
+      <Code>cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 color;
+	float offset;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2 : POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float4 Normal: NORMAL0;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT o;
+	o.Position=float4(mul(worldmat,float4(x.Position,1)).xyz,1);
+	o.Normal=float4(normalize(mul(worldmat,float4(x.Normal,1)).xyz),1);
+	return o;
+}
+
+struct GSOUT
+{
+	float4 Position : SV_POSITION;
+};
+
+[maxvertexcount(2)]
+void g(line VSOUT input[2], inout LineStream&lt;GSOUT&gt; OutputStream)
+{
+	GSOUT vx[2];
+
+	for (int x=0; x&lt;2; x++)
+		{
+			float3 p=input[x].Position.xyz+input[x].Normal.xyz*offset;
+			GSOUT g;
+			g.Position=mul(projmat,mul(viewmat,float4(p,1)));
+			OutputStream.Append(g);
+		}
+
+	OutputStream.RestartStrip();	
+}
+
+float4 p(GSOUT v) : SV_TARGET0
+{
+	return color;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>7D1A21A882071C04727232D8AAD62AFF</GUID>
+        <Name>Color</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>1</Type>
+      
+        <DefaultValue>AACAPwAAgD8AAIA/AACAPw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>7C46FA4CC80DDEFF587BA6B3DF8C1361</GUID>
+        <Name>Fillmode</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>4</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>F1EE2750D698C58A7900CF9F3B5B866E</GUID>
+        <Name>BlendMode</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>VAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>786837C98D8069FCF99D1374311B6B95</GUID>
+        <Name>Zmode</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>2</Type>
+      
+        <Value>AgAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>CDBD1EC59A8FDB6B0747E5D78BE6662C</GUID>
+        <Name>Offset</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <DefaultValue>4eBgPQAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>DE92A2BBD9EFF2B79F111FD28A701A93</GUID>
+    <Name>Precalc</Name>
+    <Type>2</Type>
+    <TargetLayer>NONENONENONENONENONENONENONENONE</TargetLayer>
+  
+    <Pass>
+      <Name>New Pass</Name>
+      <Code>cbuffer b : register(b0)
+{
+	float4 data;
+}
+
+int rect( int2 r, int2 t )
+{
+	t-=data.zw/2;
+	return all(t&gt;-r &amp;&amp; t&lt;r);
+}
+
+float4 p( float4 t:SV_Position ) : SV_TARGET0
+{ 
+	int2 s = int2(data.z/5,5);
+	return rect(s,t)-rect((s-1)*float2(1-data.x,1),t);
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>AC73680E8F7CDEDE109D64B516FF2CFF</GUID>
+        <Name>New Parameter</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>23</Type>
+      
+        <TextureGUID>B804E9F623AABCBA232F247216EE216B</TextureGUID>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <event>
+    <GUID>3807A818400756CA946DB3B40935CB46</GUID>
+    <Type>2</Type>
+    <Pass>0</Pass>
+    <StartFrame>0</StartFrame>
+    <EndFrame>999</EndFrame>
+    <TargetRT>B804E9F623AABCBA232F247216EE216B</TargetRT>
+    <Name></Name>
+    <TimeSpline>
+      <interpolation>1</interpolation>
+      <loop>0</loop>
+      <waveform>0</waveform>
+      <multiplicativewaveform>0</multiplicativewaveform>
+      <wfamplitude>15360</wfamplitude>
+      <wffrequency>18688</wffrequency>
+      <wfrandseed>0</wfrandseed>
+      <key>
+        <time>0</time>
+        <value id="0">0</value>
+        <value id="1">0</value>
+        <value id="2">0</value>
+        <value id="3">0</value>
+        <controlpos id="0">15</controlpos>
+        <controlpos id="1">15</controlpos>
+        <controlvalue id="0">0</controlvalue>
+        <controlvalue id="1">0</controlvalue>
+        <controlvalue id="2">0</controlvalue>
+        <controlvalue id="3">0</controlvalue>
+        <controlvalue id="4">0</controlvalue>
+        <controlvalue id="5">0</controlvalue>
+      </key>
+    
+      <key>
+        <time>255</time>
+        <value id="0">15360</value>
+        <value id="1">0</value>
+        <value id="2">0</value>
+        <value id="3">0</value>
+        <controlpos id="0">15</controlpos>
+        <controlpos id="1">15</controlpos>
+        <controlvalue id="0">0</controlvalue>
+        <controlvalue id="1">0</controlvalue>
+        <controlvalue id="2">0</controlvalue>
+        <controlvalue id="3">0</controlvalue>
+        <controlvalue id="4">0</controlvalue>
+        <controlvalue id="5">0</controlvalue>
+      </key>
+    </TimeSpline>
+  
+    <Tech>DE92A2BBD9EFF2B79F111FD28A701A93</Tech>
+  
+    <TechData/>
+  </event>
+</apExProject>

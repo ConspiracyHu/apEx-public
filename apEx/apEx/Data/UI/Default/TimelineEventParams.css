@@ -1,0 +1,172 @@
+#main
+{
+	margin:1px;
+}
+
+button
+{
+	width:100%;
+	height:15px;
+	top:0px;
+}
+
+#materialparams
+{
+	margin:0px;
+	top:16px;
+	border:1px;
+	padding:1px;
+	child-layout:vertical;
+	child-fill-x:true;
+	child-spacing:1px;
+}
+
+trackbar
+{
+	height:15px;
+}
+
+.parambox
+{	
+	child-layout:vertical;
+	child-fill-x:true;
+	child-spacing:1px;
+	border:1px;
+	padding:1px;
+}
+
+.textureselect
+{
+	height:32px;
+}
+
+.rendertargetselect
+{
+	height:32px;
+}
+
+label
+{
+	height:12px;
+}
+
+.parambox button
+{
+	width:100%;
+	height:15px;
+}
+
+.blendselect
+{
+	height:44px;
+}
+
+.blendlist
+{
+	margin:0px;
+	child-layout:vertical;
+	child-fill-x:true;
+}
+
+#blendbox
+{
+	height:160px;
+	child-layout:horizontal;
+	child-fill-y:true;
+	child-fill-x:true;
+	child-spacing:1px;
+}
+
+.zmodeselect
+{
+	height:18px;
+}
+
+.zmodebox
+{
+	height:17px;
+	child-fill-y:false;
+}
+
+.colorselect
+{
+	height:80px;
+}
+
+.floatselect
+{
+	height:18px;
+}
+
+.fillselect
+{
+	height:18px;
+}
+
+#culllist
+{
+	height:38px;
+}
+
+.cullselect
+{
+	height:42px;
+}
+
+#zfunctlist
+{
+	height:98px;
+}
+
+.zfunctselect
+{
+	height:102px;
+}
+#eventparambox
+{
+	margin:0px;
+	border:1px;
+	padding:1px;
+	child-layout:vertical;
+	child-fill-x:true;
+}
+
+button
+{
+	height:15px;
+	width:100%;
+}
+
+#eventparambox
+{
+	margin:0px;
+	child-layout:vertical;
+	child-fill-x:true;
+	child-spacing:1px;
+	padding:1px;
+}
+
+.buttonlist
+{
+	height:15px;
+	width:100%;
+	child-layout:horizontal;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:1px;
+}
+
+.buttonlist dropdown
+{
+	width:100%-16px;
+}
+
+#texturelocator
+{
+	width:15px;
+}
+
+#scenelocator
+{
+	width:15px;
+}

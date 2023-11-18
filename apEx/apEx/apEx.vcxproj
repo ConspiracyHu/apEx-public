@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5051A9B8-96CA-44C1-96B8-F98280B86D2F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>apEx</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)include;..\ThirdParty\D3D\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(DXSDK_DIR)lib\x86;..\ThirdParty\D3D\Lib\x86\</LibraryPath>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)include;..\ThirdParty\D3D\Include\</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(DXSDK_DIR)lib\x86;..\ThirdParty\D3D\Lib\x86\</LibraryPath>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeaderFile>BasePCH.h</PrecompiledHeaderFile>
+      <ShowIncludes>false</ShowIncludes>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\WaveSabre\WaveSabreCore\include;$(SolutionDir)Libraries\WaveSabre\WaveSabrePlayerLib\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Shlwapi.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
+      <AssemblyLinkResource>
+      </AssemblyLinkResource>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <PreBuildEvent>
+      <Command>..\buildcounter.exe</Command>
+      <Message>Increment Build Count</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderFile>BasePCH.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\WaveSabre\WaveSabreCore\include;$(SolutionDir)Libraries\WaveSabre\WaveSabrePlayerLib\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>msvcrt.lib;Shlwapi.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AssemblyLinkResource>
+      </AssemblyLinkResource>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <PreBuildEvent>
+      <Command>..\buildcounter.exe</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Increment Build Count</Message>
+    </PreBuildEvent>
+    <Bscmake>
+      <PreserveSBR>true</PreserveSBR>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="apEx.cpp" />
+    <ClCompile Include="apExHelp.cpp" />
+    <ClCompile Include="apExRoot.cpp" />
+    <ClCompile Include="apExWindow.cpp" />
+    <ClCompile Include="BasePCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</MultiProcessorCompilation>
+      <MultiProcessorCompilation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</MultiProcessorCompilation>
+    </ClCompile>
+    <ClCompile Include="BuildInfo.cpp" />
+    <ClCompile Include="CNSPack.cpp" />
+    <ClCompile Include="ColorPicker.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="ConsoleCommands.cpp" />
+    <ClCompile Include="ExtendedList.cpp" />
+    <ClCompile Include="ExternalTools.cpp" />
+    <ClCompile Include="HLSLAST.cpp" />
+    <ClCompile Include="HLSLLexer.cpp" />
+    <ClCompile Include="HLSLParser.cpp" />
+    <ClCompile Include="KasparovImport.cpp" />
+    <ClCompile Include="KKPViewer.cpp" />
+    <ClCompile Include="MeshImport.cpp" />
+    <ClCompile Include="ModelMatrix.cpp" />
+    <ClCompile Include="NumPad.cpp" />
+    <ClCompile Include="Docker.cpp" />
+    <ClCompile Include="NvTriStrip\NvTriStrip.cpp" />
+    <ClCompile Include="NvTriStrip\NvTriStripObjects.cpp" />
+    <ClCompile Include="NvTriStrip\VertexCache.cpp" />
+    <ClCompile Include="TextBox_HLSL.cpp" />
+    <ClCompile Include="MaterialEditor.cpp" />
+    <ClCompile Include="MaterialList.cpp" />
+    <ClCompile Include="MaterialShaderEditor.cpp" />
+    <ClCompile Include="MinimalExport.cpp" />
+    <ClCompile Include="ModelGraph.cpp" />
+    <ClCompile Include="ModelList.cpp" />
+    <ClCompile Include="ModelMaterial.cpp" />
+    <ClCompile Include="ModelParameters.cpp" />
+    <ClCompile Include="ModelPrimitives.cpp" />
+    <ClCompile Include="ModelView.cpp" />
+    <ClCompile Include="ProFont.cpp" />
+    <ClCompile Include="ProjectSettings.cpp" />
+    <ClCompile Include="RenderTargetEditor.cpp" />
+    <ClCompile Include="SceneClips.cpp" />
+    <ClCompile Include="SceneGraph.cpp" />
+    <ClCompile Include="SceneList.cpp" />
+    <ClCompile Include="SceneObjectParameters.cpp" />
+    <ClCompile Include="ScenePrimitives.cpp" />
+    <ClCompile Include="SceneSplineEditor.cpp" />
+    <ClCompile Include="SceneView.cpp" />
+    <ClCompile Include="SplineEditor_Phx.cpp" />
+    <ClCompile Include="TexGenFilterEditor.cpp" />
+    <ClCompile Include="TexGenMain.cpp" />
+    <ClCompile Include="TexGenPages.cpp" />
+    <ClCompile Include="TexGenParameters.cpp" />
+    <ClCompile Include="TexGenPreview.cpp" />
+    <ClCompile Include="TimelineEditor.cpp" />
+    <ClCompile Include="TimelineEventParameters.cpp" />
+    <ClCompile Include="TimelineEventSplines.cpp" />
+    <ClCompile Include="TimelinePreview.cpp" />
+    <ClCompile Include="TreeSpeciesEditor.cpp" />
+    <ClCompile Include="UberTool.cpp" />
+    <ClCompile Include="UICSSEditor.cpp" />
+    <ClCompile Include="UIXMLEditor.cpp" />
+    <ClCompile Include="VideoDumper.cpp" />
+    <ClCompile Include="WorkBench.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Bedrock\BaseLib\BaseLib.vcxproj">
+      <Project>{b6271439-accf-49cd-8f84-aa1156fede17}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bedrock\CoRE2\CoRE2.vcxproj">
+      <Project>{da81b8ab-efb1-495f-9861-374f914a6080}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bedrock\UtilLib\UtilLib.vcxproj">
+      <Project>{ecdb5e35-f1f9-4619-88e7-b9f14f4e0a1a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bedrock\WhiteBoard\WhiteBoard.vcxproj">
+      <Project>{652a214a-d012-4ad5-ac97-52c1e13718e1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Phoenix_Tool\Phoenix_Tool.vcxproj">
+      <Project>{a07e6780-f52e-466c-8fea-3ecc13b4c463}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="apExHelp.h" />
+    <ClInclude Include="apExRoot.h" />
+    <ClInclude Include="apExWindow.h" />
+    <ClInclude Include="BasePCH.h" />
+    <ClInclude Include="BuildCount.h" />
+    <ClInclude Include="BuildInfo.h" />
+    <ClInclude Include="CNSPack.h" />
+    <ClInclude Include="ColorPicker.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="ConsoleCommands.h" />
+    <ClInclude Include="ExtendedList.h" />
+    <ClInclude Include="ExternalTools.h" />
+    <ClInclude Include="Docker.h" />
+    <ClInclude Include="HLSLAST.h" />
+    <ClInclude Include="HLSLBinaryTransform.h" />
+    <ClInclude Include="HLSLLexer.h" />
+    <ClInclude Include="HLSLParser.h" />
+    <ClInclude Include="KasparovImport.h" />
+    <ClInclude Include="KKPViewer.h" />
+    <ClInclude Include="MeshImport.h" />
+    <ClInclude Include="ModelMatrix.h" />
+    <ClInclude Include="NumPad.h" />
+    <ClInclude Include="NvTriStrip\NvTriStrip.h" />
+    <ClInclude Include="NvTriStrip\NvTriStripObjects.h" />
+    <ClInclude Include="NvTriStrip\VertexCache.h" />
+    <ClInclude Include="TextBox_HLSL.h" />
+    <ClInclude Include="MaterialEditor.h" />
+    <ClInclude Include="MaterialList.h" />
+    <ClInclude Include="MaterialShaderEditor.h" />
+    <ClInclude Include="MinimalExport.h" />
+    <ClInclude Include="ModelGraph.h" />
+    <ClInclude Include="ModelList.h" />
+    <ClInclude Include="ModelMaterial.h" />
+    <ClInclude Include="ModelParameters.h" />
+    <ClInclude Include="ModelPrimitives.h" />
+    <ClInclude Include="ModelView.h" />
+    <ClInclude Include="ProFont.h" />
+    <ClInclude Include="ProjectSettings.h" />
+    <ClInclude Include="RenderTargetEditor.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SceneClips.h" />
+    <ClInclude Include="SceneGraph.h" />
+    <ClInclude Include="SceneList.h" />
+    <ClInclude Include="SceneObjectParameters.h" />
+    <ClInclude Include="ScenePrimitives.h" />
+    <ClInclude Include="SceneSplineEditor.h" />
+    <ClInclude Include="SceneView.h" />
+    <ClInclude Include="SplineEditor_Phx.h" />
+    <ClInclude Include="TexGenFilterEditor.h" />
+    <ClInclude Include="TexGenMain.h" />
+    <ClInclude Include="TexGenPages.h" />
+    <ClInclude Include="TexGenParameters.h" />
+    <ClInclude Include="TexGenPreview.h" />
+    <ClInclude Include="TimelineEditor.h" />
+    <ClInclude Include="TimelineEventParameters.h" />
+    <ClInclude Include="TimelineEventSplines.h" />
+    <ClInclude Include="TimelinePreview.h" />
+    <ClInclude Include="TreeSpeciesEditor.h" />
+    <ClInclude Include="UberTool.h" />
+    <ClInclude Include="UICSSEditor.h" />
+    <ClInclude Include="UIXMLEditor.h" />
+    <ClInclude Include="VideoDumper.h" />
+    <ClInclude Include="WorkBench.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\deploy.xml" />
+    <None Include="apex.ico" />
+    <None Include="Data\FilterLibrary.xml" />
+    <None Include="Data\MaterialLibrary.xml" />
+    <None Include="Data\Projects\bokehtest2.apx" />
+    <None Include="Data\Projects\Mesh.apx" />
+    <None Include="Data\Projects\Mesh_Subroutine.apx" />
+    <None Include="Data\Projects\Precalc.apx" />
+    <None Include="Data\Projects\Subroutines.apx" />
+    <None Include="Data\Projects\TerranPlanet.apx" />
+    <None Include="Data\Projects\TestTexture.apx" />
+    <None Include="Data\Projects\TimelineTest.apx" />
+    <None Include="Data\UI\apEx.css" />
+    <None Include="Data\UI\ConsoleWindow.css" />
+    <None Include="Data\UI\ConsoleWindow.xml" />
+    <None Include="Data\UI\CSSEditor.css" />
+    <None Include="Data\UI\CSSEditor.xml" />
+    <None Include="Data\UI\Default\KKPViewer.css" />
+    <None Include="Data\UI\Help.css" />
+    <None Include="Data\UI\Help.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\UI\MaterialEditor.css" />
+    <None Include="Data\UI\MaterialEditor.xml" />
+    <None Include="Data\UI\MaterialList.css" />
+    <None Include="Data\UI\MaterialList.xml" />
+    <None Include="Data\UI\ModelGraph.css" />
+    <None Include="Data\UI\ModelGraph.xml" />
+    <None Include="Data\UI\ModelList.css" />
+    <None Include="Data\UI\ModelList.xml" />
+    <None Include="Data\UI\ModelMaterial.css" />
+    <None Include="Data\UI\ModelMaterial.xml" />
+    <None Include="Data\UI\ModelParameters.css" />
+    <None Include="Data\UI\ModelParameters.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\UI\ModelPrimitives.css" />
+    <None Include="Data\UI\ModelPrimitives.xml" />
+    <None Include="Data\UI\ModelView.css" />
+    <None Include="Data\UI\ModelView.xml" />
+    <None Include="Data\UI\NewOp.css" />
+    <None Include="Data\UI\NewOp.xml" />
+    <None Include="Data\UI\ProjectSettings.css" />
+    <None Include="Data\UI\ProjectSettings.xml" />
+    <None Include="Data\UI\RenderTargetEditor.css" />
+    <None Include="Data\UI\RenderTargetEditor.xml" />
+    <None Include="Data\UI\SceneClips.css" />
+    <None Include="Data\UI\SceneClips.xml" />
+    <None Include="Data\UI\SceneGraph.css" />
+    <None Include="Data\UI\SceneGraph.xml" />
+    <None Include="Data\UI\SceneList.css" />
+    <None Include="Data\UI\SceneList.xml" />
+    <None Include="Data\UI\SceneObjectParameters.css" />
+    <None Include="Data\UI\SceneObjectParameters.xml" />
+    <None Include="Data\UI\ScenePrimitives.css" />
+    <None Include="Data\UI\ScenePrimitives.xml" />
+    <None Include="Data\UI\SceneSplineEditor.css" />
+    <None Include="Data\UI\SceneSplineEditor.xml" />
+    <None Include="Data\UI\SceneView.css" />
+    <None Include="Data\UI\SceneView.xml" />
+    <None Include="Data\UI\ShaderEditor.css" />
+    <None Include="Data\UI\ShaderEditor.xml" />
+    <None Include="Data\UI\skin.wbs" />
+    <None Include="Data\UI\TexgenMain.css" />
+    <None Include="Data\UI\TexgenMain.xml" />
+    <None Include="Data\UI\TexgenOpParameters.css" />
+    <None Include="Data\UI\TexgenOpParameters.xml" />
+    <None Include="Data\UI\TexgenPreview.css" />
+    <None Include="Data\UI\TexgenPreview.xml" />
+    <None Include="Data\UI\TextureFilterEditor.css" />
+    <None Include="Data\UI\TextureFilterEditor.xml" />
+    <None Include="Data\UI\TexgenPages.css" />
+    <None Include="Data\UI\TexgenPages.xml" />
+    <None Include="Data\UI\TimelineEditor.css" />
+    <None Include="Data\UI\TimelineEditor.xml" />
+    <None Include="Data\UI\TimelineEventParams.css" />
+    <None Include="Data\UI\TimelineEventParams.xml" />
+    <None Include="Data\UI\TimelineEventSplines.css" />
+    <None Include="Data\UI\TimelineEventSplines.xml" />
+    <None Include="Data\UI\TimelinePreview.css" />
+    <None Include="Data\UI\TimelinePreview.xml" />
+    <None Include="Data\UI\TreeSpeciesEditor.css" />
+    <None Include="Data\UI\VideoDumper.css" />
+    <None Include="Data\UI\XMLEditor.css" />
+    <None Include="Data\UI\XMLEditor.xml" />
+    <None Include="HLSLExpressionParser.inl" />
+    <None Include="kkrunchy_023_2014_importhack.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="apEx.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Data\UI\KKPViewer.xml" />
+    <Xml Include="Data\UI\TreeSpeciesEditor.xml" />
+    <Xml Include="Data\UI\VideoDumper.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\MVX\MVXLibrary.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

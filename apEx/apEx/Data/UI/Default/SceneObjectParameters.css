@@ -1,0 +1,201 @@
+button
+{
+	width:100%;
+	height:15px;
+}
+
+#resetpos
+{
+	width:100%-2px;
+	height:15px;
+	top:1px;
+}
+
+.modelparambox
+{
+	padding:1px;
+	padding-top:0px;
+	margin:0px;
+	top:17px;
+	child-layout:vertical;
+	child-spacing:1px;
+	overflow-y:auto;
+}
+
+dropdown
+{
+	width:100%;
+	height:15px;
+}
+
+trackbar
+{
+	width:100%;
+	height:15px;
+}
+
+label
+{
+	width:100%;
+	height:12px;
+}
+
+trackbar
+{
+	height:15px;
+}
+
+.parambox
+{	
+	child-layout:vertical;
+	child-fill-x:true;
+	child-spacing:1px;
+	border:1px;
+	padding:1px;
+	width:100%;
+}
+
+.textureselect
+{
+	height:32px;
+}
+
+.parambox button
+{
+	width:100%;
+	height:15px;
+}
+
+.blendselect
+{
+	height:44px;
+}
+
+.blendlist
+{
+	margin:0px;
+	child-layout:vertical;
+	child-fill-x:true;
+}
+
+list
+{
+	height:122px;
+}
+
+#blendbox
+{
+	height:160px;
+	child-layout:horizontal;
+	child-fill-y:true;
+	child-fill-x:true;
+	child-spacing:1px;
+}
+
+.zmodeselect
+{
+	height:34px;
+}
+
+.zmodebox
+{
+	height:34px;
+	child-fill-y:false;
+	child-layout:vertical;
+}
+
+.colorselect
+{
+	height:80px;
+}
+
+.floatselect
+{
+	height:18px;
+}
+
+.fillselect
+{
+	height:18px;
+}
+
+.cullselect
+{
+	height:32px;
+}
+
+.zfunctselect
+{
+	height:32px;
+}
+
+textbox
+{
+	border:1px;
+	height:15px;
+	padding:1px;
+}
+
+.labeltext
+{
+	height:17px;
+	padding:1px;
+	width:100%;
+	child-layout:horizontal;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:3px;
+}
+
+.labeltext label
+{
+	padding:auto;
+	width:50%;
+	margin:auto;
+	height:auto;
+	text-align:right;
+}
+
+.buttonlist
+{
+	height:15px;
+	width:100%;
+	child-layout:horizontal;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:1px;
+}
+
+.buttonlist button
+{
+	width:100%-16px;
+}
+
+#texturelocator
+{
+	width:15px;
+}
+
+#modellocator
+{
+	width:15px;
+}
+
+#scenelocator
+{
+	width:15px;
+}
+
+#modelemitterbox
+{
+	width:100%;
+	height:100%;
+	child-layout:vertical;
+	border-color:#606060;
+}
+
+#modelemitterfs
+{
+	width:100%;
+	height:55px;
+}

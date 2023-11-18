@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="ScenePrimitives">
+	<box>
+		<list id="modellist"/>
+		<button id="addmodel" text="Add Model"/>
+		<button id="addlight" text="Add Light"/>
+		<button id="addcamera" text="Add Camera"/>
+		<button id="adddummy" text="Add Dummy"/>
+		<list id="subscenelist"/>
+		<button id="addsubscene" text="Add Subscene"/>
+		<button id="addemittercpu" text="Add Emitter"/>
+		<button id="addgravity" text="Add Gravity"/>
+		<button id="adddrag" text="Add Drag"/>
+		<button id="addturbulence" text="Add Turbulence"/>
+		<button id="addvortex" text="Add Vortex"/>
+		<button id="addlogicobject" text="Add Logic Object"/>
+	</box>
+  </gui>
+</guidescriptor>

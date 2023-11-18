@@ -1,0 +1,25 @@
+box
+{
+	margin: 1px;
+	child-fill-x:true;
+	child-layout:vertical;
+	child-spacing:1px;
+	overflow-y:auto;
+}
+
+button
+{
+	height:13px;
+}
+
+.padder
+{
+	margin:auto;
+	height:4px;
+	overflow:hidden;
+}
+
+.loftable
+{
+	font-color:#33ffad
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="TimelinePreview">
+	<demopreview id="demo"/>
+	<button id="togglehistogram"/>
+	<button id="togglebadprojector"/>
+	<dropdown id="resolution">
+		<listitem name="Native"/>
+		<listitem name="1920x1080"/>
+		<listitem name="1280x720"/>
+		<listitem name="2560x1080"/>
+		<listitem name="3840x2160"/>
+	</dropdown>
+	<dropdown id="rendertargets"/>
+	<button id="togglepointsampling" text="P"/>
+  </gui>
+</guidescriptor>

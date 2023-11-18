@@ -1,0 +1,26 @@
+syntax: glob
+*.log
+*.suo
+*.*old*
+*.vcxproj.user
+*.*backup*
+*/Release*/*
+*/Debug*/*
+*Release*/*
+*Debug*/*
+*.*sdf
+*ipch/*
+.vs/*
+apEx/Builds/*
+*/Screenshots/*
+*/Autosave/*
+*/Crashes/*
+*/Minimals/*
+apEx/apEx/version.txt
+apEx/apEx/apEx.cfg
+*.bak
+apEx/MinimalPlayer/Data/release.obj
+apEx/MinimalPlayer/Data/release.mus
+apEx/MinimalPlayer/Data/release.64k
+*.aps
+apEx/Data/Streams

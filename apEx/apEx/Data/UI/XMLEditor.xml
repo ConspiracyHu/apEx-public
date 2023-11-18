@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="XMLEditor">
+    <box class="xmlnote">
+      <label id="xmlnote1" text="F3 on a window to reload window layout"/>
+      <label id="xmlnote2" text="F4 on a window to open window's files in XML/CSS editors"/>
+      <label id="xmlnote3" text="F5 in editors to save files and refresh edited windows"/>
+    </box>
+    <textbox id="xmleditor"></textbox>
+  </gui>
+</guidescriptor>

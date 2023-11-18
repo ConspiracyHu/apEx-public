@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="ModelParameters">
+  </gui>
+  <guitemplate id="modelparams" class="">
+	<button id="resetpos" text="Reset Transform"/>
+	<box id="parambox" class="modelparambox"/>
+  </guitemplate>
+  <guitemplate id="filterparams" class="">
+	<box id="filterbox">
+		<button id="disablefilter" text="Filter Disabled"/>
+		<button id="deletefilter" text="Delete Filter"/>
+		<button id="filterup" text="Move Filter Up"/>
+		<button id="filterdown" text="Move Filter Down"/>
+	</box>
+	<box id="parambox" class="filterparambox"/>
+  </guitemplate>
+  <guitemplate id="cube" class="">
+  </guitemplate>
+  <guitemplate id="plane" class="">
+	<trackbar id="planex" minimum="1" text="X Resolution"/>
+	<trackbar id="planey" minimum="1" text="Y Resolution"/>
+  </guitemplate>
+  <guitemplate id="sphere" class="">
+	<trackbar id="spherex" minimum="3" text="X Resolution"/>
+	<trackbar id="spherey" minimum="2" text="Y Resolution"/>
+	<trackbar id="spheretop" text="Top Position"/>
+	<trackbar id="spherebottom" text="BottomPosition"/>
+	<button id="spherecap" text="Cap"/>
+  </guitemplate>
+  <guitemplate id="geosphere" class="">
+	<trackbar id="georesolution" minimum="0" maximum="5" text="Iterations"/>
+  </guitemplate>
+  <guitemplate id="cylinder" class="">
+	<trackbar id="cylinderx" minimum="3" text="X Resolution"/>
+	<trackbar id="cylindery" minimum="1" text="Y Resolution"/>
+	<button id="cylindercap" text="Cap"/>
+  </guitemplate>
+  <guitemplate id="cone" class="">
+	<trackbar id="conex" minimum="3" text="X Resolution"/>
+	<trackbar id="coney" text="Y Resolution"/>
+	<trackbar id="conetop" text="Top Position"/>
+	<button id="conecap" text="Cap"/>
+  </guitemplate>
+  <guitemplate id="arc" class="">
+	<trackbar id="arcres" text="Resolution"/>
+	<trackbar id="arcbend" text="Bend"/>
+	<button id="arcclosed" text="Last Segment"/>
+  </guitemplate>
+  <guitemplate id="line" class="">
+	<trackbar id="lineres" text="Resolution"/>
+  </guitemplate>
+  <guitemplate id="spline" class="">
+	<trackbar id="splineres" text="Resolution"/>
+	<button id="splineclosed" text="Closed"/>
+  </guitemplate>
+  <guitemplate id="loft" class="">
+	<label text="Path Object"/>
+	<list id="loftpathlist"/>
+	<label text="Cross Section Object"/>
+	<list id="loftslicelist"/>
+	<button id="loftpathclose" text="Close Path"/>
+	<button id="loftsliceclose" text="Close Cross Section"/>
+	<trackbar id="loftrotation" text="Rotation"/>
+	<trackbar id="loftstartscale" text="Start Scale"/>
+	<trackbar id="loftendscale" text="End Scale"/>	
+  </guitemplate>
+  <guitemplate id="scatter" class="">
+	<label text="Scattered Object"/>
+	<list id="scatterobj"/>
+	<label text="Scatter Shape"/>
+	<list id="scattershape"/>
+	<trackbar id="scatterseed" text="Rand Seed"/>
+	<trackbar id="scattervxamout" text="Vertex Amount"/>
+	<trackbar id="scatteredgeamount" text="Edge Amount"/>
+	<trackbar id="scatterpolyamount" text="Poly Amount"/>
+	<trackbar id="scattermaxperpoly" text="Max/Polygon"/>
+	<trackbar id="scatteramountchannel" text="Amount Tint Channel" minimum="0" maximum="3"/>
+	<label text="Orientation"/>
+	<list id="scatterorientation">
+		<listitem name="Original"/>
+		<listitem name="Normal"/>
+		<listitem name="Normal Axis Rotation"/>
+		<listitem name="Fully Rotated"/>
+	</list>
+	<trackbar id="scatterscalethresh" text="Scale Threshold"/>
+	<button id="scatteronlyyscale" text="Only Y Scale"/>
+	<trackbar id="scatterxformchannel" text="XForm Tint Channel" minimum="0" maximum="3"/>
+    <label text="Move Threshold:"/>
+    <textbox id="scattermovethresh" singleline="1" password="0"/>
+  </guitemplate>
+  <guitemplate id="tree" class="">
+	<label text="Tree Species"/>
+	<trackbar id="treerandseed"/>
+	<trackbar id="treedensity1"/>
+	<trackbar id="treedensity2"/>
+	<trackbar id="treedensity3"/>
+	<trackbar id="treedensity4"/>
+	<list id="treespecies"/>
+  </guitemplate>
+  <guitemplate id="leaves" class="">
+	<label text="Tree Species"/>
+	<trackbar id="leafrandseed"/>
+	<trackbar id="treedensity1"/>
+	<trackbar id="treedensity2"/>
+	<trackbar id="treedensity3"/>
+	<trackbar id="treedensity4"/>
+	<trackbar id="treedensity5"/>
+	<list id="treeleafspecies"/>
+  </guitemplate>
+  <guitemplate id="normaldeform" class="">
+	<trackbar id="normaldeformfraction"/>
+	<trackbar id="normaldeforminteger"/>
+  </guitemplate>
+  <guitemplate id="csg" class="">
+	<label text="Other Object"/>
+	<list id="csgobjlist"/>
+	<list id="csgmode">
+		<listitem name="Add"/>
+		<listitem name="Substract"/>
+		<listitem name="Intersect"/>
+	</list>
+  </guitemplate>
+  <guitemplate id="clone" class="">
+	<list id="clonesourcelist"/>
+	<button id="cloneadd" text="Add To Clone"/>
+	<list id="clonecontentlist"/>
+	<button id="cloneremove" text="Remove From Clone"/>
+  </guitemplate>
+  <guitemplate id="bake" class="">
+	<button id="bakefetchtransform" text="Fetch transformation"/>
+	<list id="copyparentlist"/>
+  </guitemplate>
+  <guitemplate id="merge" class="">
+	<list id="mergesourcelist"/>
+	<button id="mergeadd" text="Add To Merge"/>
+	<list id="mergecontentlist"/>
+	<button id="mergeremove" text="Remove From Merge"/>
+  </guitemplate>
+  <guitemplate id="uvmap" class="">
+	<button id="resettransform" text="Reset Transformation"/>
+	<list id="uvtype">
+		<listitem name="Planar"/>
+		<listitem name="Spherical"/>
+		<listitem name="Cylindrical"/>
+		<listitem name="Box"/>
+		<listitem name="Original"/>
+	</list>
+	<trackbar id="uvchannel" minimum="0" maximum="3" text="UV Channel"/>
+    <button id="clipuv" text="Clip UV to 0..1"/>
+	<label text="Scale/Offser values in the Model Matrix Window"/>
+  </guitemplate>
+  <guitemplate id="tint" class="">
+	<trackbar id="tintsaturation" text="Saturation"/>
+	<trackbar id="tintchannel" minimum="0" maximum="3" text="UV Channel"/>
+	<box class="buttonlist">
+		<button id="tinttextureselector" text="Select Texture" class="dropdown"/>
+		<button id="texturelocator" text="->" class=""/>
+	</box>
+  </guitemplate>
+  <guitemplate id="mapxform" class="">
+	<button id="resettransform" text="Reset Transformation"/>
+  </guitemplate>
+  <guitemplate id="meshsmooth" class="">
+    <button id="meshsmoothlinear" text="Linear Smooth"/>
+    <trackbar id="meshsmoothiterations" text="Iterations" minimum="1" maximum="6"/>
+  </guitemplate>
+  <guitemplate id="smoothgroup" class="">
+    <trackbar id="smoothgroupvalue" text="Smooth Break"/>
+  </guitemplate>
+  <guitemplate id="bevel" class="">
+    <trackbar id="bevelpercent" text="Percent" minimum="1"/>
+  </guitemplate>
+  <guitemplate id="tintshape" class="">
+	<list id="tintshapetype">
+		<listitem name="Box"/>
+		<listitem name="Sphere"/>
+		<listitem name="Plane"/>
+	</list>
+	<list id="tintshapeoperator">
+		<listitem name="Overwrite"/>
+		<listitem name="Add"/>
+		<listitem name="Substract"/>
+		<listitem name="Multiply"/>
+	</list>
+    <trackbar id="tintshapepower" text="Power" minimum="0"/>
+  </guitemplate>
+  <guitemplate id="greeble" class="">
+    <trackbar id="greebleseed" text="RandSeed" minimum="0"/>
+    <trackbar id="greebleextrude" text="Extrusion" minimum="0"/>
+    <trackbar id="greebletaper" text="Taper" minimum="0"/>
+  </guitemplate>
+  <guitemplate id="text" class="">
+    <textbox id="meshtext" singleline="1" password="0"/>
+    <trackbar id="textdeviation" text="Deviation"/>
+	<list id="fontlist">
+		<listitem name="Arial"/>
+		<listitem name="Arial Black"/>
+		<listitem name="Calibri"/>
+		<listitem name="Cambria"/>
+		<listitem name="Candara"/>
+		<listitem name="Comic Sans MS"/>
+		<listitem name="Consolas"/>
+		<listitem name="Constantia"/>
+		<listitem name="Corbel"/>
+		<listitem name="Courier New"/>
+		<listitem name="Franklin Gothic Medium"/>
+		<listitem name="Georgia"/>
+		<listitem name="Impact"/>
+		<listitem name="Lucida Console"/>
+		<listitem name="Lucida Sans Unicode"/>
+		<listitem name="Microsoft Sans Serif"/>
+		<listitem name="Palatino Linotype"/>
+		<listitem name="Tahoma"/>
+		<listitem name="Times New Roman"/>
+		<listitem name="Trebuchet MS"/>
+		<listitem name="Verdana"/>
+		<listitem name="Webdings"/>
+		<listitem name="Wingdings"/>
+	</list>
+  </guitemplate>
+  <guitemplate id="replicate" class="">
+    <trackbar id="replicatecount" text="Count"/>
+	<button id="fetchtransform" text="Fetch Transform"/>
+	<label text="Transform Matrix in the Model Matrix Window"/>
+  </guitemplate>
+</guidescriptor>

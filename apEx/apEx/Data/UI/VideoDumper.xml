@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="VideoDumper">
+	<dumperpreview id="DisplayBox">
+		<label id="Progress" text=""/>
+	</dumperpreview>
+	<box id="DataBox">
+		<box id="hbox1">
+			<label id="lx" text="Width:"/>
+			<textbox id="XRes" singleline="1"/>
+			<label id="ly" text="Height:"/>
+			<textbox id="YRes" singleline="1"/>
+			<label id="fr" text="Framerate:"/>
+			<textbox id="Framerate" singleline="1"/>
+			<label id="sf" text="Start Frame:"/>
+			<textbox id="StartFrame" singleline="1"/>
+			<label id="ef" text="End Frame:"/>
+			<textbox id="EndFrame" singleline="1"/>
+		</box>
+	</box>
+	<button id="Start" text="GO!"/>
+	<button id="Exit" text="Done/Cancel"/>
+	<label id="pt" text="Path:"/>
+	<textbox id="Path" singleline="1"/>
+	<button id="ChangePath" text="Browse"/>
+	<button id="pngtoggle" text="PNG"/>
+  </gui>
+</guidescriptor>

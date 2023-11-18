@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="MaterialEditor">
+    <box id="topbox">
+      <box id="matedbox">
+        <fieldset text="Material List">
+          <box id="materialtechlist" class="newdellist">
+            <box>
+              <button text="New" id="newmaterial"/>
+              <button text="Delete" id="deletematerial"/>
+              <button text="Export" id="exportmaterial"/>
+            </box>
+            <list id="materiallist"/>
+          </box>
+        </fieldset>
+        <fieldset text="Techniques in Material">
+          <box id="materialtechlist" class="newdellist">
+            <box>
+              <button text="Add" id="addtech"/>
+              <button text="Remove" id="removetech"/>
+            </box>
+            <list id="techsinmaterial"/>
+          </box>
+        </fieldset>
+      </box>
+      <fieldset id="globaltechpool" text="Global Tech Pool">
+        <box id="techpool" class="newdellist">
+          <box>
+            <button text="New" id="newtech"/>
+            <button text="Delete" id="deletetech"/>
+		    <button text="Export" id="exporttech"/>
+          </box>
+          <list id="techlist"/>
+		  <button text="Copy Tech" id="copytech"/>
+          <box id="techdatabox">
+            <box id="techtypebox" class="techdatabox">
+              <label text="Usage:" id="fstype"/>
+              <dropdown id="techtype">
+                <listitem name="Material"/>
+                <listitem name="Scene Postprocess"/>
+                <listitem name="Timeline Effect"/>
+                <listitem name="Particle Material"/>
+              </dropdown>
+            </box>
+            <box id="techlayerbox" class="techdatabox">
+              <label text="Layer:" id="fslayer"/>
+              <dropdown id="layerlist"/>
+            </box>
+          </box>
+        </box>
+      </fieldset>
+      <fieldset id="globaltechparams" text="Global Tech Parameters">
+        <box class="paramlist">
+            <box class="newdelbox">
+              <button text="New" id="newtechparam"/>
+              <button text="Delete" id="deletetechparam"/>
+            </box>
+            <list id="techparamlist"/>
+			<box class="techdatabox">
+              <label text="Scope:"/>
+              <dropdown class="paramscope" id="techparamscope">
+                <listitem name="Constant"/>
+                <listitem name="Variable"/>
+                <listitem name="Animated"/>
+              </dropdown>
+			</box>
+			<box class="techdatabox">
+              <label text="Type:"/>
+              <button id="techparamtype" class="dropdown"/>
+			</box>
+        </box>
+        <fieldset text="Default Values" id="techparamvalues" class="paramvalues">
+        </fieldset>
+      </fieldset>
+      <fieldset id="techpasslist" text="Tech Pass List">
+        <box class="newdellist">
+          <box>
+            <button text="New" id="newpass"/>
+            <button text="Delete" id="deletepass"/>
+          </box>
+          <list id="passlist"/>
+          <button text="Minifiable" id="minifiable"/>
+        </box>
+      </fieldset>
+      <fieldset text="Local pass parameters">
+        <box class="paramlist">
+            <box class="newdelbox">
+              <button text="New" id="newpassparam"/>
+              <button text="Delete" id="deletepassparam"/>
+            </box>
+            <list id="passparamlist"/>
+			<box class="techdatabox">
+              <label text="Scope:"/>
+              <dropdown class="paramscope" id="passparamscope">
+                <listitem name="Constant"/>
+                <listitem name="Variable"/>
+                <listitem name="Animated"/>
+              </dropdown>
+			</box>
+			<box class="techdatabox">
+              <label text="Type:"/>
+              <button id="passparamtype" class="dropdown"/>
+			</box>
+        </box>
+        <fieldset text="Default Values" id="passparamvalues" class="paramvalues">
+        </fieldset>
+      </fieldset>
+    </box>
+  </gui>
+  <guitemplate id="floattemplate" class="template">
+    <box id="parambox">
+      <trackbar id="floatvalue" text="Value"/>
+    </box>
+  </guitemplate>
+  <guitemplate id="renderprioritytemplate" class="template">
+    <box id="parambox">
+      <trackbar id="renderpriovalue" text="Value"/>
+    </box>
+  </guitemplate>
+  <guitemplate id="colortemplate" class="template">
+    <box id="parambox">
+      <trackbar id="redvalue" text="Value"/>
+      <trackbar id="greenvalue" text="Value"/>
+      <trackbar id="bluevalue" text="Value"/>
+      <trackbar id="alphavalue" text="Value"/>
+    </box>
+  </guitemplate>
+  <guitemplate id="texturetemplate" class="template">
+    <box id="parambox">
+      <button id="textureselector" text="Select Texture"/>
+    </box>
+  </guitemplate>
+  <guitemplate id="rendertargettemplate" class="template">
+    <box id="parambox">
+      <button id="rendertargetselector" text="Select RT"/>
+    </box>
+  </guitemplate>
+  <guitemplate id="fillmodetemplate" class="template">
+    <box id="parambox">
+      <button id="wireframe" text="Wireframe"/>
+    </box>
+  </guitemplate>
+  <guitemplate id="blendtemplate" class="template">
+    <box id="parambox">
+      <label text="Source Blend:"/>
+      <dropdown id="srcblend">
+ 				<listitem name="Zero"/>
+				<listitem name="One"/>
+				<listitem name="Src Color"/>
+				<listitem name="1-Src Color"/>
+				<listitem name="Src Alpha"/>
+				<listitem name="1-Src Alpha"/>
+				<listitem name="Dst Alpha"/>
+				<listitem name="1-Dst ALpha"/>
+				<listitem name="Dst Color"/>
+				<listitem name="1-Dst Color"/>
+      </dropdown>
+      <label text="Dest Blend:"/>
+      <dropdown id="dstblend">
+				<listitem name="Zero"/>
+				<listitem name="One"/>
+				<listitem name="Src Color"/>
+				<listitem name="1-Src Color"/>
+				<listitem name="Src Alpha"/>
+				<listitem name="1-Src Alpha"/>
+				<listitem name="Dst Alpha"/>
+				<listitem name="1-Dst ALpha"/>
+				<listitem name="Dst Color"/>
+				<listitem name="1-Dst Color"/>
+      </dropdown>
+    </box>
+  </guitemplate>
+  <guitemplate id="zmodetemplate" class="template">
+    <box id="parambox">
+      <button id="zenable" text="Z Enable"/>
+      <button id="zwrite" text="Z Write"/>
+    </box>
+  </guitemplate>
+  <guitemplate id="zfuncttemplate" class="template">
+    <box id="parambox">
+      <dropdown id="zfunct">
+		<listitem name="Never"/>
+		<listitem name="Less"/>
+		<listitem name="Equal"/>
+		<listitem name="Less Equal"/>
+		<listitem name="Greater"/>
+		<listitem name="Not Equal"/>
+		<listitem name="Greater Equal"/>
+		<listitem name="Always"/>		
+	  </dropdown>
+    </box>
+  </guitemplate>
+  <guitemplate id="culltemplate" class="template">
+    <box id="parambox">
+      <dropdown id="cullmode">
+		<listitem name="No Culling"/>
+		<listitem name="Front"/>
+		<listitem name="Back"/>		
+	  </dropdown>
+    </box>
+  </guitemplate>
+</guidescriptor>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="ProjectSettings">
+	<box class="mainbox">
+		<label text="Internal Framerate:"/>
+		<textbox id="framerate" text="100" singleline="1"/>
+		<label text="Aspect Ratio:"/>
+		<box class="aspectbox">
+			<textbox id="aspectx" text="16" singleline="1"/>
+			<label text=":" class="aspecttext"/>
+			<textbox id="aspecty" text="9" singleline="1"/>
+		</box>
+		<label text="Release Title:"/>
+		<textbox id="title" text="[INSERT TITLE]" singleline="1"/>
+		<label text="Release Group:"/>
+		<textbox id="group" text="CONSPIRACY" singleline="1"/>
+		<label text="Website URL:"/>
+		<textbox id="www" text="http://www.conspiracy.hu" singleline="1"/>
+		<label text="Pouet URL:"/>
+		<textbox id="pouet" text="http://conspiracy.hu/link/supermode/pouet/" singleline="1"/>
+		<label text="Facebook URL:"/>
+		<textbox id="facebook" text="http://facebook.com/conspiracy.hu" singleline="1"/>
+		<label text="YouTube URL:"/>
+		<textbox id="youtube" text="http://youtube.com/user/conspiracyhu" singleline="1"/>
+		<label text="Share URL:"/>
+		<textbox id="share" text="http://www.addthis.com/bookmark.php?url=http://conspiracy.hu" singleline="1"/>
+	</box>
+  </gui>
+</guidescriptor>

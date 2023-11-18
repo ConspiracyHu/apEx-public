@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="TexgenPreview">
+	<box>
+		<button id="maximizebutton"/>
+		<button id="AlphaToggle" text="a"/>
+		<button id="TileToggle" text="t"/>
+		<button id="StretchToggle" text="s"/>
+	</box>
+  </gui>
+</guidescriptor>

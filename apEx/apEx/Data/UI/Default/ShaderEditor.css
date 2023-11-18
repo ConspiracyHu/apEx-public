@@ -1,0 +1,49 @@
+box
+{
+	top:0px;
+	height:16px;
+	width:100%;
+	child-layout:horizontal;
+	child-spacing:1px;
+	child-align-x:center;
+}
+
+box label
+{
+	width:80px;
+	height:100%;
+}
+
+#shadercode
+{
+	width:100%;
+	border:1px;
+	padding:1px;
+	font:ProFont;
+	text-transform:none;
+}
+
+.hbox
+{
+	width:100%;
+	top:100%-203px;
+	bottom:0px;
+	child-layout:vertical;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:1px;
+}
+
+.hbox textbox
+{
+	border:1px;
+	padding:1px;
+	font:ProFont;
+	text-transform:none;
+}
+
+#shadercode
+{
+	height:100%-220px;
+	top:16px;
+}

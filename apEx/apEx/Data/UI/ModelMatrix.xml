@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="ModelMatrix">
+	<box id="layoutbox">
+		<button id="resetpos" text="Reset Transform"/>
+		<label text="Raw Matrix Data"/>
+			<box class="columns">
+				<textbox id="tr00" singleline="1" password="0"/>
+				<textbox id="tr01" singleline="1" password="0"/>
+				<textbox id="tr02" singleline="1" password="0"/>
+				<textbox id="tr03" singleline="1" password="0"/>
+			</box>
+			<box class="columns">
+				<textbox id="tr10" singleline="1" password="0"/>
+				<textbox id="tr11" singleline="1" password="0"/>
+				<textbox id="tr12" singleline="1" password="0"/>
+				<textbox id="tr13" singleline="1" password="0"/>
+			</box>
+			<box class="columns">
+				<textbox id="tr20" singleline="1" password="0"/>
+				<textbox id="tr21" singleline="1" password="0"/>
+				<textbox id="tr22" singleline="1" password="0"/>
+				<textbox id="tr23" singleline="1" password="0"/>
+			</box>
+			<box class="columns">
+				<textbox id="tr30" singleline="1" password="0"/>
+				<textbox id="tr31" singleline="1" password="0"/>
+				<textbox id="tr32" singleline="1" password="0"/>
+				<textbox id="tr33" singleline="1" password="0"/>
+			</box>
+		<label text="Calculated Scale/Rotation/Translate values"/>
+		<label text="WARNING: Ignores Skew!"/>
+		<box class="columns">
+			<label text="Scale:"/>
+			<textbox id="sx" singleline="1" password="0"/>
+			<textbox id="sy" singleline="1" password="0"/>
+			<textbox id="sz" singleline="1" password="0"/>
+		</box>
+		<box class="columns">
+			<label text="Rotate:"/>
+			<textbox id="rx" singleline="1" password="0"/>
+			<textbox id="ry" singleline="1" password="0"/>
+			<textbox id="rz" singleline="1" password="0"/>
+		</box>
+		<box class="columns">
+			<label text="Translate:"/>
+			<textbox id="tx" singleline="1" password="0"/>
+			<textbox id="ty" singleline="1" password="0"/>
+			<textbox id="tz" singleline="1" password="0"/>
+		</box>
+
+		<button id="applymatrix" text="Calculate and Apply New Matrix"/>
+	</box>
+  </gui>
+</guidescriptor>

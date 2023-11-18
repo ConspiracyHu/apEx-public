@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="SceneView">
+	<scenedisplay id="display">
+		<button id="maximizebutton"/>
+		<button id="gridbutton"/>
+		<button id="helperbutton"/>
+		<button id="cameraselector" text="3D View" class="dropdown"/>
+		<button id="wfbutton" text="S"/>
+		<button id="rtselector" text="Backbuffer" class="dropdown"/>
+		<button id="movebutton"/>
+		<button id="rotatebutton"/>
+		<button id="scalebutton"/>
+		<button id="objspacebutton" text="O"/>
+		<button id="worldspacebutton" text="X"/>
+		<textbox id="snapvalue" singleline="1" password="0"/>
+		<label id="snaptext" text="shift-snap: "/>
+		<label id="tricount" text=""/>
+		</scenedisplay>
+  </gui>
+</guidescriptor>

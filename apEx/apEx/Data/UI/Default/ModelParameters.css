@@ -1,0 +1,134 @@
+#resetpos
+{
+	width:100%-2px;
+	height:13px;
+	top:1px;
+}
+
+.modelparambox
+{
+	padding:1px;
+	padding-top:0px;
+	margin:0px;
+	top:16px;
+	child-layout:vertical;
+	child-spacing:1px;
+}
+
+#filterbox
+{
+	padding:1px;
+	padding-top:0px;
+	margin:0px;
+	top:1px;
+	height:32px;
+	child-layout:vertical;
+	child-spacing:1px;
+}
+
+.filterparambox
+{
+	padding:1px;
+	padding-top:0px;
+	margin:0px;
+	top:66px;
+	child-layout:vertical;
+	child-spacing:1px;
+}
+
+#parambox
+{
+	border:1px;
+	padding:1px;
+	left:1px;
+	right:1px;
+	bottom:1px;
+}
+
+#parambox trackbar
+{
+	width:100%;
+	height:15px;
+}
+
+button
+{
+	width:100%;
+	height:15px;
+}
+
+#parambox label
+{
+	width:100%;
+	height:12px;
+}
+
+#parambox list
+{
+	width:100%;
+	height:70px;
+}
+
+#orientation
+{
+	height:50px;
+}
+
+#copyparentlist
+{
+	height:100%-16px;
+}
+
+#uvtype
+{
+	height:62px;
+}
+
+#tinttexture
+{
+	height:100%-32px;
+}
+
+textbox
+{
+	border:1px;
+	height:15px;
+	padding:1px;
+	width:100%;
+	text-transform:none;
+}
+
+#fontlist
+{
+	height:278px;
+}
+
+#treespecies
+{
+	height:50%x;
+}
+
+#treeleafspecies
+{
+	height:50%;
+}
+
+.buttonlist
+{
+	height:15px;
+	width:100%;
+	child-layout:horizontal;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:1px;
+}
+
+.buttonlist button
+{
+	width:100%-16px;
+}
+
+#texturelocator
+{
+	width:15px;
+}

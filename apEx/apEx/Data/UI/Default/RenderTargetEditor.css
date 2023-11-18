@@ -1,0 +1,101 @@
+label
+{
+	height:13px;
+}
+
+#mainbox
+{
+	margin:0px;
+	child-layout:horizontal;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:1px;
+}
+
+.contentbox
+{
+	margin: 1px;
+	bottom: 1px;
+	height: 15px;
+	child-layout: vertical;
+	child-fill-x: true;
+	child-fill-y: true;
+	child-spacing: 1px;
+}
+
+#buttonbox
+{
+	margin: 1px;
+	bottom: auto;
+	height: 15px;
+	child-layout: horizontal;
+	child-fill-x: true;
+	child-fill-y: true;
+	child-spacing: 1px;
+}
+
+#layerlayout
+{
+	margin:0px;
+	child-layout:vertical;
+	child-fill-x:true;
+	child-spacing:1px;
+}
+
+#lbuttonbox
+{
+	height:15px;
+	width:100%;
+	child-layout: horizontal;
+	child-fill-x: true;
+	child-fill-y: true;
+	child-spacing: 1px;
+}
+
+#rtlist
+{
+	left: 1px;
+	right: 1px;
+}
+
+#rltlist
+{
+	height:30%;
+}
+
+#rllist
+{
+	top: 17px;
+	left: 1px;
+	right: 1px;
+	bottom: 60%;
+}
+
+trackbar
+{
+	height:15px;
+	width:100%-2px;
+}
+
+#relativeres
+{
+	width:150px;
+	height:15px;
+}
+
+#hiddenfromtimeline
+{
+	width:150px;
+	height:15px;
+}
+
+dropdown
+{
+	width:100%-2px;
+	height:15px;
+}
+
+#layerlayout
+{
+	child-fill-y:true;
+}

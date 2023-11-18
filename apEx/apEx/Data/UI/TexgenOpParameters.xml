@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="TexgenOpParameters">
+    <box id="parameterlist"/>
+  </gui>
+  <guitemplate id="0" class="byteparam parambox">
+    <trackbar id="bytebar"/>
+  </guitemplate>
+  <guitemplate id="1" class="boolparam parambox">
+    <button id="boolbutton"/>
+  </guitemplate>
+  <guitemplate id="2" class="rgbaparam parambox">
+	<label id="label" text="rgba param"/>
+    <trackbar id="rbar"/>
+    <trackbar id="gbar"/>
+    <trackbar id="bbar"/>
+    <trackbar id="abar"/>
+	<button id="applygamma" text="Degamma Conversion"/>
+  </guitemplate>
+  <guitemplate id="3" class="channelparam parambox">
+	<label id="label" text="channel param"/>
+	<box class="channelselector">
+      <button id="ch1button" text="Red"/>
+      <button id="ch2button" text="Green"/>
+      <button id="ch3button" text="Blue"/>
+      <button id="ch4button" text="Alpha"/>
+	</box>
+  </guitemplate>
+  <guitemplate id="4" class="listparam parambox">
+	<label id="label" text="list param"/>
+    <list id="listlist"/>
+  </guitemplate>
+  <guitemplate id="lookup1" class="listparam parambox imglookup">
+	<box id="loadbox">
+    	<button text="Load Image" id="loadimage"/>
+	</box>
+  </guitemplate>
+  <guitemplate id="lookup2" class="textlookup">
+	<box id="textdatabox" class="parambox">
+    	<textbox id="textinput" singleline="1" password="0" text="Enter Text Here"/>
+		<trackbar id="textxoffset"/>
+		<trackbar id="textyoffset"/>
+		<trackbar id="textsize"/>
+		<trackbar id="textcharspacing"/>
+		<button text="Bold" id="boldbutton"/>
+		<button text="Italic" id="italicbutton"/>
+		<dropdown id="fontlist">
+			<listitem name="Arial"/>
+			<listitem name="Arial Black"/>
+			<listitem name="Calibri"/>
+			<listitem name="Cambria"/>
+			<listitem name="Candara"/>
+			<listitem name="Comic Sans MS"/>
+			<listitem name="Consolas"/>
+			<listitem name="Constantia"/>
+			<listitem name="Corbel"/>
+			<listitem name="Courier New"/>
+			<listitem name="Franklin Gothic Medium"/>
+			<listitem name="Georgia"/>
+			<listitem name="Impact"/>
+			<listitem name="Lucida Console"/>
+			<listitem name="Lucida Sans Unicode"/>
+			<listitem name="Microsoft Sans Serif"/>
+			<listitem name="Palatino Linotype"/>
+			<listitem name="Tahoma"/>
+			<listitem name="Times New Roman"/>
+			<listitem name="Trebuchet MS"/>
+			<listitem name="Verdana"/>
+			<listitem name="Webdings"/>
+			<listitem name="Wingdings"/>
+		</dropdown>
+	</box>
+  </guitemplate>
+  <guitemplate id="lookup3" class="listparam parambox splinelookup">
+	<box id="splinebox">
+		<box id="splinehorizontal">
+			<box id="splinevertical">
+				<button id="splinered" text="R"/>
+				<button id="splinegreen" text="G"/>
+				<button id="splineblue" text="B"/>
+				<button id="splinealpha" text="A"/>
+			</box>
+    		<splineeditorphx id="splineeditor" limited="0" snap="1"/>
+		</box>
+	</box>
+  </guitemplate>
+  <guitemplate id="subroutine">
+    <box class="submain">
+		<label text="Parameters"/>
+		<list id="subparamlist" class="subeditorlist"/>
+		<box id="subbox" class="channelselector">
+			<button id="newparam" text="New Param"/>
+			<button id="delparam" text="Delete Param"/>		
+		</box>
+		<label text="Parameter Type"/>
+		<list id="subparamtype" class="subeditorlist">
+          <listitem name="Byte"/>
+          <listitem name="Boolean"/>
+          <listitem name="RGBA Color"/>
+          <listitem name="Channel"/>
+          <listitem name="List"/>
+		</list>
+		<trackbar id="submin"/>
+		<trackbar id="submax"/>
+		<trackbar id="subdef"/>
+		<label text="Parameter Targets"/>
+		<label text="To add a target right click" class="greytext"/>
+		<label text="on an operator connected" class="greytext"/>
+		<label text="to the subroutine" class="greytext"/>
+		<list id="subparamtargets" class="subeditorlist"/>
+		<button id="removetarget" text="Remove Target"/>
+	</box>
+  </guitemplate>
+  <guitemplate id="load">
+	<box id="loadbox">
+		<label id="label" text="list param"/>
+		<label id="loadedop" text="NO OPERATOR SELECTED"/>
+    	<button text="Select Operator" id="loadoperator"/>
+	</box>
+  </guitemplate>
+</guidescriptor>

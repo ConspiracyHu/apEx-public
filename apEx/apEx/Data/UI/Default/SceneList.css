@@ -1,0 +1,18 @@
+#buttonbox
+{
+	margin: 0px;
+	bottom: auto;
+	height: 17px;
+	child-layout: horizontal;
+	child-fill-x: true;
+	child-fill-y: true;
+	child-spacing: 4px;
+}
+
+#scenelist
+{
+	top: 21px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}

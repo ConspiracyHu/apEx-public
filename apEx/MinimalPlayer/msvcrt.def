@@ -1,0 +1,7 @@
+EXPORTS
+_purecall
+memset
+memcpy
+qsort
+qsort_s
+sprintf

@@ -1,0 +1,25 @@
+#buttonbox
+{
+	margin: 1px;
+	bottom: auto;
+	height: 15px;
+	child-layout: horizontal;
+	child-fill-x: true;
+	child-fill-y: true;
+	child-spacing: 1px;
+}
+
+#modellist
+{
+	top: 17px;
+	left: 1px;
+	right: 1px;
+	bottom: 17px;
+}
+
+#copymodel
+{
+	margin:1px;
+	top:auto;
+	height:15px;
+}

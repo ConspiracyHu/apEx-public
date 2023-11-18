@@ -1,0 +1,123 @@
+#tfhbox
+{
+    margin: 1px;
+    bottom: auto;
+    height: 160px;
+    child-layout: horizontal;
+    child-fill-x: true;
+    child-fill-y: true;
+    child-spacing: 1;
+    border: 1px;
+    padding: 1px;
+}
+
+    #tfhbox box
+    {
+        child-layout: vertical;
+        child-spacing: 1;
+        child-fill-x: true;
+    }
+
+    #tfhbox label
+    {
+        height: 13px;
+    }
+
+    #tfhbox trackbar
+    {
+        height: 13px;
+    }
+
+.buttonbox
+{
+    height: 16px;
+    child-layout: horizontal;
+    child-spacing: 1;
+    child-fill-y: true;
+}
+
+#filterlist
+{
+    top: 31px;
+    bottom: 0px;
+}
+
+#filtertype
+{
+    height: 50px;
+}
+
+#filterrandom
+{
+    height: 13px;
+}
+
+#paramlist
+{
+    top: 31px;
+    bottom: 0px;
+}
+
+#paramtype
+{
+    height: 62px;
+}
+
+#filtercode
+{
+    margin: 1px;
+    top: 162px;
+	bottom: 100px;
+    font: ProFont;
+    text-transform:none;
+    border: 1px;
+}
+
+#compileroutput
+{
+	margin:1px;
+	right:50%;
+	top: 100%-99px;
+	border:1px;
+        font: ProFont;
+	text-transform:none;
+}
+
+#minioutput
+{
+	margin:1px;
+	top: 100%-99px;
+	left:50%;
+	border:1px;
+	font: ProFont;
+	text-transform:none;
+}
+
+#paramdatabox
+{
+	border: 0px;
+	height: 100%-77px;
+	child-layout: none;
+}
+
+#paramdatabox box
+{
+	visibility: hidden;
+	margin: 0px;
+	child-fill-y: false;
+	child-spacing: 1;
+}
+
+#listelements
+{
+	border: 1px;
+	height: 100%-17px;
+}
+
+#listparams .buttonbox
+{
+	margin: auto;
+	height: 16px;
+	child-fill-y: true;
+	visibility: visible;
+}

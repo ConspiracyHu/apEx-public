@@ -1,0 +1,108 @@
+#mainbox
+{
+	child-layout:horizontal;
+	margin:0px;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:1px;
+}
+
+#treelistbox
+{
+	width:140px;
+	child-layout:vertical;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-spacing:1px;
+}
+
+#newdelbox
+{
+	height:30px;
+	child-layout:vertical;
+	child-fill-x:true;
+	child-spacing:1px;
+}
+
+#treelist
+{
+	border:1px;
+}
+
+.treedata
+{
+	margin:0px;
+	child-layout:vertical;
+	child-fill-x:true;
+	child-spacing:1px;
+}
+
+trackbar, dropdown, textbox
+{
+	height:13px;
+}
+
+textbox
+{
+	border:1px;
+	padding-left:2px;
+}
+
+.floatinput
+{
+	height:13px;
+	child-layout:horizontal;
+	child-fill-x:true;
+	child-fill-y:true;
+}
+
+.floatinput label
+{
+	width:60%-10px;
+	text-align:right;
+}
+
+#lobebox
+{
+	height:96px;
+}
+
+#leafbox
+{
+	height:96px;
+}
+
+#treeshapebox
+{
+	height:110px;
+}
+
+#qualitybox
+{
+	height:40px;
+}
+
+label
+{
+	height:13px;
+}
+
+#lengthandtaper
+{
+	height:54px;
+}
+
+#curvature
+{
+	height:68px;
+}
+
+#branching
+{
+	height:96px;
+}
+
+#pruning
+{
+	height:82px;
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="SceneClips">
+    <box id="buttonbox">
+      <button id="newclip" text="New"/>
+      <button id="copyclip" text="Copy"/>
+      <!--button id="deleteclip" text="Delete"/-->
+    </box>
+    <list id="cliplist"/>
+  </gui>
+</guidescriptor>

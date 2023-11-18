@@ -1,0 +1,42 @@
+demopreview
+{
+	margin:0px;
+}
+
+#togglehistogram
+{
+	width:14px;
+	height:14px;
+	bottom:1px;
+	right:1px;
+	background: skin(lighting) center middle;
+}
+
+#togglebadprojector
+{
+	width:14px;
+	height:14px;
+	bottom:1px;
+	right:16px;
+	background: skin(helper) center middle;
+}
+
+dropdown
+{
+	top:0px;
+	right:0px;
+	width:80px;
+}
+
+#rendertargets
+{
+	right:81px;
+}
+
+#togglepointsampling
+{
+	right:162px;
+	width:15px;
+	height:15px;
+	top:0px;
+}

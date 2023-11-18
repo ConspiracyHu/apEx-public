@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="SceneGraph">
+	<extendedlist id="objectlist" multiselect="1"/>
+  </gui>
+</guidescriptor>

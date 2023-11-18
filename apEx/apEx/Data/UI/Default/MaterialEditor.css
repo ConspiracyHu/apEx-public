@@ -1,0 +1,226 @@
+dropdown
+{
+	height:15px;
+}
+
+#topbox
+{
+	margin: 1px;
+	height: 100%;
+	child-layout: horizontal;
+	child-fill-x: true;
+	child-fill-y: true;
+	child-spacing: 1px;
+}
+
+#topbox box
+{
+	child-layout: vertical;
+	child-fill-x: true;
+	child-spacing: 1px;
+	margin: 0px;
+}
+
+#topbox fieldset
+{
+	margin: 0px;
+}
+
+#bottombox
+{
+	margin: 1px;
+	top: 201px;
+	child-layout: horizontal;
+	child-fill-x: true;
+	child-fill-y: true;
+	child-spacing: 1px;
+}
+
+.newdellist box
+{
+	child-layout: horizontal;
+	child-fill-y: true;
+	margin: auto;
+	height: 15px;
+	padding: 0px;
+	border: 0px;
+}
+
+.newdellist list
+{
+	height: 100%-16px;
+}
+
+#techlist
+{
+	height: 100%-64px;
+}
+
+.paramvalues
+{
+	margin: 0px;
+	top: 60%;
+}
+
+.paramlist
+{
+	margin: 0px;
+	bottom: 40%;
+	child-layout: vertical;
+	child-fill-x: true;
+	child-spacing: 1px;
+}
+
+.paramlist box
+{
+	child-layout: vertical;
+	child-fill-x: true;
+	child-spacing: 1px;
+}
+
+.paramlist button
+{
+	height: 15px;
+}
+
+.paramlist label
+{
+	height: 12px;
+}
+
+.paramlist list
+{
+	height: 100%-48px;
+}
+
+.paramscope
+{
+	height: 15px;
+}
+
+.paramtype
+{
+	height: 38px;
+}
+
+.paramlistl box
+{
+	margin: auto;
+	height:15px;
+	child-layout: horizontal;
+	child-fill-x: true;
+	child-fill-y: true;
+}
+
+.paramlistr box
+{
+	margin: auto;
+	height: 15px;
+}
+
+#matedbox
+{
+	child-layout:vertical;
+	child-fill-x:true;
+	child-fill-y:true;
+}
+
+.parambox
+{
+	margin:0px;
+	child-layout:vertical;
+	child-spacing:1px;
+	child-fill-x:true;
+}
+
+#parambox button
+{
+	height:15px;
+}
+
+#parambox label
+{
+	height: 12px;
+}
+
+#parambox trackbar
+{
+	height: 13px;
+}
+
+#techdatabox
+{
+	child-layout:vertical;
+	child-spacing:1px;
+	child-fill-x:true;
+	height:31px;
+}
+
+.techdatabox
+{
+	margin:auto;
+	child-layout:none;
+	height:15px;
+}
+
+.techdatabox label
+{
+	left:0px;
+	top:1px;
+	width:52px;
+	height:15px;
+}
+
+.techdatabox dropdown
+{
+	left:52px;
+	right:0px;
+	top:0px;
+}
+
+.techdatabox button
+{
+	left:52px;
+	right:0px;
+	top:0px;
+}
+
+.newdelbox
+{
+	margin:auto;
+	height: 15px;
+	child-layout: horizontal;
+	child-fill-x: true;
+	child-fill-y: true;
+	child-spacing: 1px;
+}
+
+#matedbox
+{
+	width:140px;
+}
+
+#globaltechpool
+{
+	width:140px;
+}
+
+#techpasslist
+{
+	width:140px;
+}
+
+#passlist
+{
+	height:100%-32px;
+}
+
+#matedbox
+{
+	width:15%;
+}
+
+#globaltechpool
+{
+	width:15%;
+}

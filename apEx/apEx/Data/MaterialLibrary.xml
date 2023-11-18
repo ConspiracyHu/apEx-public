@@ -1,0 +1,3938 @@
+<apExProject>
+  <rendertarget>
+    <GUID>B804E9F623AABCBA232F247216EE216B</GUID>
+    <Name>Backbuffer</Name>
+  
+    <ResolutionDescriptor>128</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>0</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>A277553146FC64CF028CD78429CB0C26</GUID>
+    <Name>Albedo and Metalness</Name>
+  
+    <ResolutionDescriptor>128</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>2EAC5AF0314990354101A913294D674C</GUID>
+    <Name>Normal and roughness</Name>
+  
+    <ResolutionDescriptor>128</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>66B8BAA646D228338C523F1351543A11</GUID>
+    <Name>Back X/2 Y/1</Name>
+  
+    <ResolutionDescriptor>136</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>ABE9AC938257A0207A4C164AF72306A0</GUID>
+    <Name>Back X/2 Y/2</Name>
+  
+    <ResolutionDescriptor>137</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>672E7FB08DEB05C9B52B4F78FC2B30F4</GUID>
+    <Name>Back X/4 Y/2</Name>
+  
+    <ResolutionDescriptor>145</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>290A7AC85C535BCB4E3FA01128C3433B</GUID>
+    <Name>Back X/4 Y/4</Name>
+  
+    <ResolutionDescriptor>147</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>BE215926557E4997FE98ABB3D6817364</GUID>
+    <Name>Back X/8 Y/4</Name>
+  
+    <ResolutionDescriptor>154</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>D2375BBF84EB0121216AE6397E0E31C4</GUID>
+    <Name>Back X/8 Y/8</Name>
+  
+    <ResolutionDescriptor>155</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>9DE2A20DCA6371A7D7731C30E7A870A1</GUID>
+    <Name>Internal</Name>
+  
+    <ResolutionDescriptor>128</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>777C0EC1778502D5674EEA52BFD29691</GUID>
+    <Name>Shadow Map</Name>
+  
+    <ResolutionDescriptor>128</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>1</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>89B6D1BE3363599A89BCE8D9B4012C76</GUID>
+    <Name>Internal 2</Name>
+  
+    <ResolutionDescriptor>128</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>1</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <rendertarget>
+    <GUID>72EBFB38C3A8BCE58CC7DD09BEC554F8</GUID>
+    <Name>Temp 1</Name>
+  
+    <ResolutionDescriptor>128</ResolutionDescriptor>
+  
+    <ZResolution>0</ZResolution>
+  
+    <HiddenFromTimeline>0</HiddenFromTimeline>
+    <PixelFormat>0</PixelFormat>
+    <CubeMap>0</CubeMap></rendertarget>
+
+  <renderlayer>
+    <GUID>FCE6163CC00DB65A95211DB17ADD9460</GUID>
+    <Name>Shadow Layer</Name>
+    <OmitDepthBuffer>0</OmitDepthBuffer>
+    <ClearRenderTargets>1</ClearRenderTargets>
+    <Voxelizer>0</Voxelizer>
+    <IgnoreHelperObjects>1</IgnoreHelperObjects>
+    <Pickable>0</Pickable>
+    <RenderTarget>777C0EC1778502D5674EEA52BFD29691</RenderTarget></renderlayer>
+
+  <renderlayer>
+    <GUID>0B660A129B4CFDA2A5A2D3E4E0949FA6</GUID>
+    <Name>Solid Layer</Name>
+    <OmitDepthBuffer>0</OmitDepthBuffer>
+    <ClearRenderTargets>1</ClearRenderTargets>
+    <Voxelizer>0</Voxelizer>
+    <IgnoreHelperObjects>0</IgnoreHelperObjects>
+    <Pickable>1</Pickable>
+    <RenderTarget>B804E9F623AABCBA232F247216EE216B</RenderTarget>
+    <RenderTarget>A277553146FC64CF028CD78429CB0C26</RenderTarget>
+    <RenderTarget>2EAC5AF0314990354101A913294D674C</RenderTarget></renderlayer>
+
+  <renderlayer>
+    <GUID>0BE1808FCCA5B61BC690EAC74EADDEA5</GUID>
+    <Name>Lighting Layer</Name>
+    <OmitDepthBuffer>1</OmitDepthBuffer>
+    <ClearRenderTargets>0</ClearRenderTargets>
+    <Voxelizer>0</Voxelizer>
+    <IgnoreHelperObjects>1</IgnoreHelperObjects>
+    <Pickable>0</Pickable>
+    <RenderTarget>B804E9F623AABCBA232F247216EE216B</RenderTarget></renderlayer>
+
+  <renderlayer>
+    <GUID>1424586010B909EA488C988A1F5021F9</GUID>
+    <Name>Transparent Layer</Name>
+    <OmitDepthBuffer>0</OmitDepthBuffer>
+    <ClearRenderTargets>0</ClearRenderTargets>
+    <Voxelizer>0</Voxelizer>
+    <IgnoreHelperObjects>1</IgnoreHelperObjects>
+    <Pickable>0</Pickable>
+    <RenderTarget>B804E9F623AABCBA232F247216EE216B</RenderTarget></renderlayer>
+
+  <rendertechnique>
+    <GUID>2EC2AE23E3AA634D2FD7277D3C18D797</GUID>
+    <Name>[Base Material]</Name>
+    <Type>0</Type>
+    <TargetLayer>0B660A129B4CFDA2A5A2D3E4E0949FA6</TargetLayer>
+  
+    <Pass>
+      <Name>Solid Pass</Name>
+      <Code>Texture2D t_0:register(t0);
+Texture2D t_1:register(t1);
+Texture2D t_2:register(t2);
+SamplerState Sampler:register(s0);
+
+struct lightdata
+{
+	float4 pos;
+	float4 ambient;
+	float4 diffuse;
+	float4 specular;
+	float4 spotdirection;
+	float4 sda;
+};
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+	float4 lightcount;
+	lightdata lights[8];
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 specularcolor;
+	float4 specularpower;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float3 Normal: TEXCOORD1;
+	float2 uv:TEXCOORD0;
+	float3 p:TEXCOORD2;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;
+	
+	k.p=mul(worldmat,float4(x.Position,1)).xyz;
+	k.Normal=mul(itworldmat,float4(x.Normal,0)).xyz;
+	k.Position=mul(projmat,mul(viewmat,float4(k.p,1)));
+	k.uv=x.UV.xy;
+	return k;
+}
+
+float4 getenvmap(VSOUT v)
+{
+	float3 r=reflect(normalize(mul(viewmat,float4(v.p,1)).xyz),
+                     normalize(mul(viewmat,float4(v.Normal,0)).xyz));
+	float m = 2.0 * sqrt( r.x*r.x + r.y*r.y + (r.z+1.0)*(r.z+1.0) );
+	float2 env=r.xy/m+0.5;
+	return t_1.Sample(Sampler,env);
+}
+
+float3 calculatespecular(float3 po, float3 n, float3 lightdir)
+{	//blinn-phong
+    float3 H=normalize(-normalize(po)+normalize(lightdir));
+	//float3 incoming=reflect(lightdir,H);
+
+	return pow(saturate(dot(normalize(n),H)),40);
+}
+
+void GetLightData( lightdata l, float3 pos, out float3 dir, out float distance, inout float spotcutoff)
+{
+	if (l.pos.w)
+	{
+		dir=l.pos.xyz-pos;
+		distance=length(dir);
+		dir/=distance;
+		if (l.sda.y)
+		{
+			spotcutoff=dot(-l.spotdirection.xyz,dir);
+			spotcutoff=(spotcutoff-l.sda.y)/(1-l.sda.y);
+			if (spotcutoff&gt;0)
+				spotcutoff=pow(abs(saturate(spotcutoff)),l.sda.x);
+			else spotcutoff=0;
+		}
+	}
+	else
+	{
+		dir=normalize(l.pos.xyz);
+		distance=1;
+	}	
+}
+
+float3 lighting(float3 diff, float3 pos, float3 normal)
+{
+	float3 result=0;
+	for (int x=0; x&lt;lightcount[0]; x++)
+	{
+		lightdata l=lights[x];
+		float3 dir;
+		float dist;
+		float spotcutoff=1;
+		GetLightData(l,pos,dir,dist,spotcutoff);
+    	float3 H=normalize(-normalize(pos-campos.xyz)+dir.xyz);
+
+		float3 ambient=l.ambient.xyz;
+		float3 diffuse=l.diffuse.xyz*saturate(dot(dir,normal))*spotcutoff;
+		float3 specular=l.specular.xyz*spotcutoff*
+						pow(saturate(dot(normal,H)),1/(specularpower.x+0.000001));
+		float att=1+dist*(l.sda.z+l.sda.w*l.sda.w);
+
+		result+=(diff*ambient+diff*diffuse+specular*specularcolor.xyz)/att;
+	}
+	return result;
+}
+
+float3 perturb_normal(float3 N, float3 p, float2 uv, float3 map)
+{
+    float3 dp1 = ddx( p );
+    float3 dp2 = ddy( p );
+    float2 duv1 = ddx( uv );
+    float2 duv2 = ddy( uv );
+ 
+    // solve the linear system
+    float3 dp2perp = cross( dp2, N );
+    float3 dp1perp = cross( N, dp1 );
+    float3 T = dp2perp * duv1.x + dp1perp * duv2.x;
+    float3 B = dp2perp * duv1.y + dp1perp * duv2.y;
+ 
+    // construct a scale-invariant frame 
+    float invmax = rsqrt( max( dot(T,T), dot(B,B) ) );
+
+	float3x3 tangentFrame=float3x3( T * invmax, B * invmax, N );
+	
+	if (dot(map,map)==0) map=float3(0.5,0.5,1); //hack to fix not selected texture
+	
+	map=map*2-1;
+
+	return normalize( mul( map, tangentFrame ) );
+}
+
+struct PSOUT
+{
+	float4 c:SV_TARGET0;
+	float4 am:SV_TARGET1;
+	float4 nr:SV_TARGET2;
+};
+
+PSOUT p(VSOUT v)
+{ 
+	float normmult=1;
+	if (specularpower.y&gt;0.5) normmult=-1;
+
+	float4 tc=t_0.Sample(Sampler,v.uv.xy);
+	float4 normalMap=t_2.Sample(Sampler,v.uv.xy);
+
+	float3 normal=perturb_normal(normalize(v.Normal)*normmult,v.p,v.uv.xy,normalMap.xyz);
+	
+	float3 env=getenvmap(v).xyz;
+	
+	PSOUT p;
+	p.c.xyz=lighting(tc.xyz+env,v.p,normal);
+	p.c.w=tc.w;
+	p.am=tc;
+	p.nr=float4(normal,0);
+	
+	return p;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>8B8A33FF2B0E726DDD928D6754D0C3BE</GUID>
+        <Name>Texture</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      
+        <TextureGUID>E818D1B9C43129BE101D2865DFB184B2</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>60D36B9B1E2FC14A3AE82401A0380F09</GUID>
+        <Name>Envmap</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>8</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      
+        <TextureGUID>NONENONENONENONENONENONENONENONE</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>6DD97B71C15690B7FBFE0F10E38F7183</GUID>
+        <Name>NormalMap</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>9</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>45A2E4DD9B24E7EB3F665B00F5A7D5AD</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>2EC96BF15C044BADD08ED544F29357E9</GUID>
+        <Name>Specular Color</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>1</Type>
+      
+        <Value>AACAPwAAgD8AAIA/AACAPw==</Value>
+      
+        <DefaultValue>AACAPwAAgD8AAIA/AACAPw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>9178888EFE6DA3ADF1608D6B34F67F3E</GUID>
+        <Name>Specular</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>4eDgPAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>4eDgPAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>661B7206873613BD6B1FC5B0F2507399</GUID>
+        <Name>Invert Normals</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>0C49E60577805ED5575956E51B068058</GUID>
+        <Name>Culling</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>5</Type>
+      
+        <Value>AwAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>A2ADA781DC8D5CC56F03406A1763606C</GUID>
+        <Name>ZMode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>2</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>3FFF1538DC7EC0DA6733724C0BA075CB</GUID>
+        <Name>Render Priority</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>6</Type>
+      
+        <Value>fwAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>fwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>EC7AB2D739B31F05173BDE45C0D35EBF</GUID>
+        <Name>Blending</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AQAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>E398C0C938180A8EE97E87517E6E986B</GUID>
+    <Name>[PBR Mixed Rendering]</Name>
+    <Type>0</Type>
+    <TargetLayer>0B660A129B4CFDA2A5A2D3E4E0949FA6</TargetLayer>
+  
+    <Pass>
+      <Name>Solid Pass</Name>
+      <Code>Texture2D t_0:register(t0);
+Texture2D t_1:register(t1);
+SamplerState Sampler:register(s0);
+
+struct lightdata
+{
+	float4 pos;
+	float4 ambient;
+	float4 diffuse;
+	float4 specular;
+	float4 spotdirection;
+	float4 sda;
+};
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+	float4 lightcount;
+	lightdata lights[8];
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 data;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float3 Normal: TEXCOORD1;
+	float4 uv:TEXCOORD0;
+	float3 p:TEXCOORD2;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;
+	k.p=mul(worldmat,float4(x.Position,1)).xyz;
+	k.Normal=mul(itworldmat,float4(x.Normal,0)).xyz;
+	k.Position=mul(projmat,mul(viewmat,float4(k.p,1)));
+	k.uv=x.UV;
+	return k;
+}
+
+#define PI 3.14159265
+
+float3 fresnelSchlick(float cosTheta, float3 F0)
+{
+    return F0 + (1.0 - F0) * pow(1.0 - cosTheta, 5.0);
+}  
+
+float GeometrySchlickGGX(float NdotV, float roughness)
+{
+    float r = (roughness + 1.0);
+    float k = (r*r) / 8.0;
+
+    float num   = NdotV;
+    float denom = NdotV * (1.0 - k) + k;
+	
+    return num / denom;
+}
+
+float GeometrySmith(float3 N, float3 V, float3 L, float roughness)
+{
+    float NdotV = max(dot(N, V), 0.0);
+    float NdotL = max(dot(N, L), 0.0);
+    float ggx2  = GeometrySchlickGGX(NdotV, roughness);
+    float ggx1  = GeometrySchlickGGX(NdotL, roughness);
+	
+    return ggx1 * ggx2;
+}
+
+float DistributionGGX(float3 N, float3 H, float roughness)
+{
+    float a      = roughness*roughness;
+    float a2     = a*a;
+    float NdotH  = max(dot(N, H), 0.0);
+    float NdotH2 = NdotH*NdotH;
+	
+    float num   = a2;
+    float denom = (NdotH2 * (a2 - 1.0) + 1.0);
+    denom = PI * denom * denom;
+	
+    return num / denom;
+}
+
+float3 perturb_normal(float3 N, float3 p, float2 uv, float3 map)
+{
+    float3 dp1 = ddx( p );
+    float3 dp2 = ddy( p );
+    float2 duv1 = ddx( uv );
+    float2 duv2 = ddy( uv );
+ 
+    // solve the linear system
+    float3 dp2perp = cross( dp2, N );
+    float3 dp1perp = cross( N, dp1 );
+    float3 T = dp2perp * duv1.x + dp1perp * duv2.x;
+    float3 B = dp2perp * duv1.y + dp1perp * duv2.y;
+ 
+    // construct a scale-invariant frame 
+    float invmax = rsqrt( max( dot(T,T), dot(B,B) ) );
+
+	float3x3 tangentFrame=float3x3( T * invmax, B * invmax, N );
+	
+	if (dot(map,map)==0) map=float3(0.5,0.5,1); //hack to fix not selected texture
+	
+	map=map*2-1;
+
+	return normalize( mul( map, tangentFrame ) );
+}
+
+float ApplyModifier( float value, float modifier )
+{
+	if (modifier&lt;=127/255.0)
+		return value*modifier/(127/255.0);
+	else
+		return lerp(value,1,(modifier-127/255.0)/(128/255.0));	
+}
+
+struct PSOUT
+{
+	float4 c:SV_TARGET0;
+	float4 am:SV_TARGET1;
+	float4 nr:SV_TARGET2;
+};
+
+void GetLightData( lightdata l, float3 pos, out float3 dir, out float distance, inout float spotcutoff)
+{
+	if (l.pos.w)
+	{
+		dir=l.pos.xyz-pos;
+		distance=length(dir);
+		dir/=distance;
+		if (l.sda.y)
+		{
+			spotcutoff=dot(-l.spotdirection.xyz,dir);
+			spotcutoff=(spotcutoff-l.sda.y)/(1-l.sda.y);
+			if (spotcutoff&gt;0)
+				spotcutoff=pow(abs(saturate(spotcutoff)),l.sda.x);
+			else spotcutoff=0;
+		}
+	}
+	else
+	{
+		dir=normalize(l.pos.xyz);
+		distance=1;
+	}	
+}
+
+PSOUT p(VSOUT v)
+{
+	float normmult=1;
+	if (data.z&gt;0.5) normmult=-1;
+
+	float4 albedo=t_0.Sample(Sampler,v.uv.xy);
+	float4 normalMap=t_1.Sample(Sampler,v.uv.xy);
+
+	float3 N=perturb_normal(normalize(v.Normal)*normmult,v.p,v.uv.xy, normalMap.xyz);
+	float3 V=normalize(campos.xyz-v.p);
+	
+	float3 F0 = 0.04;
+	float metallic=ApplyModifier(albedo.w,data.y);
+	float roughness=ApplyModifier(normalMap.w,data.x);
+    F0 = lerp(F0, albedo.xyz, metallic);
+	
+	float3 Lo = 0;
+    for(int i = 0; i &lt; lightcount[0]; ++i)
+    {
+		lightdata l=lights[i];
+		float3 L;
+		float distance;
+		float spotcutoff=1;
+		GetLightData(l,v.p,L,distance,spotcutoff);
+
+		// calculate per-light radiance
+        float3 H = normalize(V + L);
+        //float distance    = length(l.pos.xyz - v.p);
+        float attenuation = 1.0 / (distance * distance);
+        float3 radiance     = l.diffuse.xyz * attenuation * spotcutoff;
+        
+        // cook-torrance brdf
+        float NDF = DistributionGGX(N, H, roughness);        
+        float G   = GeometrySmith(N, V, L, roughness);      
+        float3 F  = fresnelSchlick(max(dot(H, V), 0.0), F0);       
+        
+        float3 kS = F;
+        float3 kD = 1 - kS;
+        kD *= 1.0 - metallic;	  
+        
+        float3 numerator    = NDF * G * F;
+        float denominator = 4.0 * max(dot(N, V), 0.0) * max(dot(N, L), 0.0);
+        float3 specular     = numerator / max(denominator, 0.001);  
+            
+        // add to outgoing radiance Lo
+        float NdotL = max(dot(N, L), 0.0);                
+        Lo += (kD * albedo.xyz / PI + specular) * radiance * NdotL; 
+    }   
+  
+	PSOUT p;
+	p.c=float4(Lo, 1.0);
+	p.nr=float4(N,roughness);
+	p.am=float4(albedo.xyz,metallic);
+	
+	return p;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>8B8A33FF2B0E726DDD928D6754D0C3BE</GUID>
+        <Name>Albedo Map (alpha is Metalness)</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      
+        <TextureGUID>9A4A487BDB2B19B63C420D30C56ED1E4</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>6DD97B71C15690B7FBFE0F10E38F7183</GUID>
+        <Name>Normal Map (Alpha is Roughness)</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>8</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>8578EC9789A801EE76E62970B7DA6316</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>87DEFF81A095115449BCA9B089FB5B2A</GUID>
+        <Name>Roughness Modifier</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>//7+PgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>//7+PgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>7286301357B2FEC56EBEC87B4A7B704B</GUID>
+        <Name>Metalness Modifier</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>//7+PgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>//7+PgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>4EC3695F84FCBD9FF5FE4F6DC6287871</GUID>
+        <Name>Invert Normals</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>3CAD412881630D9D5721BF4D1D4B8A0C</GUID>
+        <Name>Culling</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>5</Type>
+      
+        <Value>AwAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>1F02CDB955E0799D4359A5ABEF7024C2</GUID>
+        <Name>ZMode</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>2</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>1BE5E7844E799944F2F51B6E223244FB</GUID>
+        <Name>Render Priority</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>6</Type>
+      
+        <Value>fwAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>fwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>2C884AF8578B8F54E03AFC52C9BF29E8</GUID>
+        <Name>Blending</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AQAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>DD2ED55A6A7511D4AE7A47FC3A9561F4</GUID>
+    <Name>[PBR Pure Deferred]</Name>
+    <Type>0</Type>
+    <TargetLayer>0B660A129B4CFDA2A5A2D3E4E0949FA6</TargetLayer>
+  
+    <Pass>
+      <Name>Solid Pass</Name>
+      <Code>Texture2D t_0:register(t0);
+Texture2D t_1:register(t1);
+SamplerState Sampler:register(s0);
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 data;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float3 Normal: TEXCOORD1;
+	float4 uv:TEXCOORD0;
+	float3 p:TEXCOORD2;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;
+	
+	k.p=mul(worldmat,float4(x.Position,1)).xyz;
+	k.Normal=mul(itworldmat,float4(x.Normal,0)).xyz;
+	k.Position=mul(projmat,mul(viewmat,float4(k.p,1)));
+	k.uv=x.UV;
+	return k;
+}
+
+float3 perturb_normal(float3 N, float3 p, float2 uv, float3 map)
+{
+    float3 dp1 = ddx( p );
+    float3 dp2 = ddy( p );
+    float2 duv1 = ddx( uv );
+    float2 duv2 = ddy( uv );
+ 
+    // solve the linear system
+    float3 dp2perp = cross( dp2, N );
+    float3 dp1perp = cross( N, dp1 );
+    float3 T = dp2perp * duv1.x + dp1perp * duv2.x;
+    float3 B = dp2perp * duv1.y + dp1perp * duv2.y;
+ 
+    // construct a scale-invariant frame 
+    float invmax = rsqrt( max( dot(T,T), dot(B,B) ) );
+
+	float3x3 tangentFrame=float3x3( T * invmax, B * invmax, N );
+	
+	if (dot(map,map)==0) map=float3(0.5,0.5,1); //hack to fix not selected texture
+	
+	map=map*2-1;
+
+	return normalize( mul( map, tangentFrame ) );
+}
+
+float ApplyModifier( float value, float modifier )
+{
+	if (modifier&lt;=127/255.0)
+		return value*modifier/(127/255.0);
+	else
+		return lerp(value,1,(modifier-127/255.0)/(128/255.0));	
+}
+
+struct PSOUT
+{
+	float4 am:SV_TARGET1;
+	float4 nr:SV_TARGET2;
+};
+
+PSOUT p(VSOUT v)
+{
+	float normmult=1;
+	if (data.z&gt;0.5) normmult=-1;
+
+	float4 albedo=t_0.Sample(Sampler,v.uv.xy);
+	float4 normalMap=t_1.Sample(Sampler,v.uv.xy);
+
+	float3 normal=perturb_normal(normalize(v.Normal)*normmult,v.p,v.uv.xy, normalMap.xyz);
+	albedo.w=ApplyModifier(albedo.w,data.y);
+	
+	PSOUT p;
+	p.nr=float4(normal,ApplyModifier(normalMap.w,data.x));
+	p.am=albedo;
+	return p;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>8B8A33FF2B0E726DDD928D6754D0C3BE</GUID>
+        <Name>Albedo Map (alpha is Metalness)</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      
+        <TextureGUID>NONENONENONENONENONENONENONENONE</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>6DD97B71C15690B7FBFE0F10E38F7183</GUID>
+        <Name>Normal Map (Alpha is Roughness)</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>8</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>NONENONENONENONENONENONENONENONE</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>AF6EBDB21D965C28DD6DDF6F15FCF98A</GUID>
+        <Name>Roughness Modifier</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>//7+PgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>//7+PgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>8E9D011E39D25D6F8498EA2ACFA0166D</GUID>
+        <Name>Metalness Modifier</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>//7+PgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>//7+PgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>EF6481AD72EAE8DFC127734421A52F5D</GUID>
+        <Name>Invert Normals</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>F22515E52761FD20D08534D1601EFE43</GUID>
+        <Name>Culling</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>5</Type>
+      
+        <Value>AwAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>F36F69801B2768BFAC346009058E80FC</GUID>
+        <Name>ZMode</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>2</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>78EC329F9CDC749CDF9B0F8FBD7BE892</GUID>
+        <Name>Render Priority</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>6</Type>
+      
+        <Value>fwAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>fwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>F03865288E732EB6A215C350DAC81D76</GUID>
+        <Name>Blending</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AQAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>5247EBE22E9C40E3FB00E44BE3EDB6EF</GUID>
+    <Name>Chromatic Aberration</Name>
+    <Type>2</Type>
+    <TargetLayer>NONENONENONENONENONENONENONENONE</TargetLayer>
+  
+    <Pass>
+      <Name>New Pass</Name>
+      <Code>SamplerState sm:register(s1);
+Texture2D Textur:register(t0);
+
+cbuffer b : register(b0)
+{
+	float t,aspect,xres,yres;
+}
+
+cbuffer c : register(b1)
+{
+	float power;
+	float samplecnt;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{ 
+	float count=samplecnt*255;
+
+	float2 dirr=(0.5-t);
+	float2 dirb=dirr;
+	float4 col=Textur.Sample(sm,t);
+	float4 r=0;
+	float4 b=0;
+	for (int x=0; x&lt;count; x++)
+	{
+ 		r+=Textur.Sample(sm,t-dirr*x/200.0f*power);
+ 		b+=Textur.Sample(sm,t+dirb*x/200.0f*power);
+	}
+
+	col.x=r.x/count;
+	col.z=b.z/count;
+
+	return col;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>A0BD031ED32C7A1A4E800945A8338AB3</GUID>
+        <Name>Input</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>fIrSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>fIrSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>9DE2A20DCA6371A7D7731C30E7A870A1</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>18C2BDC7B442D3DDB039BD6BED5B4C04</GUID>
+        <Name>Rendertarget</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>/H3SCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>/H3SCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>B804E9F623AABCBA232F247216EE216B</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>91255282F27FC5D26806E934D6D166B2</GUID>
+        <Name>Power</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>nZycPgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>zcxMPgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>08822755AC7C86D9EAB4C307C6B4F8D0</GUID>
+        <Name>Samplecount</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>kZCQPQAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>kZCQPQAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>E29A95A4D3FD630C418CF73778137606</GUID>
+    <Name>Colored Texture</Name>
+    <Type>0</Type>
+    <TargetLayer>0B660A129B4CFDA2A5A2D3E4E0949FA6</TargetLayer>
+  
+    <Pass>
+      <Name>New Pass</Name>
+      <Code>Texture2D t_0:register(t0);
+SamplerState Sampler:register(s0);
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 color;
+	float alphatest;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float3 Normal: TEXCOORD1;
+	float2 uv:TEXCOORD0;
+	float3 p:TEXCOORD2;
+};
+
+struct PSOUT
+{
+	float4 Color:SV_TARGET0;
+	float4 NormalZ:SV_TARGET1;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;
+
+	k.p=mul(worldmat,float4(x.Position,1)).xyz;
+	k.Position=mul(projmat,mul(viewmat,float4(k.p,1)));
+
+	k.uv=x.UV.xy;
+	k.Normal=0;
+	return k;
+}
+
+PSOUT p(VSOUT v)
+{
+	float4 t=t_0.Sample(Sampler,v.uv.xy);
+	if (alphatest&gt;t.a*255/256.0) discard;
+
+	PSOUT o;
+	o.Color=t*color;
+	o.NormalZ.xyz=normalize(v.Normal);
+	o.NormalZ=mul(viewmat,float4(v.p,1)).z;
+	return o;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>F6A1FAE63E1D9AFF3CC77BB727475DAC</GUID>
+        <Name>Texture</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      
+        <TextureGUID>CA6128FA9CB4BD2DC5837065C113AD02</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>FA7D6F80E43F84F2F179364DD26A510F</GUID>
+        <Name>Color</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>1</Type>
+      
+        <Value>AACAPwAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AACAPwAAgD8AAIA/AACAPw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>6CCC876B752C32F1E3FB58525273BDEB</GUID>
+        <Name>Cullmode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>5</Type>
+      
+        <Value>AwAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AwAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>769B9183B0BCB2CDB21153B55233C194</GUID>
+        <Name>Zmode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>2</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>EBD1F97CAB311067A61F36467C5A39B6</GUID>
+        <Name>BlendMode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AQAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>1C1EC3A5D789F2E071A414B31E27A8B1</GUID>
+        <Name>AlphaTest</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>6FF5D701CFEA9FBEDDCBFAA3905EE337</GUID>
+        <Name>Render Priority</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>6</Type>
+      
+        <Value>fwAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>fwAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>3826A688B4578BD29E77B3D829A99798</GUID>
+    <Name>Combine</Name>
+    <Type>2</Type>
+    <TargetLayer>NONENONENONENONENONENONENONENONE</TargetLayer>
+  
+    <Pass>
+      <Name>New Pass</Name>
+      <Code>SamplerState sm:register(s0);
+Texture2D i1:register(t0);
+Texture2D i2:register(t1);
+
+cbuffer b : register(b0)
+{
+}
+
+cbuffer c : register(b1)
+{
+	float4 type;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{ 
+	float4 v1=i1.Sample(sm,t);
+	float4 v2=i2.Sample(sm,t);
+	int Type=type.x*255+0.5;
+	
+	float4 r=v1+v2;
+	if (Type==1) r=v1-v2;
+	if (Type==2) r=v1*v2;
+	if (Type==3) r=v1*(1-v2.w)+v2*v2.w;
+	if (Type==4) r=min(v1,v2);
+	if (Type==5) r=max(v1,v2);
+	if (Type==6) r=v1/(1-v2);
+	if (Type==7) r=1-(1-v1)/v2;
+	if (Type==8) r=1-(1-v1)*(1-v2);
+	if (Type==9) r=lerp(1-2*(1-v1)*(1-v2),2*v1*v2,v1&lt;0.5);	
+	
+	return r;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>C0965B34AB0F2D55C3EDE3C80A4D5BE7</GUID>
+        <Name>Type</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>FE7A15BB4434AA4861D227EE1CC4FB92</GUID>
+        <Name>Input 1</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>NONENONENONENONENONENONENONENONE</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>B2CD6DB18DA9C9D42BB806AAF2832142</GUID>
+        <Name>Input 2</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>8</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>NONENONENONENONENONENONENONENONE</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>1D5A65A54047510BBAB6A03EEB482046</GUID>
+        <Name>Target</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>NONENONENONENONENONENONENONENONE</TextureGUID>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>FC4B0E596FDD0B25CB581741643997D8</GUID>
+    <Name>Copy To Rendertarget</Name>
+    <Type>2</Type>
+    <TargetLayer>NONENONENONENONENONENONENONENONE</TargetLayer>
+  
+    <Pass>
+      <Name>Copy</Name>
+      <Code>SamplerState sm:register(s1);
+Texture2D Textur:register(t0);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{ 
+  return Textur.Sample(sm,t.xy);
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>05724443836EAEEAD74F7F1A06A83EDC</GUID>
+        <Name>Input</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>NONENONENONENONENONENONENONENONE</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>D351A482D43154495296701CADA455D2</GUID>
+        <Name>rebderTarget</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>NONENONENONENONENONENONENONENONE</TextureGUID>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>D9BCB25B70726C223C6F5F322777287C</GUID>
+    <Name>Default Particle</Name>
+    <Type>3</Type>
+    <TargetLayer>1424586010B909EA488C988A1F5021F9</TargetLayer>
+  
+    <Pass>
+      <Name>Particle pass</Name>
+      <Code>Texture2D t_0:register(t0);
+Texture2D t_1:register(t1);
+SamplerState Sampler:register(s0);
+SamplerState Smp:register(s1);
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 color;
+	float alphatest;
+}
+
+struct VSIN
+{
+	float4 Position : POSITION0;
+	float4 Data : TEXCOORD0;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float4 Color:TEXCOORD0;
+	float4 Data:TEXCOORD1;
+	float4 Size:TEXCOORD2;
+	float AlphaTest:TEXCOORD3;
+};
+
+struct GSOUT
+{
+	float4 Position : SV_POSITION;
+	float2 UV : TEXCOORD0;
+	float4 Data:TEXCOORD1;
+	float4 Color:TEXCOORD2;
+	float AlphaTest:TEXCOORD3;
+};
+
+[maxvertexcount(4)]
+void g(point VSOUT input[1], inout TriangleStream&lt;GSOUT&gt; OutputStream)
+{
+	float4 p=input[0].Position;
+	float4 scale=0.1*input[0].Size.x;
+	float r=0.1*input[0].Data.y;
+	float4 x=float4(sin(r),cos(r),0,0);
+	float4 y=float4(-x.y,x.x,0,0);
+
+	GSOUT vx[4];
+
+	vx[0].Position=mul(projmat,p+(-x-y)*scale);
+	vx[0].UV=float2(1,1);
+	vx[1].Position=mul(projmat,p+(x-y)*scale);
+	vx[1].UV=float2(1,0);
+	vx[2].Position=mul(projmat,p+(x+y)*scale);
+	vx[2].UV=float2(0,0);
+	vx[3].Position=mul(projmat,p+(-x+y)*scale);
+	vx[3].UV=float2(0,1);
+	
+	vx[0].Data=vx[1].Data=vx[2].Data=vx[3].Data=input[0].Data;
+	vx[0].Color=vx[1].Color=vx[2].Color=vx[3].Color=input[0].Color;
+	vx[0].AlphaTest=vx[1].AlphaTest=vx[2].AlphaTest=vx[3].AlphaTest=input[0].AlphaTest;
+
+	OutputStream.Append(vx[3]);
+	OutputStream.Append(vx[0]);
+	OutputStream.Append(vx[2]);
+	OutputStream.Append(vx[1]);
+
+	OutputStream.RestartStrip();	
+}
+
+float pdata(int id, float l)
+{
+	float t = 1-l;
+	float a = t_0.Load(int3(trunc(t*2048),id,0)).x;
+	float b = t_0.Load(int3(trunc(t*2048)+1,id,0)).x;
+	return lerp(a,b, frac(t*2048) );
+}
+
+float GetNoise(float tin)
+{
+ return frac(sin(tin*54.37)*17593.1317);
+}
+
+float pdatachaos(int id, int cid, float c, float l)
+{
+	return pdata(id,l)+pdata(cid,l)*GetNoise(c+cid);
+}
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;
+
+	k.Position=mul(viewmat,x.Position);
+
+	k.Data=x.Data;
+	k.Color.x=pdatachaos(0,5,x.Data.z,x.Data.x);
+	k.Color.y=pdatachaos(1,6,x.Data.z,x.Data.x);
+	k.Color.z=pdatachaos(2,7,x.Data.z,x.Data.x);
+	k.Color.w=pdatachaos(3,8,x.Data.z,x.Data.x);
+	k.Size=pdatachaos(4,9,x.Data.z,x.Data.x);
+	k.AlphaTest=pdata(10,x.Data.x);
+	return k;
+}
+
+float4 p(GSOUT v) : SV_TARGET0
+{
+	//return v.AlphaTest;
+	float4 t = t_1.Sample(Sampler,v.UV);
+	if (t.w&lt;v.AlphaTest)
+		discard;
+	return v.Color*t;// v.UV.xyxy;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>21804F8A15EED15B9F3461E5108EA527</GUID>
+        <Name>Culling</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>5</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>D718FFA06E9C1B9191BA62205F29CD51</GUID>
+        <Name>Z mode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>2</Type>
+      
+        <Value>AgAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AgAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>E8F2764E64204DE510CBA2CA47F3ADA2</GUID>
+        <Name>Blending</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>VAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>VAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>898C7D2ADEA9EA9876C2729200AFC8D6</GUID>
+        <Name>Texture</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>8</Type>
+      
+        <Value>3Ei3DAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>F6DFD9DB908F6BACD95B08C843BBCEA0</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>86C8C380A01ADAAF2341241322DCB75E</GUID>
+        <Name>Red</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <Value>AACAPwAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AACAPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>7981A98594F21F0753ACD1921DDB2EAD</GUID>
+        <Name>Green</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <Value>AACAPwAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AACAPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>A34D02E2C9BF19BE92547FDD64DB1597</GUID>
+        <Name>Blue</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <Value>AACAPwAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AACAPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>0A46CB1EAF31C7AD6F5DD8E2AEE3FD11</GUID>
+        <Name>Alpha</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <Value>AACAPwAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AACAPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>2B0FF4087D0ECFCD6FCBD138F1EF0B7E</GUID>
+        <Name>Size</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <Value>AACAPwAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AACAPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>0730E7826620EE356815534D67C35161</GUID>
+        <Name>Red Chaos</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>ED46EA413D16A0BC90748ADD3216B65E</GUID>
+        <Name>Green Chaos</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>78C6F826000C5E3A31F01A87E18F7838</GUID>
+        <Name>Blue Chaos</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>EF92B48D5D6B83C61853CBE910C8DA60</GUID>
+        <Name>Alpha Chaos</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>7439552AFCCDD02D9F85BBFB7F65E7AF</GUID>
+        <Name>Size Chaos</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>9026CE0FB858C46E32A0F524E69ECE03</GUID>
+        <Name>alphatest</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>24</Type>
+      
+        <Value>AACAPwAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>07D72FA094C9ACA3EA268BA044F3E496</GUID>
+    <Name>Deferred Ambient Light</Name>
+    <Type>0</Type>
+    <TargetLayer>0BE1808FCCA5B61BC690EAC74EADDEA5</TargetLayer>
+  
+    <Pass>
+      <Name>Sphere Light</Name>
+      <Code>Texture2D t_0:register(t0);
+Texture2D t_1:register(t1);
+Texture2D t_2:register(t7);
+SamplerState Sampler:register(s0);
+
+struct lightdata
+{
+	float4 pos;
+	float4 ambient;
+	float4 diffuse;
+	float4 specular;
+	float4 spotdirection;
+	float4 sda;
+};
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+	float4 lightcount;
+	lightdata lights[8];
+	float4 res;
+	float4x4 iviewmat;
+	float4x4 iprojmat;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 lightColor;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float2 uv:TEXCOORD0;
+	float4 pos:TEXCOORD1;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;	
+	k.Position=float4(x.Position.xzy*2,1);
+	k.pos.xyz=transpose(worldmat)[3].xyz;
+	k.pos.w=length(mul(worldmat,float4(0,1,0,0)));
+	k.uv=x.UV.xy;
+	return k;
+}
+
+float3 getWorldPos(float depth, float2 uv)
+{
+	float4 a=mul(iviewmat,mul(iprojmat, float4(uv*2-1,depth,1)));
+	return a.xyz/a.w;	
+}
+
+#define PI 3.14159265
+
+float3 fresnelSchlick(float cosTheta, float3 F0)
+{
+    return F0 + (1.0 - F0) * pow(1.0 - cosTheta, 5.0);
+}  
+
+float3 DiffuseIBL(float3 N, float3 V, float3 F0, float3 albedo, float metallic)
+{
+	float3 H = normalize(V + N);
+    float3 F = fresnelSchlick(max(dot(H, V), 0.0), F0);       
+	return (1 - F) * (1.0 - metallic)*lightColor.xyz*albedo/PI;
+}
+
+float4 p(VSOUT v) : SV_TARGET0
+{ 
+	float4 albedo=t_0.Load(int3(v.Position.xy,0));
+	float4 normal=t_1.Load(int3(v.Position.xy,0));
+	float depth=t_2.Load(int3(v.Position.xy,0)).x;
+
+	float roughness = normal.w;
+	float metallic = albedo.w;
+	
+	float3 N=normalize(normal.xyz);
+	float3 V=normalize(campos.xyz-getWorldPos(depth,v.uv));
+	
+	float3 F0 = 0.04;
+    F0 = lerp(F0, albedo.xyz, metallic);
+	
+	return float4(DiffuseIBL(N,V,F0,albedo.xyz,metallic),1); 
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>42CF2F5EF3C73DEDCFD6230C95C17391</GUID>
+        <Name>Blending</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>EQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>90AB32A60E19F15E6DCF5F41F77E94F1</GUID>
+        <Name>Culling</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>5</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>7D56C3615A56AF849133C49EDABE63BB</GUID>
+        <Name>Albedo and Metalness</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>nH7SCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>nH7SCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>A277553146FC64CF028CD78429CB0C26</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>B61A66B408C0301A57445736695B71CB</GUID>
+        <Name>Normal and Roughness</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>8</Type>
+      
+        <Value>PHrSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>PHrSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>2EAC5AF0314990354101A913294D674C</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>FB01F4A2B6AD6037BC0FF467F561B032</GUID>
+        <Name>Depth</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>25</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>56CB4BD94488A27472D1817E2180C79C</GUID>
+        <Name>Light Color</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>1</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAACAPw==</Value>
+      
+        <DefaultValue>AACAPwAAgD8AAIA/AACAPw==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>168625FA5DABA54CC9795DAE67349F4E</GUID>
+    <Name>Deferred Fake Cubemap</Name>
+    <Type>0</Type>
+    <TargetLayer>0BE1808FCCA5B61BC690EAC74EADDEA5</TargetLayer>
+  
+    <Pass>
+      <Name>Sphere Light</Name>
+      <Code>Texture2D t_0:register(t0);
+Texture2D t_1:register(t1);
+Texture2D t_2:register(t2);
+Texture2D t_3:register(t7);
+SamplerState Sampler:register(s0);
+
+struct lightdata
+{
+	float4 pos;
+	float4 ambient;
+	float4 diffuse;
+	float4 specular;
+	float4 spotdirection;
+	float4 sda;
+};
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+	float4 campos;
+	float4 lightcount;
+	lightdata lights[8];
+	float4 res;
+	float4x4 iviewmat;
+	float4x4 iprojmat;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float2 uv:TEXCOORD0;
+	float4 pos:TEXCOORD1;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT k;	
+	k.Position=float4(x.Position.xzy*2,1);
+	k.pos.xyz=transpose(worldmat)[3].xyz;
+	k.pos.w=length(mul(worldmat,float4(0,1,0,0)));
+	k.uv=x.UV.xy;
+	return k;
+}
+
+float3 getWorldPos(float depth, float2 uv)
+{
+	float4 a=mul(iviewmat,mul(iprojmat, float4(uv*2-1,depth,1)));
+	return a.xyz/a.w;	
+}
+
+#define PI 3.14159265
+
+float3 fresnelSchlick(float cosTheta, float3 F0)
+{
+    return F0 + (1.0 - F0) * pow(1.0 - cosTheta, 5.0);
+}  
+
+float radicalInverse_VdC(uint bits) {
+     bits = (bits &lt;&lt; 16u) | (bits &gt;&gt; 16u);
+     bits = ((bits &amp; 0x55555555u) &lt;&lt; 1u) | ((bits &amp; 0xAAAAAAAAu) &gt;&gt; 1u);
+     bits = ((bits &amp; 0x33333333u) &lt;&lt; 2u) | ((bits &amp; 0xCCCCCCCCu) &gt;&gt; 2u);
+     bits = ((bits &amp; 0x0F0F0F0Fu) &lt;&lt; 4u) | ((bits &amp; 0xF0F0F0F0u) &gt;&gt; 4u);
+     bits = ((bits &amp; 0x00FF00FFu) &lt;&lt; 8u) | ((bits &amp; 0xFF00FF00u) &gt;&gt; 8u);
+     return float(bits) * 2.3283064365386963e-10; // / 0x100000000
+ }
+ // http://holger.dammertz.org/stuff/notes_HammersleyOnHemisphere.html
+ float2 Hammersley(uint i, uint N) {
+     return float2(float(i)/float(N), radicalInverse_VdC(i));
+ }
+
+float3 hemisphereSample_uniform(float u, float v) 
+{
+	float phi = v * 2.0 * PI;
+	float cosTheta = 1.0 - u;
+	float sinTheta = sqrt(1.0 - cosTheta * cosTheta);
+	return float3(cos(phi) * sinTheta, sin(phi) * sinTheta, cosTheta);
+}
+
+float2 DeCube( float3 uv )
+{
+	float3 absUV = abs(uv);
+	float maxAxis=max(max(absUV.x,absUV.y),absUV.z);
+	float2 uvc=uv.zy;
+	if ( maxAxis==absUV.y ) uvc=uv.xz;
+	if ( maxAxis==absUV.z ) uvc=uv.xy;
+	return 0.5*(uvc/maxAxis+1);
+}
+
+float3 ImportanceSampleGGX( float2 Xi, float Roughness, float3 N )
+{
+	float a = Roughness * Roughness;
+	float Phi = 2 * PI * Xi.x;
+	float CosTheta = sqrt( (1 - Xi.y) / ( 1 + (a*a - 1) * Xi.y ) );
+	float SinTheta = sqrt( 1 - CosTheta * CosTheta );
+	float3 H;
+	H.x = SinTheta * cos( Phi );
+	H.y = SinTheta * sin( Phi );
+	H.z = CosTheta;
+	float3 UpVector = abs(N.z) &lt; 0.999 ? float3(0,0,1) : float3(1,0,0);
+	float3 TangentX = normalize( cross( UpVector, N ) );
+	float3 TangentY = cross( N, TangentX );
+	// Tangent to world space
+	return TangentX * H.x + TangentY * H.y + N * H.z;
+}
+
+float GeometrySchlickGGX(float NdotV, float roughness)
+{
+    float r = (roughness + 1.0);
+    float k = (r*r) / 8.0;
+
+    float num   = NdotV;
+    float denom = NdotV * (1.0 - k) + k;
+	
+    return num / denom;
+}
+
+float GeometrySmith(float3 N, float3 V, float3 L, float roughness)
+{
+    float NdotV = max(dot(N, V), 0.0);
+    float NdotL = max(dot(N, L), 0.0);
+    float ggx2  = GeometrySchlickGGX(NdotV, roughness);
+    float ggx1  = GeometrySchlickGGX(NdotL, roughness);
+	
+    return ggx1 * ggx2;
+}
+
+float3 SpecularIBL( float3 SpecularColor , float Roughness, float3 N, float3 V )
+{
+	float3 SpecularLighting = 0;
+	const uint NumSamples = 32;
+	for( uint i = 0; i &lt; NumSamples; i++ )
+	{
+		float2 Xi = Hammersley( i, NumSamples );
+
+		float3 H = ImportanceSampleGGX( Xi, Roughness, N );
+		float3 L = 2 * dot( V, H ) * H - V;
+		float NoV = saturate( dot( N, V ) );
+		float NoL = saturate( dot( N, L ) );
+		float NoH = saturate( dot( N, H ) );
+		float VoH = saturate( dot( V, H ) );
+		if( NoL &gt; 0 )
+		{
+			float3 SampleColor = t_2.SampleLevel( Sampler , DeCube(L), 0 ).rgb;
+			float G = GeometrySmith( N, V, L, Roughness );
+			float Fc = pow( 1 - VoH, 5 );
+			float3 F = (1 - Fc) * SpecularColor + Fc;
+			// Incident light = SampleColor * NoL
+			// Microfacet specular = D*G*F / (4*NoL*NoV)
+			// pdf = D * NoH / (4 * VoH)
+			SpecularLighting += SampleColor * F * G * VoH / (NoH * NoV);
+		}
+	}
+	return SpecularLighting / NumSamples;
+}
+
+float3 DiffuseIBL(float3 N, float3 V, float3 F0, float3 albedo, float metallic)
+{
+	float3 H = normalize(V + N);
+    float3 F  = fresnelSchlick(max(dot(H, V), 0.0), F0);       
+	
+    float3 kD = 1 - F;
+    kD *= 1.0 - metallic;
+	
+	const uint NumSamples = 64;
+	
+	float3 smp=0;
+	
+	float3 tmp=float3(0,1,0);
+	if (abs(dot(tmp,N))&lt;0.1)
+		tmp=float3(1,0,0);
+	
+	float3 X=normalize(cross(N,tmp));
+	float3 Y=normalize(cross(X,N));
+	float3x3 mat=float3x3(X,Y,N);
+	
+	for( uint i = 0; i &lt; NumSamples; i++ )
+	{
+		float2 Xi = Hammersley( i, NumSamples );
+		float3 v = hemisphereSample_uniform(Xi.x, Xi.y);
+		float3 v2=mul(v,mat);
+		smp+=t_2.SampleLevel( Sampler , DeCube(v2), 8 ).rgb;
+	}
+	
+	return kD*(smp/NumSamples)*albedo/PI;
+}
+
+float4 p(VSOUT v) : SV_TARGET0
+{ 
+	float4 albedo=t_0.Load(int3(v.Position.xy,0));
+	float4 normal=t_1.Load(int3(v.Position.xy,0));
+	float depth=t_3.Load(int3(v.Position.xy,0)).x;
+
+	float roughness = normal.w;
+	float metallic = albedo.w;
+	
+	float3 N=normalize(normal.xyz);
+	float3 V=normalize(campos.xyz-getWorldPos(depth,v.uv));
+	
+	float3 F0 = 0.04;
+    F0 = lerp(F0, albedo.xyz, metallic);
+	
+	float3 light = DiffuseIBL(N,V,F0,albedo.xyz,metallic); 
+	light+=SpecularIBL(F0, roughness, N, V);
+	
+	return float4(light,1);
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>BD9E334A4732B0A557939451D328D1D2</GUID>
+        <Name>Blending</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>EQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>9EFA5A2D20A9FB53199F604F1020D358</GUID>
+        <Name>Culling</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>5</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>5609525ABA001495C6AC5DDBE6DB821A</GUID>
+        <Name>Albedo and Metalness</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>nH7SCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>nH7SCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>A277553146FC64CF028CD78429CB0C26</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>61832A03E0FC4BA7653643A90F8E0776</GUID>
+        <Name>Normal and Roughness</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>8</Type>
+      
+        <Value>PHrSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>PHrSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>2EAC5AF0314990354101A913294D674C</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>93744B6F447A3D5B22F2737CDC4C4609</GUID>
+        <Name>Depth</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>25</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>F37544CDAE35B589734DF51A60645618</GUID>
+        <Name>Envmap (non-cube)</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>9</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>CABD4995B492CF7933B3ED5ACC49CB74</TextureGUID>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>4EB186919A7C90223A237FC6C30F31F9</GUID>
+    <Name>FXAA</Name>
+    <Type>2</Type>
+    <TargetLayer>NONENONENONENONENONENONENONENONE</TargetLayer>
+  
+    <Pass>
+      <Name>Prepass</Name>
+      <Code>SamplerState sm:register(s1);
+Texture2D Textur:register(t0);
+
+cbuffer b : register(b0)
+{
+	float t,aspect,xres,yres;
+}
+
+cbuffer c : register(b1)
+{
+	float r,g,b;
+}
+
+float gamma(float c)
+{
+float cs=saturate(c);
+
+if (cs&lt;0.0031308) cs=12.92*cs;
+else cs=1.055*pow(cs,1/2.4)-0.055;
+
+return cs;
+}
+
+float4 gamma4(float4 g)
+{
+return float4(gamma(g.x),gamma(g.y),gamma(g.z),g.w);
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	float4 c=gamma4(saturate(Textur.Sample(sm,t)));
+	float f=r+g+b;
+	c.w=dot(saturate(c.xyz),float3(r,g,b)/f);
+	return c;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>ED1554CFF9DDAC4928D77B62023D5E3B</GUID>
+        <Name>Input</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>/H3SCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>/H3SCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>B804E9F623AABCBA232F247216EE216B</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>717842B61F3FD894D188046F02359C52</GUID>
+        <Name>Target</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>fIrSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>fIrSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>9DE2A20DCA6371A7D7731C30E7A870A1</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>0F13015F6E3CFED2590A2C5592741536</GUID>
+        <Name>Luma Red</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>m5qaPgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>m5qaPgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>BF3E0D065CF0C443C03CE5BAA7E1E9DC</GUID>
+        <Name>Luma Green</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>zczMPgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>zczMPgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>861A6DD35CA2A0AD202BC59E713367AA</GUID>
+        <Name>Luma Blue</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>m5qaPgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>m5qaPgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  
+    <Pass>
+      <Name>FXAA</Name>
+      <Code>SamplerState sm : register(s1);
+Texture2D t : register(t0);
+
+float4 ft(float2 p) { return t.SampleLevel(sm, p, 0.0); }
+float4 fo(float2 p, int2 o) { return t.SampleLevel(sm, p, 0.0, o); }
+
+float4 FxaaPixelShader(float2 p, float2 fxaaQualityRcpFrame,
+					   float fxaaQualitySubpix, float fxaaQualityEdgeThreshold,
+					   float fxaaQualityEdgeThresholdMin)
+{
+	float quality[12] = { 1, 1, 1, 1, 1, 1.5, 2, 2, 2, 2, 4, 8 };
+
+	float4 rgbyM = ft(p);
+	float lS = fo(p, int2(0, 1)).w;
+	float lE = fo(p, int2(1, 0)).w;
+	float lN = fo(p, int2(0, -1)).w;
+	float lW = fo(p, int2(-1, 0)).w;
+
+	float rangeMax = max(max(lN, lW), max(lE, max(lS, rgbyM.w)));
+	float rangeMin = min(min(lN, lW), min(lE, min(lS, rgbyM.w)));
+	float rangeMaxScaled = rangeMax * fxaaQualityEdgeThreshold;
+	float range = rangeMax - rangeMin;
+	float rangeMaxClamped = max(fxaaQualityEdgeThresholdMin, rangeMaxScaled);
+	if (range &lt; rangeMaxClamped)
+		return rgbyM;
+
+	float lNW = fo(p, int2(-1, -1)).w;
+	float lSE = fo(p, int2(1, 1)).w;
+	float lNE = fo(p, int2(1, -1)).w;
+	float lSW = fo(p, int2(-1, 1)).w;
+
+	float lNS = lN + lS;
+	float lWE = lW + lE;
+	float subpixRcpRange = 1.0 / range;
+	float subpixNSWE = lNS + lWE;
+	float edgeHorz1 = (-2.0 * rgbyM.w) + lNS;
+	float edgeVert1 = (-2.0 * rgbyM.w) + lWE;
+
+	float lNESE = lNE + lSE;
+	float lNWNE = lNW + lNE;
+	float edgeHorz2 = (-2.0 * lE) + lNESE;
+	float edgeVert2 = (-2.0 * lN) + lNWNE;
+
+	float lNWSW = lNW + lSW;
+	float lSWSE = lSW + lSE;
+	float edgeHorz4 = (abs(edgeHorz1) * 2.0) + abs(edgeHorz2);
+	float edgeVert4 = (abs(edgeVert1) * 2.0) + abs(edgeVert2);
+	float edgeHorz3 = (-2.0 * lW) + lNWSW;
+	float edgeVert3 = (-2.0 * lS) + lSWSE;
+	float edgeHorz = abs(edgeHorz3) + edgeHorz4;
+	float edgeVert = abs(edgeVert3) + edgeVert4;
+
+	float subpixNWSWNESE = lNWSW + lNESE;
+	float lengthSign = fxaaQualityRcpFrame.x;
+	bool horzSpan = edgeHorz &gt;= edgeVert;
+	float subpixA = subpixNSWE * 2.0 + subpixNWSWNESE;
+
+	if (!horzSpan) lN = lW;
+	if (!horzSpan) lS = lE;
+	if (horzSpan) lengthSign = fxaaQualityRcpFrame.y;
+	float subpixB = (subpixA * (1.0 / 12.0)) - rgbyM.w;
+
+	float gradientN = lN - rgbyM.w;
+	float gradientS = lS - rgbyM.w;
+	float lNN = lN + rgbyM.w;
+	float lSS = lS + rgbyM.w;
+	bool pairN = abs(gradientN) &gt;= abs(gradientS);
+	float gradient = max(abs(gradientN), abs(gradientS));
+	if (pairN) lengthSign = -lengthSign;
+	float subpixC = saturate(abs(subpixB) * subpixRcpRange);
+
+	float2 posB=p;
+	float2 offNP;
+	offNP.x = (!horzSpan) ? 0.0 : fxaaQualityRcpFrame.x;
+	offNP.y = (horzSpan) ? 0.0 : fxaaQualityRcpFrame.y;
+	if (!horzSpan) posB.x += lengthSign * 0.5;
+	if (horzSpan) posB.y += lengthSign * 0.5;
+
+	float2 posN=posB-offNP*quality[0];
+	float2 posP=posB+offNP*quality[0];
+	float subpixD = ((-2.0)*subpixC) + 3.0;
+	float lEndN = ft(posN).w;
+	float subpixE = subpixC * subpixC;
+	float lEndP = ft(posP).w;
+
+	if (!pairN) lNN = lSS;
+	float gradientScaled = gradient * 1.0 / 4.0;
+	float lMM = rgbyM.w - lNN * 0.5;
+	float subpixF = subpixD * subpixE;
+	bool lMLTZero = lMM &lt; 0.0;
+
+	lEndN -= lNN * 0.5;
+	lEndP -= lNN * 0.5;
+	bool doneN,doneP,doneNP;
+
+	for (int x = 1; x &lt; 12; x++)
+	{
+		doneN = abs(lEndN) &gt;= gradientScaled;
+		doneP = abs(lEndP) &gt;= gradientScaled;
+		if (!doneN) posN.x -= offNP.x * quality[x];
+		if (!doneN) posN.y -= offNP.y * quality[x];
+		doneNP = (!doneN) || (!doneP);
+		if (!doneP) posP.x += offNP.x * quality[x];
+		if (!doneP) posP.y += offNP.y * quality[x];
+
+		if (!doneNP || x==11) break;
+		if (!doneN) lEndN = ft(posN.xy).w;
+		if (!doneP) lEndP = ft(posP.xy).w;
+		if (!doneN) lEndN = lEndN - lNN * 0.5;
+		if (!doneP) lEndP = lEndP - lNN * 0.5;
+	}
+
+	float dstN = p.x - posN.x;
+	float dstP = posP.x - p.x;
+	if (!horzSpan) dstN = p.y - posN.y;
+	if (!horzSpan) dstP = posP.y - p.y;
+
+	bool goodSpanN = (lEndN &lt; 0.0) != lMLTZero;
+	float spanLength = (dstP + dstN);
+	bool goodSpanP = (lEndP &lt; 0.0) != lMLTZero;
+	float spanLengthRcp = 1.0 / spanLength;
+
+	bool directionN = dstN &lt; dstP;
+	float dst = min(dstN, dstP);
+	bool goodSpan = directionN ? goodSpanN : goodSpanP;
+	float subpixG = subpixF * subpixF;
+	float pixelOffset = (dst * (-spanLengthRcp)) + 0.5;
+	float subpixH = subpixG * fxaaQualitySubpix;
+
+	float pixelOffsetGood = goodSpan ? pixelOffset : 0.0;
+	float pixelOffsetSubpix = max(pixelOffsetGood, subpixH);
+
+	float2 posM=p;
+	if (!horzSpan) posM.x += pixelOffsetSubpix * lengthSign;
+	if (horzSpan) posM.y += pixelOffsetSubpix * lengthSign;
+	return float4(ft(posM).xyz, rgbyM.w);
+}
+
+cbuffer b : register(b0)
+{
+	float time, aspect, xres, yres;
+}
+
+cbuffer c : register(b1)
+{
+	float subpixel;
+	float edgethresh, edgethreshmin;
+}
+
+float degamma(float c)
+{
+float cs;
+if (c&lt;0.04045) cs=c/12.92;
+else cs=pow((c+0.055)/1.055,2.4);
+return cs;
+}
+
+float4 degamma4(float4 g)
+{
+return float4(degamma(g.x),degamma(g.y),degamma(g.z),g.w);
+}
+
+float4 p(float2 t : TEXCOORD0) : SV_TARGET0
+{
+	return degamma4(saturate(FxaaPixelShader(t, 1 / float2(xres, yres), subpixel, lerp(1 / 3.0, 0.063, edgethresh), edgethreshmin*0.0833)));// Textur.Sample(sm,t.xy);
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>950D57988C9710C0CD95128F901F13DB</GUID>
+        <Name>Input</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>fIrSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>fIrSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>9DE2A20DCA6371A7D7731C30E7A870A1</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>EFDE54CB9E4EA4033E730FF7D5089E1C</GUID>
+        <Name>Output</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>/H3SCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>/H3SCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>B804E9F623AABCBA232F247216EE216B</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>9313E83DA314663A00C92180AD993B09</GUID>
+        <Name>Subpixel</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>wsFBPwAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>wsFBPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>25EE7EE36DF5EF1E88B276888DFB6ABD</GUID>
+        <Name>Edge Threshold</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>gYAAPwAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>gYAAPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>629D89FA75C4A14194E667F9E7908B5D</GUID>
+        <Name>Edge Threshold Min</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>AACAPwAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AACAPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>33AEA5F0F3B498146DA6A11BA7474CDF</GUID>
+    <Name>Glow</Name>
+    <Type>2</Type>
+    <TargetLayer>NONENONENONENONENONENONENONENONE</TargetLayer>
+  
+    <Parameter>
+      <GUID>54DDD83C1A13618CC5E7DF312A595AB9</GUID>
+      <Name>Blur X</Name>
+    
+      <Scope>1</Scope>
+    
+      <Type>0</Type>
+    
+      <Value>gYCAPgAAAAAAAAAAAAAAAA==</Value>
+    
+      <DefaultValue>gICAPgAAAAAAAAAAAAAAAA==</DefaultValue>
+    </Parameter>
+  
+    <Parameter>
+      <GUID>BDB08EB78B6B0B1711EBA58541FCD038</GUID>
+      <Name>Blur Y</Name>
+    
+      <Scope>1</Scope>
+    
+      <Type>0</Type>
+    
+      <Value>gYCAPgAAAAAAAAAAAAAAAA==</Value>
+    
+      <DefaultValue>gICAPgAAAAAAAAAAAAAAAA==</DefaultValue>
+    </Parameter>
+  
+    <Parameter>
+      <GUID>8A51F34A9EE53A2BC76920E879F45AF2</GUID>
+      <Name>Samplecount</Name>
+    
+      <Scope>1</Scope>
+    
+      <Type>0</Type>
+    
+      <Value>wcDAPQAAAAAAAAAAAAAAAA==</Value>
+    
+      <DefaultValue>wMDAPQAAAAAAAAAAAAAAAA==</DefaultValue>
+    </Parameter>
+  
+    <Parameter>
+      <GUID>7ADC915D48F09D962320CE100BE405BE</GUID>
+      <Name>pad</Name>
+    
+      <Scope>0</Scope>
+    
+      <Type>0</Type>
+    
+      <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+    
+      <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+    </Parameter>
+  
+    <Pass>
+      <Name>To Back X/2 Y/1</Name>
+      <Code>SamplerState sm:register(s1);
+Texture2D Textur:register(t0);
+
+cbuffer b : register(b0)
+{
+}
+
+cbuffer c : register(b1)
+{
+	float4 blur;
+	float threshold;
+	float power;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{ 
+	float4 col=0;
+	float cnt=blur.z*255;
+
+	for (int x=0; x&lt;cnt; x++)
+	{
+		float p=(x-(cnt-1)/2.)*blur.x/cnt/4.0f;
+		float4 c=Textur.Sample(sm,t.xy+p*float2(1,0));
+		float4 cm=c&gt;=threshold;
+		col+=((c-threshold)*(1+power*5)+threshold)*cm;
+	}
+
+  return col/cnt;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>C4AE94742A5F2A86E322981E138C43D7</GUID>
+        <Name>Input</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>fIrSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>fIrSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>9DE2A20DCA6371A7D7731C30E7A870A1</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>0F31CEB4BFBB528375AF2837CBFA2881</GUID>
+        <Name>Rendertarget</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>fIXSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>fIXSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>66B8BAA646D228338C523F1351543A11</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>E42E5D0AD32A4BB02F382237D8FBE4C7</GUID>
+        <Name>threshold</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>m5oaPwAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>CF0A47A94ACB2FC5D0D3D6606874373C</GUID>
+        <Name>Power</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>4+LiPgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  
+    <Pass>
+      <Name>To Back X/2 Y/2</Name>
+      <Code>SamplerState sm:register(s1);
+Texture2D Textur:register(t0);
+
+cbuffer b : register(b0)
+{
+}
+
+cbuffer c : register(b1)
+{
+	float2 blur;
+	float samplecount;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{ 
+	float4 col=0;
+	float cnt=samplecount*255;
+
+	for (int x=0; x&lt;cnt; x++)
+	{
+		float p=(x-(cnt-1)/2.)*blur.y/cnt/4.0f;
+		col+=Textur.Sample(sm,t.xy+p*float2(0,1));
+	}
+
+  return col/cnt;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>5E27F19A05ACB6FA0D0B32EC831C19CF</GUID>
+        <Name>Rendertarget</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>HIHSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>HIHSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>ABE9AC938257A0207A4C164AF72306A0</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>AD2F5AADA115EA85D40ABEA44B8CA191</GUID>
+        <Name>Input</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>fIXSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>fIXSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>66B8BAA646D228338C523F1351543A11</TextureGUID>
+      </Parameter>
+    </Pass>
+  
+    <Pass>
+      <Name>To Back X/4 Y/2</Name>
+      <Code>SamplerState sm:register(s1);
+Texture2D Textur:register(t0);
+
+cbuffer b : register(b0)
+{
+}
+
+cbuffer c : register(b1)
+{
+	float2 blur;
+	float samplecount;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{ 
+	float4 col=0;
+	float cnt=samplecount*255;
+
+	for (int x=0; x&lt;cnt; x++)
+	{
+		float p=(x-(cnt-1)/2.)*blur.x/cnt/4.0f;
+		col+=Textur.Sample(sm,t.xy+p*float2(1,0));
+	}
+
+  return col/cnt;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>BED54AF97921A2946031251778827E22</GUID>
+        <Name>Rendertarget</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>vIHSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>vIHSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>672E7FB08DEB05C9B52B4F78FC2B30F4</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>A268FE4DB902DF1D3227FF84BF182F87</GUID>
+        <Name>Input</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>HIHSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>HIHSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>ABE9AC938257A0207A4C164AF72306A0</TextureGUID>
+      </Parameter>
+    </Pass>
+  
+    <Pass>
+      <Name>To Back X/4 Y/4</Name>
+      <Code>SamplerState sm:register(s1);
+Texture2D Textur:register(t0);
+
+cbuffer b : register(b0)
+{
+}
+
+cbuffer c : register(b1)
+{
+	float2 blur;
+	float samplecount;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{ 
+	float4 col=0;
+	float cnt=samplecount*255;
+
+	for (int x=0; x&lt;cnt; x++)
+	{
+		float p=(x-(cnt-1)/2.)*blur.y/cnt/4.0f;
+		col+=Textur.Sample(sm,t.xy+p*float2(0,1));
+	}
+
+  return col/cnt;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>7AF12AEAB6E05ACA712695E40420E6EF</GUID>
+        <Name>Rendertarget</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>/IzSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>/IzSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>290A7AC85C535BCB4E3FA01128C3433B</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>7DF8FF574C21D618E7F5D18B49EFD09C</GUID>
+        <Name>Input</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>vIHSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>vIHSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>672E7FB08DEB05C9B52B4F78FC2B30F4</TextureGUID>
+      </Parameter>
+    </Pass>
+  
+    <Pass>
+      <Name>To Back X/8 Y/4</Name>
+      <Code>SamplerState sm:register(s1);
+Texture2D Textur:register(t0);
+
+cbuffer b : register(b0)
+{
+}
+
+cbuffer c : register(b1)
+{
+	float2 blur;
+	float samplecount;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{ 
+	float4 col=0;
+	float cnt=samplecount*255;
+
+	for (int x=0; x&lt;cnt; x++)
+	{
+		float p=(x-(cnt-1)/2.)*blur.x/cnt/4.0f;
+		col+=Textur.Sample(sm,t.xy+p*float2(1,0));
+	}
+
+  return col/cnt;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>CDFD61031F3DA4D44DBBEE0267823CEA</GUID>
+        <Name>Rendertarget</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>nIjSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>nIjSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>BE215926557E4997FE98ABB3D6817364</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>112EA8849B30D377945C0A6E0A784ED8</GUID>
+        <Name>Input</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>/IzSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>/IzSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>290A7AC85C535BCB4E3FA01128C3433B</TextureGUID>
+      </Parameter>
+    </Pass>
+  
+    <Pass>
+      <Name>To Back X/8 Y/8</Name>
+      <Code>SamplerState sm:register(s1);
+Texture2D Textur:register(t0);
+
+cbuffer b : register(b0)
+{
+}
+
+cbuffer c : register(b1)
+{
+	float2 blur;
+	float samplecount;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{ 
+	float4 col=0;
+	float cnt=samplecount*255;
+
+	for (int x=0; x&lt;cnt; x++)
+	{
+		float p=(x-(cnt-1)/2.)*blur.y/cnt/4.0f;
+		col+=Textur.Sample(sm,t.xy+p*float2(0,1));
+	}
+
+  return col/cnt;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>B8051140FEB22DAB09ADB8578EA7D3E8</GUID>
+        <Name>Rendertarget</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>fI/SCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>fI/SCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>D2375BBF84EB0121216AE6397E0E31C4</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>DF2DE8002B61B2AB72BE6592FD6FE065</GUID>
+        <Name>Input</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>nIjSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>nIjSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>BE215926557E4997FE98ABB3D6817364</TextureGUID>
+      </Parameter>
+    </Pass>
+  
+    <Pass>
+      <Name>Output</Name>
+      <Code>SamplerState sm:register(s1);
+Texture2D Textur:register(t0);
+
+cbuffer b : register(b0)
+{
+}
+
+cbuffer c : register(b1)
+{
+	float4 blur;
+	float4 color;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ return Textur.Sample(sm,t.xy)*color;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>8CC2DDF43854C88B05DC8BCA5F8721B1</GUID>
+        <Name>Output</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>fIrSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>fIrSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>9DE2A20DCA6371A7D7731C30E7A870A1</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>C037B974D6D0EC1345717BDE5B891E6D</GUID>
+        <Name>Input</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>fI/SCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>fI/SCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>D2375BBF84EB0121216AE6397E0E31C4</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>BA45E81E0C9275ACEDA39305BBB63BCA</GUID>
+        <Name>Color</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>1</Type>
+      
+        <Value>7exsPo2MDD7R0NA9AACAPw==</Value>
+      
+        <DefaultValue>AACAPwAAgD8AAIA/AACAPw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>4FA2566DA42AEC134955DD0722A4E36C</GUID>
+        <Name>Blend</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>EQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>EQAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>D9AAC97A71B2221D1D1A4A052E3B0637</GUID>
+    <Name>Noise</Name>
+    <Type>2</Type>
+    <TargetLayer>NONENONENONENONENONENONENONENONE</TargetLayer>
+  
+    <Pass>
+      <Name>New Pass</Name>
+      <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+
+cbuffer b : register(b0)
+{
+	float tme,aspect,xres,yres;
+}
+
+cbuffer c : register(b1)
+{
+	float p1,p2,p3;
+	float o1,o2,o3;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{ 
+	float4 c1=Textur.Sample(sm,t*2+float2(sin(tme*(o1+0.5)*1000),cos(tme*(o2+0.5)*1000)))*p1;
+	float4 c2=Textur.Sample(sm,t*4+float2(sin(tme*(o2+0.5)*1000),cos(tme*(o3+0.5)*1000)))*p2;
+	float4 c3=Textur.Sample(sm,t*8+float2(sin(tme*(o3+0.5)*1000),cos(tme*(o1+0.5)*1000)))*p3;
+	return c1+c2+c3;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>EEB9BF3185B10F15468DD6D90F299F80</GUID>
+        <Name>Noise Texture</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>09D5CD5235580A8477DD0E10CAC693F8</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>813D805C277F2002F2E226D6609DD676</GUID>
+        <Name>Rendertarget</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>/H3SCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>/H3SCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>B804E9F623AABCBA232F247216EE216B</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>FAE77B12E14D5EBA430F2C61A1C1796E</GUID>
+        <Name>power 1</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>iIiIPgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>+Ph4PgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>AC6AA01734636D30B4A28EAAD1C502E3</GUID>
+        <Name>power 2</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>8PDwPQAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>8PBwPgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>93AD541CF3543A35BE52389B1E22FBC7</GUID>
+        <Name>power 3</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>qKgoPgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>gICAPgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>13F557EDEF7D695C88F56DD2C66ECB12</GUID>
+        <Name>offset 1</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>qKioPgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>i4sLPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>41440B4276139E484D896B818EBBA1EF</GUID>
+        <Name>offset 2</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>0NDQPgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>yclJPwAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>0D6882B7A19780BF70C882F6298D85B5</GUID>
+        <Name>offset 3</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>n58fPwAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>qKioPgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>EBFBDFA56F416F162999D2E9ACDC19F3</GUID>
+        <Name>blending</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>FAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>DF3B04D3DDCB67A835408CE58B6BA679</GUID>
+    <Name>PointSprites</Name>
+    <Type>0</Type>
+    <TargetLayer>1424586010B909EA488C988A1F5021F9</TargetLayer>
+  
+    <Pass>
+      <Name>New Pass</Name>
+      <Code>Texture2D t_0:register(t0);
+SamplerState Sampler:register(s0);
+
+cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 color;
+	float scale;
+	float offset;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2: POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+};
+
+float4 v(VSIN x) : SV_POSITION
+{
+	return mul(viewmat,float4(mul(worldmat,float4(x.Position,1)).xyz,1));
+}
+
+struct GSOUT
+{
+	float4 Position : SV_POSITION;
+	float2 UV : TEXCOORD0;
+};
+
+[maxvertexcount(4)]
+void g(triangle VSOUT input[3], inout TriangleStream&lt;GSOUT&gt; OutputStream)
+{
+	float4 p=(input[0].Position+input[1].Position+input[2].Position)/3.0f;
+	float3 a=normalize(input[0].Position.xyz-input[1].Position.xyz);
+	float3 b=normalize(input[2].Position.xyz-input[1].Position.xyz);
+	float3 n=cross(a,b);
+	p+=float4(n,0)*offset;
+
+	GSOUT vx[4];
+
+	vx[0].Position=mul(projmat,p+float4(-1,-1,0,0)*scale);
+	vx[0].UV=float2(0,0);
+	vx[1].Position=mul(projmat,p+float4(1,-1,0,0)*scale);
+	vx[1].UV=float2(1,0);
+	vx[2].Position=mul(projmat,p+float4(1,1,0,0)*scale);
+	vx[2].UV=float2(1,1);
+	vx[3].Position=mul(projmat,p+float4(-1,1,0,0)*scale);
+	vx[3].UV=float2(0,1);
+
+	OutputStream.Append(vx[3]);
+	OutputStream.Append(vx[0]);
+	OutputStream.Append(vx[2]);
+	OutputStream.Append(vx[1]);
+
+	OutputStream.RestartStrip();	
+}
+
+float4 p(GSOUT v) : SV_TARGET0
+{
+	return t_0.Sample(Sampler,v.UV.xy)*color;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>B60C314357C2E51CFD94C6FCC20502B2</GUID>
+        <Name>Cullmode</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>5</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>8BF7697D5A620EC7C2773D21F47EEE6B</GUID>
+        <Name>BlendMode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>EQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>C5900026C82CE9663762C6EFBEDF3EF1</GUID>
+        <Name>ZMode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>2</Type>
+      
+        <Value>AgAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>C1466038720EB9D4632A99FF2226F5E0</GUID>
+        <Name>Texture</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>973B56E8888BCD8CE0B42A40018701AE</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>9FD2D533AD96F1D4C7ECB1723769E963</GUID>
+        <Name>Color</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>1</Type>
+      
+        <Value>AACAP8C/Pz+TkhI/AACAPw==</Value>
+      
+        <DefaultValue>AACAPwAAgD8AAIA/AACAPw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>4894D079E6BCF18E31A380C8BDF9A430</GUID>
+        <Name>Sprite Size</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>gYCAPCBub3QgZm91bmQhAA==</Value>
+      
+        <DefaultValue>0dBQPQAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>8BDCBCDFC913A5697498B22558B7E559</GUID>
+        <Name>Sprite offset</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>ubi4PQAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>ycjIPQAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>7EDD9961B7275190F8FD01C09D64E164</GUID>
+    <Name>Radial Blur</Name>
+    <Type>2</Type>
+    <TargetLayer>NONENONENONENONENONENONENONENONE</TargetLayer>
+  
+    <Pass>
+      <Name>New Pass</Name>
+      <Code>SamplerState sm:register(s1);
+Texture2D Textur:register(t0);
+
+cbuffer b : register(b0)
+{
+	float t,aspect,xres,yres;
+}
+
+cbuffer c : register(b1)
+{
+	float power;
+	float samplecnt;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{ 
+	float count=samplecnt*255+1;
+
+	float2 dirr=(0.5-t);
+	float2 dirb=dirr;
+	float4 col=Textur.Sample(sm,t);
+	for (int x=-count/2; x&lt;count/2; x++)
+ 		col+=Textur.Sample(sm,t+dirr*x/200.0f*power);
+
+	col=col/count;
+	return col;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>CD3AB5832AE878690BB1E0C6FE00E674</GUID>
+        <Name>Input</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>/H3SCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>/H3SCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>B804E9F623AABCBA232F247216EE216B</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>65E9D6E9C50DD3D0AF1D6518CCD2CB40</GUID>
+        <Name>Rendertarget</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>nH7SCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>nH7SCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>A277553146FC64CF028CD78429CB0C26</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>353DB3E7802C4BE9529F21EC941655D1</GUID>
+        <Name>Power</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>zcxMPgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>zcxMPgAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>4D26C1964ADFCDB5FF1A1F7F30CE3BE9</GUID>
+        <Name>SampleCount</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>oaCgPQAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>mZiYPQAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>FA2C8F6BB7A84615E511F0B5458FC520</GUID>
+    <Name>Texture Draw</Name>
+    <Type>2</Type>
+    <TargetLayer>0B660A129B4CFDA2A5A2D3E4E0949FA6</TargetLayer>
+  
+    <Pass>
+      <Name>New Pass</Name>
+      <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+
+cbuffer b : register(b0)
+{
+}
+
+cbuffer c : register(b1)
+{
+	float4 color;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{ 
+	return Textur.Sample(sm,t)*color;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>B4F0CF2363DA250F0284B2ADE6788929</GUID>
+        <Name>RenderTarget</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>23</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>8ECC5ABCA79B63695CCE7FF9FD05507B</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>321AFEE79575A7AECFDB23D5924963A9</GUID>
+        <Name>Texture</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>7</Type>
+      
+        <Value>fIrSCgAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>fIrSCgAAAAAAAAAAAAAAAA==</DefaultValue>
+      
+        <TextureGUID>9DE2A20DCA6371A7D7731C30E7A870A1</TextureGUID>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>5D8628038F51F2B75FA463F6E2DF6FDB</GUID>
+        <Name>Color</Name>
+      
+        <Scope>2</Scope>
+      
+        <Type>1</Type>
+      
+        <Value>AACAPwAAgD8AAIA/AACAPw==</Value>
+      
+        <DefaultValue>AACAPwAAgD8AAIA/AACAPw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>438A8061827629139060FE2382D8404B</GUID>
+        <Name>BlendMode</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>VAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <rendertechnique>
+    <GUID>2A9BCBB81A1352D113B8B5BF0982D887</GUID>
+    <Name>Wireframe</Name>
+    <Type>0</Type>
+    <TargetLayer>0B660A129B4CFDA2A5A2D3E4E0949FA6</TargetLayer>
+  
+    <Pass>
+      <Name>Wireframe Pass</Name>
+      <Code>cbuffer b : register(b0)
+{
+	float4x4 viewmat;
+	float4x4 projmat;
+}
+
+cbuffer c : register(b1)
+{
+	float4x4 worldmat;
+	float4x4 itworldmat;
+	float4 color;
+	float offset;
+}
+
+struct VSIN
+{
+	float3 Position : POSITION0;
+	float3 Position2 : POSITION1;
+	float3 Normal : NORMAL0;
+	float4 Color : COLOR0;
+	float4 UV : TEXCOORD0;
+	float4 UV2: TEXCOORD1;
+};
+
+struct VSOUT
+{
+	float4 Position : SV_POSITION;
+	float4 Normal: NORMAL0;
+};
+
+VSOUT v(VSIN x)
+{
+	VSOUT o;
+	o.Position=float4(mul(worldmat,float4(x.Position,1)).xyz,1);
+	o.Normal=float4(normalize(mul(worldmat,float4(x.Normal,1)).xyz),1);
+	return o;
+}
+
+struct GSOUT
+{
+	float4 Position : SV_POSITION;
+};
+
+[maxvertexcount(2)]
+void g(line VSOUT input[2], inout LineStream&lt;GSOUT&gt; OutputStream)
+{
+	GSOUT vx[2];
+
+	for (int x=0; x&lt;2; x++)
+		{
+			float3 p=input[x].Position.xyz+input[x].Normal.xyz*offset;
+			GSOUT g;
+			g.Position=mul(projmat,mul(viewmat,float4(p,1)));
+			OutputStream.Append(g);
+		}
+
+	OutputStream.RestartStrip();	
+}
+
+float4 p(GSOUT v) : SV_TARGET0
+{
+	return color;
+}</Code>
+      <Minifiable>1</Minifiable>
+      <Parameter>
+        <GUID>7D1A21A882071C04727232D8AAD62AFF</GUID>
+        <Name>Color</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>1</Type>
+      
+        <Value>AACAPwAAgD8AAIA/AACAPw==</Value>
+      
+        <DefaultValue>AACAPwAAgD8AAIA/AACAPw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>7C46FA4CC80DDEFF587BA6B3DF8C1361</GUID>
+        <Name>Fillmode</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>4</Type>
+      
+        <Value>AQAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>F1EE2750D698C58A7900CF9F3B5B866E</GUID>
+        <Name>BlendMode</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>15</Type>
+      
+        <Value>VAAAAAAAAAAAAAAAAAAAvw==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAvw==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>786837C98D8069FCF99D1374311B6B95</GUID>
+        <Name>Zmode</Name>
+      
+        <Scope>0</Scope>
+      
+        <Type>2</Type>
+      
+        <Value>AgAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>AAAAAAAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    
+      <Parameter>
+        <GUID>CDBD1EC59A8FDB6B0747E5D78BE6662C</GUID>
+        <Name>Offset</Name>
+      
+        <Scope>1</Scope>
+      
+        <Type>0</Type>
+      
+        <Value>AAAAAAAAAAAAAAAAAAAAAA==</Value>
+      
+        <DefaultValue>4eBgPQAAAAAAAAAAAAAAAA==</DefaultValue>
+      </Parameter>
+    </Pass>
+  </rendertechnique>
+
+  <material>
+    <GUID>9D7DA38871AC352A1A4670C233F4AD7F</GUID>
+    <Name>[Physically Based Mixed Rendering]</Name>
+    <Tech>E398C0C938180A8EE97E87517E6E986B</Tech></material>
+
+  <material>
+    <GUID>DBA0302AABAE47887030712D7CD43A3B</GUID>
+    <Name>[Physically Based Pure Deferred]</Name>
+    <Tech>DD2ED55A6A7511D4AE7A47FC3A9561F4</Tech></material>
+
+  <material>
+    <GUID>C5D0ADAF505073D2F4E35D221EE3D9A7</GUID>
+    <Name>Ad-Hoc (old Base) Material</Name>
+    <Tech>2EC2AE23E3AA634D2FD7277D3C18D797</Tech></material>
+
+  <material>
+    <GUID>8BD5B82483EB479268A8E082AF11CD73</GUID>
+    <Name>Deferred Ambient Light</Name>
+    <Tech>07D72FA094C9ACA3EA268BA044F3E496</Tech></material>
+
+  <material>
+    <GUID>35DD17BA55A365FD08208885CC32627C</GUID>
+    <Name>Deferred Fake Cubemap</Name>
+    <Tech>168625FA5DABA54CC9795DAE67349F4E</Tech></material>
+
+  <material>
+    <GUID>A84A65F1626DC961D09A5F4D0677DD08</GUID>
+    <Name>Hide Object</Name></material>
+
+  <material>
+    <GUID>0DA9620A5D8A63D92C8152F5454BB5FB</GUID>
+    <Name>Particle Material</Name>
+    <Tech>D9BCB25B70726C223C6F5F322777287C</Tech></material>
+
+  <material>
+    <GUID>E78A2AF015A46FD9FDA63304B241C084</GUID>
+    <Name>PointSprites</Name>
+    <Tech>DF3B04D3DDCB67A835408CE58B6BA679</Tech></material>
+
+  <material>
+    <GUID>12D5FB8DDBDFAABA4C5755702B02FD76</GUID>
+    <Name>textured (noshade, alphatest)</Name>
+    <Tech>E29A95A4D3FD630C418CF73778137606</Tech></material>
+
+  <material>
+    <GUID>2AB14C9F5E1625A6C4F39766B33F013E</GUID>
+    <Name>Wireframe</Name>
+    <Tech>2A9BCBB81A1352D113B8B5BF0982D887</Tech></material>
+</apExProject>

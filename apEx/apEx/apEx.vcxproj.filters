@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\GUI">
+      <UniqueIdentifier>{d44c43ca-f745-40ba-8fc6-8fccf7ba3943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{46b91e99-729d-42b0-a362-e3c7c56a8f52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUI\System">
+      <UniqueIdentifier>{36ef539c-f971-41b5-9a12-8673a5e72945}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI\System">
+      <UniqueIdentifier>{4a38bf28-d19b-4d83-9458-3a009473ab90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUI\Utils">
+      <UniqueIdentifier>{e194e241-2b79-46d8-bf86-7e4413afdcb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI\Utils">
+      <UniqueIdentifier>{7b4ab812-1c6f-48df-a893-eef2f141510e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUI\Texgen">
+      <UniqueIdentifier>{92a54c06-52d3-4288-8a85-93140792a8d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI\Texgen">
+      <UniqueIdentifier>{46d24f36-d33e-4ec3-8b4d-9b4a024933a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUI\Keyframer">
+      <UniqueIdentifier>{d5579fa0-6f88-4e55-b18d-888b7983b911}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI\Keyframer">
+      <UniqueIdentifier>{66210869-d43a-4a6d-b9e8-cfe85f875647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUI\Material Editor">
+      <UniqueIdentifier>{cd50ebfe-2ab1-4d83-bba8-922d58a3cc27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI\Material Editor">
+      <UniqueIdentifier>{306eb359-cf25-4109-b2ac-bfa2e0d7eec1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUI\Video Editor">
+      <UniqueIdentifier>{cb8ca8e2-a9fd-4ca1-b886-6a5264d3abfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI\Video Editor">
+      <UniqueIdentifier>{700b3acc-8d96-4f8a-ad4d-a391a50ec967}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GUI\Modeler">
+      <UniqueIdentifier>{943785bf-9dc7-42fc-9d0b-b669cc7eb961}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI\Modeler">
+      <UniqueIdentifier>{ff38e1eb-8045-4eae-83eb-3fffd8289f34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{1ef8ec4e-0dca-42d5-96ce-0d175ad3f351}</UniqueIdentifier>
+      <Extensions>xml;css</Extensions>
+    </Filter>
+    <Filter Include="UI\MaterialEditor">
+      <UniqueIdentifier>{4966cc93-20d9-427c-ae63-ab95d67b6dfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Texgen">
+      <UniqueIdentifier>{18674dc8-1863-41c8-92f2-9e2eb733fe57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Modeler">
+      <UniqueIdentifier>{e64c5b75-da90-4508-acf0-abe40a02b1a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Keyframer">
+      <UniqueIdentifier>{5f6ec09d-47ef-4dde-8bf1-1dabb00a1f4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Timeline">
+      <UniqueIdentifier>{98e0a5fd-38bb-4053-b906-2f9e72f29717}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Misc">
+      <UniqueIdentifier>{23721cbb-5502-402d-8a44-62bb2de66049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Example Projects">
+      <UniqueIdentifier>{9aa193b6-429c-4647-a0f2-618a323bd284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ShaderProcessor">
+      <UniqueIdentifier>{c148f4fa-a3db-4bc0-b342-777e2668f849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ShaderProcessor">
+      <UniqueIdentifier>{ddadb8e7-c320-436c-a60d-8eb8a423ec96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NvTriStrip">
+      <UniqueIdentifier>{87d60286-d6b7-43a7-8abc-0e267e24db58}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="apEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="apExRoot.cpp">
+      <Filter>Source Files\GUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="ProFont.cpp">
+      <Filter>Source Files\GUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkBench.cpp">
+      <Filter>Source Files\GUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="apExWindow.cpp">
+      <Filter>Source Files\GUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialEditor.cpp">
+      <Filter>Source Files\GUI\Material Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialList.cpp">
+      <Filter>Source Files\GUI\Material Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialShaderEditor.cpp">
+      <Filter>Source Files\GUI\Material Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelGraph.cpp">
+      <Filter>Source Files\GUI\Modeler</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelList.cpp">
+      <Filter>Source Files\GUI\Modeler</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelMaterial.cpp">
+      <Filter>Source Files\GUI\Modeler</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelParameters.cpp">
+      <Filter>Source Files\GUI\Modeler</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelPrimitives.cpp">
+      <Filter>Source Files\GUI\Modeler</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelView.cpp">
+      <Filter>Source Files\GUI\Modeler</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorPicker.cpp">
+      <Filter>Source Files\GUI\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneClips.cpp">
+      <Filter>Source Files\GUI\Keyframer</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGraph.cpp">
+      <Filter>Source Files\GUI\Keyframer</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneList.cpp">
+      <Filter>Source Files\GUI\Keyframer</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneObjectParameters.cpp">
+      <Filter>Source Files\GUI\Keyframer</Filter>
+    </ClCompile>
+    <ClCompile Include="ScenePrimitives.cpp">
+      <Filter>Source Files\GUI\Keyframer</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneSplineEditor.cpp">
+      <Filter>Source Files\GUI\Keyframer</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneView.cpp">
+      <Filter>Source Files\GUI\Keyframer</Filter>
+    </ClCompile>
+    <ClCompile Include="TexGenFilterEditor.cpp">
+      <Filter>Source Files\GUI\Texgen</Filter>
+    </ClCompile>
+    <ClCompile Include="TexGenPages.cpp">
+      <Filter>Source Files\GUI\Texgen</Filter>
+    </ClCompile>
+    <ClCompile Include="TexGenParameters.cpp">
+      <Filter>Source Files\GUI\Texgen</Filter>
+    </ClCompile>
+    <ClCompile Include="TexGenPreview.cpp">
+      <Filter>Source Files\GUI\Texgen</Filter>
+    </ClCompile>
+    <ClCompile Include="TimelineEditor.cpp">
+      <Filter>Source Files\GUI\Video Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="TimelineEventParameters.cpp">
+      <Filter>Source Files\GUI\Video Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="TimelineEventSplines.cpp">
+      <Filter>Source Files\GUI\Video Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="TimelinePreview.cpp">
+      <Filter>Source Files\GUI\Video Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeSpeciesEditor.cpp">
+      <Filter>Source Files\GUI\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectSettings.cpp">
+      <Filter>Source Files\GUI\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="apExHelp.cpp">
+      <Filter>Source Files\GUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CNSPack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Console.cpp">
+      <Filter>Source Files\GUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="ExternalTools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TexGenMain.cpp">
+      <Filter>Source Files\GUI\Texgen</Filter>
+    </ClCompile>
+    <ClCompile Include="UICSSEditor.cpp">
+      <Filter>Source Files\GUI\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="UIXMLEditor.cpp">
+      <Filter>Source Files\GUI\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="SplineEditor_Phx.cpp">
+      <Filter>Source Files\GUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderTargetEditor.cpp">
+      <Filter>Source Files\GUI\Material Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="BasePCH.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UberTool.cpp">
+      <Filter>Source Files\GUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtendedList.cpp">
+      <Filter>Source Files\GUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimalExport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleCommands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBox_HLSL.cpp">
+      <Filter>Source Files\GUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoDumper.cpp">
+      <Filter>Source Files\GUI\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshImport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HLSLLexer.cpp">
+      <Filter>Source Files\ShaderProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="HLSLAST.cpp">
+      <Filter>Source Files\ShaderProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="HLSLParser.cpp">
+      <Filter>Source Files\ShaderProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="NumPad.cpp">
+      <Filter>UI\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Docker.cpp">
+      <Filter>Source Files\GUI\System</Filter>
+    </ClCompile>
+    <ClCompile Include="KasparovImport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelMatrix.cpp">
+      <Filter>Source Files\GUI\Modeler</Filter>
+    </ClCompile>
+    <ClCompile Include="NvTriStrip\NvTriStrip.cpp">
+      <Filter>Source Files\NvTriStrip</Filter>
+    </ClCompile>
+    <ClCompile Include="NvTriStrip\NvTriStripObjects.cpp">
+      <Filter>Source Files\NvTriStrip</Filter>
+    </ClCompile>
+    <ClCompile Include="NvTriStrip\VertexCache.cpp">
+      <Filter>Source Files\NvTriStrip</Filter>
+    </ClCompile>
+    <ClCompile Include="KKPViewer.cpp">
+      <Filter>Source Files\GUI\Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BuildCount.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="apExRoot.h">
+      <Filter>Header Files\GUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ProFont.h">
+      <Filter>Header Files\GUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkBench.h">
+      <Filter>Header Files\GUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="apExWindow.h">
+      <Filter>Header Files\GUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="TexGenFilterEditor.h">
+      <Filter>Header Files\GUI\Texgen</Filter>
+    </ClInclude>
+    <ClInclude Include="TexGenPreview.h">
+      <Filter>Header Files\GUI\Texgen</Filter>
+    </ClInclude>
+    <ClInclude Include="TexGenPages.h">
+      <Filter>Header Files\GUI\Texgen</Filter>
+    </ClInclude>
+    <ClInclude Include="TexGenParameters.h">
+      <Filter>Header Files\GUI\Texgen</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialShaderEditor.h">
+      <Filter>Header Files\GUI\Material Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialEditor.h">
+      <Filter>Header Files\GUI\Material Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialList.h">
+      <Filter>Header Files\GUI\Material Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelView.h">
+      <Filter>Header Files\GUI\Modeler</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelMaterial.h">
+      <Filter>Header Files\GUI\Modeler</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelParameters.h">
+      <Filter>Header Files\GUI\Modeler</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelPrimitives.h">
+      <Filter>Header Files\GUI\Modeler</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelList.h">
+      <Filter>Header Files\GUI\Modeler</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelGraph.h">
+      <Filter>Header Files\GUI\Modeler</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneView.h">
+      <Filter>Header Files\GUI\Keyframer</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGraph.h">
+      <Filter>Header Files\GUI\Keyframer</Filter>
+    </ClInclude>
+    <ClInclude Include="ScenePrimitives.h">
+      <Filter>Header Files\GUI\Keyframer</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneObjectParameters.h">
+      <Filter>Header Files\GUI\Keyframer</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneClips.h">
+      <Filter>Header Files\GUI\Keyframer</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneList.h">
+      <Filter>Header Files\GUI\Keyframer</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneSplineEditor.h">
+      <Filter>Header Files\GUI\Keyframer</Filter>
+    </ClInclude>
+    <ClInclude Include="TimelinePreview.h">
+      <Filter>Header Files\GUI\Video Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="TimelineEditor.h">
+      <Filter>Header Files\GUI\Video Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="TimelineEventParameters.h">
+      <Filter>Header Files\GUI\Video Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="TimelineEventSplines.h">
+      <Filter>Header Files\GUI\Video Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorPicker.h">
+      <Filter>Header Files\GUI\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeSpeciesEditor.h">
+      <Filter>Header Files\GUI\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjectSettings.h">
+      <Filter>Header Files\GUI\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="apExHelp.h">
+      <Filter>Header Files\GUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CNSPack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Console.h">
+      <Filter>Header Files\GUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ExternalTools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TexGenMain.h">
+      <Filter>Header Files\GUI\Texgen</Filter>
+    </ClInclude>
+    <ClInclude Include="UICSSEditor.h">
+      <Filter>Header Files\GUI\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="UIXMLEditor.h">
+      <Filter>Header Files\GUI\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SplineEditor_Phx.h">
+      <Filter>Header Files\GUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderTargetEditor.h">
+      <Filter>Header Files\GUI\Material Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="BasePCH.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UberTool.h">
+      <Filter>Header Files\GUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtendedList.h">
+      <Filter>Header Files\GUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="MinimalExport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleCommands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox_HLSL.h">
+      <Filter>Header Files\GUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoDumper.h">
+      <Filter>Header Files\GUI\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshImport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HLSLLexer.h">
+      <Filter>Header Files\ShaderProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="HLSLAST.h">
+      <Filter>Header Files\ShaderProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="HLSLParser.h">
+      <Filter>Header Files\ShaderProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="HLSLBinaryTransform.h">
+      <Filter>Header Files\ShaderProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="NumPad.h">
+      <Filter>UI\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Docker.h">
+      <Filter>Header Files\GUI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="KasparovImport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelMatrix.h">
+      <Filter>Header Files\GUI\Modeler</Filter>
+    </ClInclude>
+    <ClInclude Include="NvTriStrip\NvTriStrip.h">
+      <Filter>Source Files\NvTriStrip</Filter>
+    </ClInclude>
+    <ClInclude Include="NvTriStrip\NvTriStripObjects.h">
+      <Filter>Source Files\NvTriStrip</Filter>
+    </ClInclude>
+    <ClInclude Include="NvTriStrip\VertexCache.h">
+      <Filter>Source Files\NvTriStrip</Filter>
+    </ClInclude>
+    <ClInclude Include="KKPViewer.h">
+      <Filter>Header Files\GUI\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\UI\Help.css">
+      <Filter>UI\Misc</Filter>
+    </None>
+    <None Include="Data\UI\Help.xml">
+      <Filter>UI\Misc</Filter>
+    </None>
+    <None Include="Data\UI\MaterialEditor.css">
+      <Filter>UI\MaterialEditor</Filter>
+    </None>
+    <None Include="Data\UI\MaterialEditor.xml">
+      <Filter>UI\MaterialEditor</Filter>
+    </None>
+    <None Include="Data\UI\MaterialList.css">
+      <Filter>UI\MaterialEditor</Filter>
+    </None>
+    <None Include="Data\UI\MaterialList.xml">
+      <Filter>UI\MaterialEditor</Filter>
+    </None>
+    <None Include="Data\UI\ModelGraph.css">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="Data\UI\ModelGraph.xml">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="Data\UI\ModelList.css">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="Data\UI\ModelList.xml">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="Data\UI\ModelMaterial.css">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="Data\UI\ModelMaterial.xml">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="Data\UI\ModelParameters.css">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="Data\UI\ModelParameters.xml">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="Data\UI\ModelPrimitives.css">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="Data\UI\ModelPrimitives.xml">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="Data\UI\ModelView.css">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="Data\UI\ModelView.xml">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="Data\UI\ProjectSettings.css">
+      <Filter>UI\Misc</Filter>
+    </None>
+    <None Include="Data\UI\ProjectSettings.xml">
+      <Filter>UI\Misc</Filter>
+    </None>
+    <None Include="Data\UI\SceneClips.css">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\SceneClips.xml">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\SceneGraph.css">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\SceneGraph.xml">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\SceneList.css">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\SceneList.xml">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\SceneObjectParameters.css">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\SceneObjectParameters.xml">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\ScenePrimitives.css">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\ScenePrimitives.xml">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\SceneSplineEditor.css">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\SceneSplineEditor.xml">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\SceneView.css">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\SceneView.xml">
+      <Filter>UI\Keyframer</Filter>
+    </None>
+    <None Include="Data\UI\ShaderEditor.css">
+      <Filter>UI\MaterialEditor</Filter>
+    </None>
+    <None Include="Data\UI\ShaderEditor.xml">
+      <Filter>UI\MaterialEditor</Filter>
+    </None>
+    <None Include="Data\UI\NewOp.css">
+      <Filter>UI\Texgen</Filter>
+    </None>
+    <None Include="Data\UI\NewOp.xml">
+      <Filter>UI\Texgen</Filter>
+    </None>
+    <None Include="Data\UI\TexgenMain.css">
+      <Filter>UI\Texgen</Filter>
+    </None>
+    <None Include="Data\UI\TexgenMain.xml">
+      <Filter>UI\Texgen</Filter>
+    </None>
+    <None Include="Data\UI\TexgenOpParameters.css">
+      <Filter>UI\Texgen</Filter>
+    </None>
+    <None Include="Data\UI\TexgenOpParameters.xml">
+      <Filter>UI\Texgen</Filter>
+    </None>
+    <None Include="Data\UI\TexgenPreview.css">
+      <Filter>UI\Texgen</Filter>
+    </None>
+    <None Include="Data\UI\TexgenPreview.xml">
+      <Filter>UI\Texgen</Filter>
+    </None>
+    <None Include="Data\UI\TextureFilterEditor.css">
+      <Filter>UI\Texgen</Filter>
+    </None>
+    <None Include="Data\UI\TextureFilterEditor.xml">
+      <Filter>UI\Texgen</Filter>
+    </None>
+    <None Include="Data\UI\TexgenPages.css">
+      <Filter>UI\Texgen</Filter>
+    </None>
+    <None Include="Data\UI\TexgenPages.xml">
+      <Filter>UI\Texgen</Filter>
+    </None>
+    <None Include="Data\UI\TimelineEditor.css">
+      <Filter>UI\Timeline</Filter>
+    </None>
+    <None Include="Data\UI\TimelineEditor.xml">
+      <Filter>UI\Timeline</Filter>
+    </None>
+    <None Include="Data\UI\TimelineEventParams.css">
+      <Filter>UI\Timeline</Filter>
+    </None>
+    <None Include="Data\UI\TimelineEventParams.xml">
+      <Filter>UI\Timeline</Filter>
+    </None>
+    <None Include="Data\UI\TimelineEventSplines.css">
+      <Filter>UI\Timeline</Filter>
+    </None>
+    <None Include="Data\UI\TimelineEventSplines.xml">
+      <Filter>UI\Timeline</Filter>
+    </None>
+    <None Include="Data\UI\TimelinePreview.css">
+      <Filter>UI\Timeline</Filter>
+    </None>
+    <None Include="Data\UI\TimelinePreview.xml">
+      <Filter>UI\Timeline</Filter>
+    </None>
+    <None Include="Data\UI\ConsoleWindow.css">
+      <Filter>UI\Misc</Filter>
+    </None>
+    <None Include="Data\UI\ConsoleWindow.xml">
+      <Filter>UI\Misc</Filter>
+    </None>
+    <None Include="Data\UI\CSSEditor.css">
+      <Filter>UI\Misc</Filter>
+    </None>
+    <None Include="Data\UI\CSSEditor.xml">
+      <Filter>UI\Misc</Filter>
+    </None>
+    <None Include="Data\UI\XMLEditor.css">
+      <Filter>UI\Misc</Filter>
+    </None>
+    <None Include="Data\UI\XMLEditor.xml">
+      <Filter>UI\Misc</Filter>
+    </None>
+    <None Include="apex.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Data\UI\skin.wbs">
+      <Filter>UI</Filter>
+    </None>
+    <None Include="Data\FilterLibrary.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Data\Projects\TestTexture.apx">
+      <Filter>Resource Files\Example Projects</Filter>
+    </None>
+    <None Include="Data\Projects\Mesh.apx">
+      <Filter>Resource Files\Example Projects</Filter>
+    </None>
+    <None Include="Data\Projects\Mesh_Subroutine.apx">
+      <Filter>Resource Files\Example Projects</Filter>
+    </None>
+    <None Include="Data\Projects\Subroutines.apx">
+      <Filter>Resource Files\Example Projects</Filter>
+    </None>
+    <None Include="Data\Projects\TerranPlanet.apx">
+      <Filter>Resource Files\Example Projects</Filter>
+    </None>
+    <None Include="Data\UI\RenderTargetEditor.css">
+      <Filter>UI\MaterialEditor</Filter>
+    </None>
+    <None Include="Data\UI\RenderTargetEditor.xml">
+      <Filter>UI\MaterialEditor</Filter>
+    </None>
+    <None Include="Data\Projects\TimelineTest.apx">
+      <Filter>Resource Files\Example Projects</Filter>
+    </None>
+    <None Include="Data\MaterialLibrary.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Data\UI\apEx.css">
+      <Filter>UI</Filter>
+    </None>
+    <None Include="..\deploy.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Data\Projects\bokehtest2.apx">
+      <Filter>Resource Files\Example Projects</Filter>
+    </None>
+    <None Include="Data\UI\VideoDumper.css">
+      <Filter>UI\Misc</Filter>
+    </None>
+    <None Include="kkrunchy_023_2014_importhack.exe">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Data\Projects\Precalc.apx">
+      <Filter>Resource Files\Example Projects</Filter>
+    </None>
+    <None Include="Data\UI\TreeSpeciesEditor.css">
+      <Filter>UI\Modeler</Filter>
+    </None>
+    <None Include="HLSLExpressionParser.inl">
+      <Filter>Source Files\ShaderProcessor</Filter>
+    </None>
+    <None Include="Data\UI\Default\KKPViewer.css">
+      <Filter>UI\Misc</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="apEx.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Data\UI\VideoDumper.xml">
+      <Filter>UI\Misc</Filter>
+    </Xml>
+    <Xml Include="Data\UI\TreeSpeciesEditor.xml">
+      <Filter>UI\Modeler</Filter>
+    </Xml>
+    <Xml Include="Data\UI\KKPViewer.xml">
+      <Filter>UI\Misc</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\MVX\MVXLibrary.lib" />
+  </ItemGroup>
+</Project>

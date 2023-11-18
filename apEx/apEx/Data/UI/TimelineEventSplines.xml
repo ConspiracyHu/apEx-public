@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="TimelineEventSplines">
+   	<splineeditorphx limited="0" snap="1" id="splineeditor"/>
+	<list id="splinelist" multiselect="1"/>
+  </gui>
+</guidescriptor>

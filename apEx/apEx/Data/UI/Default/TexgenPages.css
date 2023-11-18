@@ -1,0 +1,41 @@
+#buttonbox
+{
+	margin: 1px;
+	bottom: auto;
+	height: 15px;
+	child-layout: horizontal;
+	child-fill-x: true;
+	child-fill-y: true;
+	child-spacing: 1px;
+}
+
+#pagelist
+{
+	top: 17px;
+	left: 1px;
+	right: 1px;
+	bottom: 50px;
+}
+
+trackbar
+{
+	height:15px;
+	width:100%-2px;
+}
+
+#yres
+{
+	bottom:17px;
+}
+
+#xres
+{
+	bottom:34px;
+}
+
+#hdr
+{
+	width:100%-2px;
+	bottom:1px;
+	height:15px;
+}

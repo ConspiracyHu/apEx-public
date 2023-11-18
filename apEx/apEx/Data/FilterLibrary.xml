@@ -1,0 +1,2546 @@
+<apExProject>
+  <texturefilter>
+    <GUID>CDEDB0BD255B091EDED9D5D630AB5B75</GUID>
+    <Name>Blur</Name>
+    <Code>SamplerState sm:register(s0);
+float4 PassData:register(c0);
+float4 data1:register(c1);
+Texture2D Textur:register(t0);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ #define oneway 24.0f
+ float4 res=0;
+
+ float XM=1;
+ float YM=0;
+
+ if (PassData.x+0.5&gt;=3)
+ {
+  XM=0;
+  YM=1;
+ }
+
+ float2 xd=float2(data1.x*XM,data1.y*YM)*-0.5;
+ float2 xxd=float2(data1.x*XM,data1.y*YM)/oneway;
+
+ for (float x=0; x&lt;oneway; x++)
+ {
+  res+=Textur.Sample(sm,t+xd);
+  xd+=xxd;
+ }
+
+ return res/oneway;
+}</Code>
+    <Type>2</Type>
+    <PassCount>6</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>X Amount</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>32</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Amount</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>32</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>4B841EDD9D4EE4288164844C5FBAA768</GUID>
+    <Name>CellEdges</Name>
+    <Code>float4 PassData:register(c0);
+float4 data1:register(c1);
+Texture2D noise:register(t0);
+
+float4 GetNoise(float2 tin, float2 grid)
+{
+ return noise.Load((int3(fmod(tin/grid*256+512,256),0)));
+}
+
+float voronoi(float2 x, float2 grid)
+{
+    float2 p=floor(x);
+    float2 f=frac(x);
+ 
+	float2 mr;
+
+    float res = 128.0;
+    for (int j=-1; j&lt;=1; j++)
+		for (int i=-1; i&lt;=1; i++)
+		{			  
+		     float2 b=float2(i,j);   
+		     float2 r=b-f+GetNoise(p+b,grid).xy;   
+		     float d=dot(r,r);
+			   
+		     if (d&lt;res)
+		     {
+				res=d;
+				mr=r;
+			 }
+		}
+	
+    res = 128.0;
+    for (int k=-2; k&lt;=2; k++)
+    	for (int l=-2; l&lt;=2; l++)
+    	{
+        	float2 b=float2(l,k);
+        	float2 r=b-f+GetNoise(p+b,grid).xy;
+        	float d=dot(0.5*(mr+r),normalize(r-mr));
+		    if (length(r-mr)&gt;0)
+        	res=min(res,d);
+    	}
+	
+	return res;	
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	float2 grid=data1.xy*255;
+	float dis=voronoi(t*grid,grid);
+    return 1-dis/data1.z;
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>1</NeedsRandSeed>
+  
+    <LookupType>4</LookupType>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>X Count</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>5</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Count</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>5</Default></Parameter>
+  
+    <Parameter>
+      <Name>Thickness</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>10</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>FB2A9ECDEE6E163BDFBBF7B84FE4DF16</GUID>
+    <Name>Cells</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D noise:register(t1);
+float4 PassData:register(c0);
+float4 data1:register(c1);
+
+float le(float2 l)
+{
+ float k=abs(l.x)+abs(l.y);
+ if (!data1.w) k=length(l);
+ return k;
+}
+
+float4 GetNoise(float2 tin)
+{
+ return noise.Load((int3(fmod(tin*256+512,256),0)));
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 n=PassData.yzwy;
+
+ float2 j=(t.xy-GetNoise(n.yz).xy);
+ float l=le(frac(j)-0.5)*2/data1.y/sqrt(2)/((n.z+0.2)*data1.z*10+1);
+ if (PassData.x)
+ {
+  float2 x=t+n.xy;
+  float2 y=t+n.zw;
+
+  float d=Textur.Sample(sm,x).x;
+  float k=Textur.Sample(sm,y).x;
+  l=min(l,min(d,k));
+ }
+ if (PassData.x+0.5&gt;=(data1.x)*255) l=Textur.Sample(sm,t).x;
+
+ return l;
+}</Code>
+    <Type>0</Type>
+    <PassCount>11</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>1</NeedsRandSeed>
+  
+    <LookupType>4</LookupType>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Iterations</Name>
+      <Type>0</Type>
+      <Min>1</Min>
+      <Max>11</Max>
+      <Default>7</Default></Parameter>
+  
+    <Parameter>
+      <Name>Power</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>50</Default></Parameter>
+  
+    <Parameter>
+      <Name>Size</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  
+    <Parameter>
+      <Name>Manhattan</Name>
+      <Type>1</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>85A3A4598546B52869B4E5B1CEBD2B16</GUID>
+    <Name>Cells 2</Name>
+    <Code>float4 PassData:register(c0);
+float4 data1:register(c1);
+Texture2D noise:register(t0);
+
+float4 GetNoise(float2 tin, float2 grid)
+{
+ return noise.Load((int3(fmod(tin/grid*256+512,256),0)));
+}
+
+float voronoi(float2 x, float2 grid)
+{
+    float2 p=floor(x);
+    float2 f=frac(x);
+
+    float res=8.0;
+	
+    for (int j=-1; j&lt;=1; j++)
+	    for (int i=-1; i&lt;=1; i++)
+		{
+			float2 b=float2(i,j);
+			float2 r=b-f+GetNoise(p+b,grid).xy;
+			float d=dot(r,r);
+			res=min(res,d);
+		}
+	
+    return sqrt(res);
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	float2 grid=data1.xy*255;
+	return voronoi(t*grid,grid);
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>1</NeedsRandSeed>
+  
+    <LookupType>4</LookupType>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>X Count</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>5</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Count</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>5</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>293BDFEFE6E78D39BF95D34A9138F5BB</GUID>
+    <Name>Colorize</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 Color1:register(c1);
+float4 Color2:register(c2);
+float4 Data1:register(c3);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float f=Textur.Sample(sm,t)[(int)(Data1.x*256)];
+ return lerp(Color1,Color2,f);
+}</Code>
+    <Type>3</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Color 1</Name>
+      <Type>2</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  
+    <Parameter>
+      <Name>Color 2</Name>
+      <Type>2</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>255</Default></Parameter>
+  
+    <Parameter>
+      <Name>Control Channel</Name>
+      <Type>3</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>B593A39FD1166147DB3437FD1B3DC9D3</GUID>
+    <Name>Combine</Name>
+    <Code>SamplerState sm:register(s0);
+float4 data1:register(c1);
+Texture2D Textur:register(t0);
+Texture2D Textur2:register(t1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	float4 v1=Textur.Sample(sm,t);
+	float4 v2=Textur2.Sample(sm,t);
+	float4 r=v1+v2;
+	int Type=(int)(data1.x*256);
+	if (Type==1) r=v1-v2;
+	if (Type==2) r=v1*v2;
+	if (Type==3) r=v1*(1-v2.w)+v2*v2.w;
+	if (Type==4) r=min(v1,v2);
+	if (Type==5) r=max(v1,v2);
+	if (Type==6) r=v1/(1-v2);
+	if (Type==7) r=1-(1-v1)/v2;
+	if (Type==8) r=1-(1-v1)*(1-v2);
+	if (Type==9) r=lerp(1-2*(1-v1)*(1-v2),2*v1*v2,v1&lt;0.5);
+	return r;
+}</Code>
+    <Type>1</Type>
+    <PassCount>1</PassCount>
+    <InputCount>2</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Filter</Name>
+      <Type>4</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <ListItem>Add</ListItem>
+      <ListItem>Subtract</ListItem>
+      <ListItem>Multiply</ListItem>
+      <ListItem>Alpha Blend</ListItem>
+      <ListItem>Darken</ListItem>
+      <ListItem>Lighten</ListItem>
+      <ListItem>Color Dodge</ListItem>
+      <ListItem>Color Burn</ListItem>
+      <ListItem>Screen</ListItem>
+      <ListItem>Overlay</ListItem>
+    </Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>74DC36107DB66254A841FE48313562B1</GUID>
+    <Name>Contrast</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 c=Textur.Sample(sm,t);
+
+ float s=data1.x*3;
+ s*=s;
+ return lerp(0.5,c,s*5);
+}</Code>
+    <Type>3</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Strength</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>38</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>D322B78B3E5BDA5B91DFCF83BC9E4D78</GUID>
+    <Name>Crystalize</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D noise:register(t1);
+float4 PassData:register(c0);
+float4 data1:register(c1);
+
+float4 GetNoise(float2 tin, float2 grid)
+{
+ return noise.Load((int3(fmod(tin/grid*256+512,256),0)));
+}
+
+float4 voronoi(float2 x, float2 grid)
+{
+    float2 p=floor(x);
+    float2 f=frac(x);
+
+    float res=8.0;
+	
+	float2 rm;
+	
+    for (int j=-1; j&lt;=1; j++)
+	    for (int i=-1; i&lt;=1; i++)
+		{
+			float2 b=float2(i,j);
+			float2 r=b-f+GetNoise(p+b,grid).xy;
+			float d=dot(r,r);
+		    if (d&lt;res)
+			{
+				res=d;
+				rm=r;
+			}
+		}
+	
+    return Textur.Sample(sm,(p+rm+f)/grid);
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	float2 grid=data1.xy*255;
+	return voronoi(t*grid,grid);
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>1</NeedsRandSeed>
+  
+    <LookupType>4</LookupType>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>X Count</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>5</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Count</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>5</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>E2A4E9A1C02F7E457448B289FD0F05A4</GUID>
+    <Name>Curves</Name>
+    <Code>SamplerState sm:register(s0);
+SamplerState cs:register(s1);
+
+Texture2D Textur:register(t0);
+Texture2D Curves:register(t1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 c=Textur.Sample(sm,t);
+ float4 r;
+ r.x=Curves.SampleLevel(cs,float2(c.x,0),0).x;
+ r.y=Curves.SampleLevel(cs,float2(c.y,0),0).y;
+ r.z=Curves.SampleLevel(cs,float2(c.z,0),0).z;
+ r.w=Curves.SampleLevel(cs,float2(c.w,0),0).w;
+ return r;
+}</Code>
+    <Type>3</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <LookupType>3</LookupType>
+  
+    <Minifiable>1</Minifiable></texturefilter>
+
+  <texturefilter>
+    <GUID>30BD4D1C8F082EA0BD78D8A9DAAB0C92</GUID>
+    <Name>DirBlur</Name>
+    <Code>SamplerState sm:register(s0);
+float4 data1:register(c1);
+Texture2D Textur:register(t0);
+Texture2D DirMap:register(t1);
+
+#define c 21
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float d=DirMap.Sample(sm,t)[(int)(data1.x*256)];
+ float2 vec=float2(cos(d*3.14159265*2),sin(d*3.14159265*2));
+
+ float4 ret=0;
+
+ for (int x=1; x&lt;c; x++)
+  ret+=Textur.Sample(sm,t+(vec*x*data1.y*0.03));
+
+ return ret/(c-1);
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>2</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Control Channel</Name>
+      <Type>3</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  
+    <Parameter>
+      <Name>Amount</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>D7609E916A7F9EA9B37E1D77BCCB34B0</GUID>
+    <Name>Emboss</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float d2=0.5/4096.0;
+
+ float4 c1=Textur.Sample(sm,t);
+ float d=data1.x*255/256.0f*3.14159265*2;
+ t+=float2(cos(d),sin(d))*d2;
+ float4 c2=Textur.Sample(sm,t);
+
+ return (c2-c1)/(1-data1.y)*16+0.5;
+}</Code>
+    <Type>3</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Direction</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  
+    <Parameter>
+      <Name>Strength</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>6E7AC8C30D6A76F0515EAF6A96B435B1</GUID>
+    <Name>Envmap</Name>
+    <Code>float4 radius:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	float d=radius.x-radius.y;
+	float2 scle=(t-0.5)/(radius.zw*radius.x);
+	float l=length(scle);
+	return 1+(radius.y-l)/d;
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Outer Radius</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>255</Default></Parameter>
+  
+    <Parameter>
+      <Name>Inner Radius</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>X Scale</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Scale</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>8D68EE9789AA2C58F700FD88410D46C9</GUID>
+    <Name>Fractalize</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 PassData:register(c0);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 u=Textur.Sample(sm,t);
+ float4 v=Textur.Sample(sm,t*2);
+ float vv=1;
+ if (PassData.x+0.5&gt;=data1.x*255) vv=0;
+ return lerp(u,v,data1.y*vv);
+}</Code>
+    <Type>2</Type>
+    <PassCount>11</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Iterations</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>11</Max>
+      <Default>1</Default></Parameter>
+  
+    <Parameter>
+      <Name>Blend</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>34B09455D52F207AB927E837C9D2034D</GUID>
+    <Name>Glass</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D DataMap:register(t1);
+float4 data1:register(c1);
+
+#define c 3
+#define Scatter 1/32.0f
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 dx=DataMap.Sample(sm,float2(t.x+Scatter,t.y));
+ float4 dy=DataMap.Sample(sm,float2(t.x,t.y+Scatter));
+
+ float d=DataMap.Sample(sm,t)[(int)(data1.x*256)];
+
+ float2 dv=float2(d-dx.x,d-dy.y);
+ float2 n=t+dv*(data1.y-0.5);
+
+ return Textur.Sample(sm,n);
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>2</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Control Channel</Name>
+      <Type>3</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  
+    <Parameter>
+      <Name>Amount</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>610C710104126E1A289510D9901D69E8</GUID>
+    <Name>Gradient</Name>
+    <Code>float4 d:register(c1);
+
+float4 p( float2 tt : TEXCOORD0 ) : SV_TARGET0
+{
+	float r=0;
+	int Pattern=(int)(d.x*256);
+
+	float2 t=tt-0.5f;
+
+	if (Pattern==0) r=1-length(t)*2/sqrt(2);
+	if (Pattern==1) r=1-max(abs(t.x),abs(t.y))*2;
+	if (Pattern==2) r=tt.x;
+	if (Pattern==3) r=tt.y;
+	if (Pattern==4) r=1-abs(1-tt.x*2);
+	if (Pattern==5) r=1-abs(1-tt.y*2);
+
+	return r;
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>GradientType</Name>
+      <Type>4</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <ListItem>Radial</ListItem>
+      <ListItem>Manhattan</ListItem>
+      <ListItem>Horizontal</ListItem>
+      <ListItem>Vertical</ListItem>
+      <ListItem>Horizontal Mirrored</ListItem>
+      <ListItem>Vertical Mirrored</ListItem>
+    </Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>CEE035ACE63356879DC898DE1C3F58C3</GUID>
+    <Name>HoneyComb</Name>
+    <Code>float4 PassData:register(c0);
+float4 data1:register(c1);
+
+float4 p(float2 p:TEXCOORD0) : SV_TARGET0
+{
+ float2 uv=frac(p.xy*float2(data1.xy*255));
+ float m=128;
+ float2 m1;
+ float2 m2;
+
+ for (int x=-1; x&lt;3; x++)
+  for (int y=-1; y&lt;3; y++)
+   {
+    float2 d=uv-float2(0.25+x*0.5+y*0.25,0.25+y*0.5);
+    float r=dot(d,d);
+    if (r&lt;m)
+    {
+     m1=d;
+     m=r;
+    }
+   }
+
+ float r2=128;
+
+ for (int x=-2; x&lt;4; x++)
+  for (int y=-2; y&lt;4; y++)
+   {
+    float2 d=uv-float2(0.25+x*0.5+y*0.25,0.25+y*0.5);
+   	float dd=dot(0.5*(m1+d),normalize(d-m1));
+    if (length(m-d)&gt;0)
+    r2=min(r2,dd);
+   }
+
+ r2=r2*4&gt;data1.z;
+
+ if (data1.w&gt;0)
+ 	return 1-r2;
+
+ return pow(1-sqrt(m)*2.7,2);
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>X Tiling</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>1</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Tiling</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>1</Default></Parameter>
+  
+    <Parameter>
+      <Name>Filled border</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>10</Default></Parameter>
+  
+    <Parameter>
+      <Name>Filled</Name>
+      <Type>1</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>21EAF46BC325662442A8AB197408A129</GUID>
+    <Name>HSL</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float3 rgb_to_hsv(float3 c)
+{
+	float3 r; 
+	float Min; 
+
+	r.z=max(max(c.x,c.y),c.z); 
+	Min=min(min(c.x,c.y),c.z); 
+
+	float delta = r.z - Min;
+    if (r.z!=0)
+	r.y = delta/r.z; 
+	else r.y=0;
+
+	float3 m=r.z-c;
+
+	r.x = (m.z-m.y) / delta;
+	if (c.y == r.z) r.x = (m.x-m.z) / delta + 2; 
+	if (c.z == r.z) r.x = (m.y-m.x) / delta + 4; 
+
+	if (delta==0) r.x=-1;
+
+	return r;
+} 
+
+float3 hsv_to_rgb(float3 h) 
+{ 
+	float3 r; 
+
+	h.x=fmod(h.x+6,6);
+
+	float f = h.x - (int)h.x;
+
+	int o = h.x; 
+
+	r=float3(0,1-f,1);
+	if (o==1) r=float3(f,0,1);
+	if (o==2) r=float3(1,0,1-f);
+	if (o==3) r=float3(1,f,0);
+	if (o==4) r=float3(1-f,1,0);
+	if (o==5) r=float3(0,1,f);
+
+	return (1-r*h.y)*h.z; 
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 c=Textur.Sample(sm,t);
+
+ float4 d=data1/256*255;
+
+ c.xyz=rgb_to_hsv(c);
+
+ c.x+=d.x*6;
+ c.y*=d.y*4;
+
+ if (d.z&lt;0.5) c.z*=d.z*2;
+ else c.z=lerp(c.z,1,(d.z-0.5)*2);
+
+ c.xyz=saturate(hsv_to_rgb(c.xyz));
+
+ return c;
+}</Code>
+    <Type>3</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Hue</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  
+    <Parameter>
+      <Name>Saturation</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>64</Default></Parameter>
+  
+    <Parameter>
+      <Name>Lightness</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>128</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>D67806AC742D825550FC2D42607C0980</GUID>
+    <Name>HSLCurves</Name>
+    <Code>SamplerState sm:register(s0);
+SamplerState cs:register(s1);
+
+Texture2D Textur:register(t0);
+Texture2D Curves:register(t1);
+
+float3 rgb_to_hsv(float3 c)
+{
+	float3 r; 
+	float Min; 
+
+	r.z=max(max(c.x,c.y),c.z); 
+	Min=min(min(c.x,c.y),c.z); 
+
+	float delta = r.z - Min;
+    if (r.z!=0)
+	r.y = delta/r.z; 
+	else r.y=0;
+
+	float3 m=r.z-c;
+
+	r.x = (m.z-m.y) / delta;
+	if (c.y == r.z) r.x = (m.x-m.z) / delta + 2; 
+	if (c.z == r.z) r.x = (m.y-m.x) / delta + 4; 
+
+	if (delta==0) r.x=-1;
+
+	return r;
+} 
+
+float3 hsv_to_rgb(float3 h) 
+{ 
+	float3 r; 
+
+	h.x=fmod(h.x+6,6);
+
+	float f = h.x - (int)h.x;
+
+	int o = h.x; 
+
+	r=float3(0,1-f,1);
+	if (o==1) r=float3(f,0,1);
+	if (o==2) r=float3(1,0,1-f);
+	if (o==3) r=float3(1,f,0);
+	if (o==4) r=float3(1-f,1,0);
+	if (o==5) r=float3(0,1,f);
+
+	return (1-r*h.y)*h.z; 
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 c=Textur.Sample(sm,t);
+ c.xyz=rgb_to_hsv(c.xyz);
+ float4 r;
+ r.x=Curves.Sample(cs,float2(c.x/6,0)).x*6;
+ r.y=Curves.Sample(cs,float2(c.y,0)).y;
+ r.z=Curves.Sample(cs,float2(c.z,0)).z;
+ return float4(hsv_to_rgb(r.xyz),c.w);
+}</Code>
+    <Type>3</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <LookupType>3</LookupType>
+  
+    <Minifiable>1</Minifiable></texturefilter>
+
+  <texturefilter>
+    <GUID>A1663F9F53B0F5D21B06EC66EA42502B</GUID>
+    <Name>Image</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+
+float degamma(float c)
+{
+	float cs;
+	if (c&lt;0.04045) cs=c/12.92;
+	else cs=pow((c+0.055)/1.055,2.4);
+	return cs;
+}
+
+float4 degamma4(float4 g)
+{
+	return float4(degamma(g.x),degamma(g.y),degamma(g.z),g.w);
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	return degamma4(saturate(Textur.Sample(sm,t)));
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <LookupType>1</LookupType>
+  
+    <Minifiable>1</Minifiable></texturefilter>
+
+  <texturefilter>
+    <GUID>2E5B2083C7DD80D50560D657142096F4</GUID>
+    <Name>Image Raw</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	return Textur.Sample(sm,t);
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <LookupType>1</LookupType>
+  
+    <Minifiable>1</Minifiable></texturefilter>
+
+  <texturefilter>
+    <GUID>3D565B952DEB7ECA0ACF6AA456C83BD7</GUID>
+    <Name>Invert</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	return 1-Textur.Sample(sm,t);
+}</Code>
+    <Type>3</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable></texturefilter>
+
+  <texturefilter>
+    <GUID>D506D291F49E9843242F9A17420A0A6E</GUID>
+    <Name>Light</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D DataMap1:register(t1);
+float4 ambient:register(c1);
+float4 diffuse:register(c2);
+float4 specular:register(c3);
+float4 data1:register(c4);
+
+float4 calculatespecular(float3 p, float3 n, float3 lightdir)
+{
+	float3 incoming=reflect(lightdir,n);
+	return pow(saturate(dot(normalize(p),incoming)),data1.z*10);
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	float4 tx=Textur.Sample(sm,t);
+	
+	float4 Normal=normalize(DataMap1.Sample(sm,t)-0.5f);
+	
+	float rot=data1.x*3.14159f*2;
+	float hei=(data1.y+1.5)*3.14159f;
+	
+	float4 ldir;
+	ldir.x=cos(rot)*sin(hei);
+	ldir.y=sin(rot)*sin(hei);
+	ldir.z=cos(hei);
+	ldir.w=0;
+	ldir=normalize(ldir);
+	
+	float4 s=calculatespecular(
+		float3(t.x-0.5,t.y-0.5,0.5),
+		//float3(0,0,1)+0*
+		Normal.xyz,
+		-ldir.xyz);
+
+	//float3 incoming=reflect(Normal.xyz,ldir.xyz);
+	//return incoming.xyzx;
+		
+	return saturate(s)*specular+tx*saturate(dot(Normal,ldir))*diffuse+ambient;
+}</Code>
+    <Type>1</Type>
+    <PassCount>1</PassCount>
+    <InputCount>2</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Ambient Color</Name>
+      <Type>2</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>20</Default></Parameter>
+  
+    <Parameter>
+      <Name>Diffuse COlor</Name>
+      <Type>2</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>255</Default></Parameter>
+  
+    <Parameter>
+      <Name>Specular Color</Name>
+      <Type>2</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>Light Rotation</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>Light Height</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>Specular Power</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>506B597216634E783F90399B9D8891B7</GUID>
+    <Name>Loop</Name>
+    <Code>SamplerState sm:register(s0);
+float4 data1:register(c1);
+Texture2D Textur:register(t0);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ return Textur.Sample(sm,t*float2(data1.x*255.0f,data1.y*255.0f));
+}</Code>
+    <Type>1</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>X Loop</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>1</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Loop</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>1</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>796B58AD6BE72336D9B1BBE40125D78E</GUID>
+    <Name>Mapdistort</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D DataMap:register(t1);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float d=DataMap.Sample(sm,t)[(int)(data1.x*256)];
+ float2 n=t+d*float2(data1.y,data1.z);
+  return Textur.Sample(sm,n);
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>2</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Control Channel</Name>
+      <Type>3</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  
+    <Parameter>
+      <Name>X Amount</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Amount</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>DB84B6D080A408CC8FB2793AB39CDE37</GUID>
+    <Name>MappedCombine</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D DataMap1:register(t1);
+Texture2D DataMap2:register(t2);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	float4 a=Textur.Sample(sm,t);
+	float4 b=DataMap1.Sample(sm,t);
+	
+	float4 c;
+	c.x=DataMap2.Sample(sm,float2(a.x,b.x)).x;
+	c.y=DataMap2.Sample(sm,float2(a.y,b.y)).x;
+	c.z=DataMap2.Sample(sm,float2(a.z,b.z)).x;
+	c.w=DataMap2.Sample(sm,float2(a.w,b.w)).x;
+	
+	return c;
+}</Code>
+    <Type>1</Type>
+    <PassCount>1</PassCount>
+    <InputCount>3</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable></texturefilter>
+
+  <texturefilter>
+    <GUID>78968182F312130C262FC5DAFC189C2D</GUID>
+    <Name>Mix</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D Tex2:register(t1);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ return lerp(Textur.Sample(sm,t),Tex2.Sample(sm,t),data1.x);
+}</Code>
+    <Type>1</Type>
+    <PassCount>1</PassCount>
+    <InputCount>2</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Amount</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>8BAD614103780E399528190CD2B331BE</GUID>
+    <Name>MixMap</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D Tex2:register(t1);
+Texture2D MixMap:register(t2);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float Amount=MixMap.Sample(sm,t)[(int)(data1.x*256)];
+ return lerp(Textur.Sample(sm,t),Tex2.Sample(sm,t),Amount);
+}</Code>
+    <Type>1</Type>
+    <PassCount>1</PassCount>
+    <InputCount>3</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Control Channel</Name>
+      <Type>3</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>95663E90B7E22F94ADF911ADF81B82DF</GUID>
+    <Name>Noise</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D noise:register(t1);
+float4 PassData:register(c0);
+float4 data1:register(c1);
+
+float4 GetNoise(float2 tin)
+{
+	return noise.Load(int3(fmod(tin*256*(max(1,PassData.x)*(1+PassData.y)),256),0));
+}
+
+float4 p( float2 tt:TEXCOORD0 ) : SV_TARGET0
+{
+ float Min=data1.x*255-1;
+ float Max=data1.y*255;
+
+ int PassCnt=PassData.x+0.5-Min;
+
+ float s=1/(pow(2.0f,PassData.x+2));
+ float Noise=PassCnt?pow(abs(data1.z),PassCnt):1;
+
+ float2 t=tt;
+ float2 tpart=t%s;
+ t-=tpart;
+ tpart/=s;
+
+ if (data1.w==0)
+   tpart*=tpart*(3-2*tpart);
+
+ float2 t4=frac(t+s);
+ float4 nx,ny;
+
+ nx=lerp(GetNoise(t),GetNoise(float2(t4.x,t.y)),tpart.x);
+ ny=lerp(GetNoise(float2(t.x,t4.y)),GetNoise(t4),tpart.x);
+
+ float4 n=(lerp(nx,ny,tpart.y)-0.5f)*Noise;
+
+ if (PassCnt&gt;0)
+  n+=Textur.Sample(sm,tt);
+ else n+=0.5f;
+
+ if (PassData.x+0.5&gt;Max) n=Textur.Sample(sm,tt);
+
+ return n;
+}</Code>
+    <Type>0</Type>
+    <PassCount>11</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>1</NeedsRandSeed>
+  
+    <LookupType>4</LookupType>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Minimum</Name>
+      <Type>0</Type>
+      <Min>1</Min>
+      <Max>11</Max>
+      <Default>1</Default></Parameter>
+  
+    <Parameter>
+      <Name>Maximum</Name>
+      <Type>0</Type>
+      <Min>1</Min>
+      <Max>11</Max>
+      <Default>11</Default></Parameter>
+  
+    <Parameter>
+      <Name>Blend</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>192</Default></Parameter>
+  
+    <Parameter>
+      <Name>Linear</Name>
+      <Type>1</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>43D0AFDAD2232F1D84161C800B9A683A</GUID>
+    <Name>Normalmap</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float d=0.5/4096.0f;
+
+ int DataChannel=data1.x*256;
+
+ float x1=Textur.Sample(sm,t-float2(d,0))[DataChannel];
+ float x2=Textur.Sample(sm,t+float2(d,0))[DataChannel];
+ float y1=Textur.Sample(sm,t-float2(0,d))[DataChannel];
+ float y2=Textur.Sample(sm,t+float2(0,d))[DataChannel];
+
+ float s=(1-data1.y*255/256.0f)*1.2;
+ s*=s;
+ s*=s;
+
+ float3 n=normalize(float3(x2-x1,y2-y1,s/8.0f))/2+0.5;
+
+ return float4(n,1);
+}</Code>
+    <Type>3</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Control Channel</Name>
+      <Type>3</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  
+    <Parameter>
+      <Name>Strength</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>128</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>46BA05677674B159E87978EF31E0007F</GUID>
+    <Name>Palette</Name>
+    <Code>SamplerState cm:register(s0);
+SamplerState sm:register(s1);
+Texture2D Textur:register(t0);
+Texture2D DataMap1:register(t1);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+    int ch=(int)(data1.x*256);
+	if (data1.z==0)
+	{
+    	float c=Textur.Sample(sm,t)[ch];
+    	return DataMap1.Sample(sm,float2(c,data1.y));
+	}
+
+	float4 c=Textur.Sample(cm,t);
+	float4 r;
+	r.x=DataMap1.SampleLevel(sm,float2(c.x,data1.y),0)[ch];
+	r.y=DataMap1.SampleLevel(sm,float2(c.y,data1.y),0)[ch];
+	r.z=DataMap1.SampleLevel(sm,float2(c.z,data1.y),0)[ch];
+	r.w=DataMap1.SampleLevel(sm,float2(c.w,data1.y),0)[ch];
+	return r;
+}</Code>
+    <Type>3</Type>
+    <PassCount>1</PassCount>
+    <InputCount>2</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Control Channel</Name>
+      <Type>3</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  
+    <Parameter>
+      <Name>Palette Line</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>Selected Channel For All</Name>
+      <Type>1</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>4F957825D86CF31FAF087B0235A6BACD</GUID>
+    <Name>Pixelize</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	float2 size = 1.0f/(data1.xy*255);
+	float2 t2 = t-fmod(t,size)+size/2.0f;	
+	return Textur.SampleLevel(sm,t2,0);
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>x count</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>y count</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>49B59D063E829190B0524F5FE8C1593A</GUID>
+    <Name>Plasma</Name>
+    <Code>float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	int x=data1.x*256;
+	int y=data1.y*256;
+	float2 uv=cos(t*float2(x,y)*3.14159265*2.0f)/2.0f;
+	float v=(uv.x+uv.y)/2;
+	if (data1.z)
+		v=(uv.x*uv.y)*2;
+	return v+0.5;
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>X Count</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>3</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Count</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>3</Default></Parameter>
+  
+    <Parameter>
+      <Name>Alternative Style</Name>
+      <Type>1</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>F01C46ECBDDC7C6CC9A3060ABDFF26EF</GUID>
+    <Name>Polar</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float4 Polar(float2 p)
+{
+ float theta=sin(3.14159265*(p.y));
+ float phi2=((p.x-0.5))*theta-0.5;
+
+ float2 t=float2(phi2,p.y);
+
+ return Textur.Sample(sm,t);
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 a=Polar(t);
+ if (data1.z) t.x=1-t.x;
+ if (data1.w) t.y=1-t.y;
+
+ float4 b=Polar(frac(t+float2(data1.x+0.5f,0)));
+
+ float l1=saturate(1-t.x/data1.y*2);
+ float l2=saturate(1-(1-t.x)/data1.y*2);
+
+ return lerp(a,b,l1+l2);
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>BlendOffset</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  
+    <Parameter>
+      <Name>BlendWidth</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>192</Default></Parameter>
+  
+    <Parameter>
+      <Name>X Swap</Name>
+      <Type>1</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  
+    <Parameter>
+      <Name>Y Swap</Name>
+      <Type>1</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>40767B33E61DFE81D2AEDAF68CFA26F6</GUID>
+    <Name>Polygon</Name>
+    <Code>float4 data1:register(c1);
+
+bool PointInTriangle (float2 pt, float2 v1)
+{
+    float3 d = float3(pt.x*v1.y-v1.x*pt.y,pt.y,-(pt.x-v1.x)*v1.y - (0.5-v1.x)*(pt.y-v1.y));
+    return !any(d&lt;0) || !any(d&gt;0);
+}
+
+float4 p(float4 p:TEXCOORD0) : SV_TARGET0
+{
+	int cnt=data1.x*255.0f;
+	float2 c = p.xy-0.5;
+	float l=length(c);
+	float t=fmod(atan2(c.x,c.y)+radians(360),radians(360)/cnt);
+
+	float2 t2=float2(cos(t),sin(t))*l;
+	float tn=radians(360)/cnt;
+	float2 tp=float2(cos(tn),sin(tn))*0.5;
+	
+	return PointInTriangle(t2,tp);
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Sides</Name>
+      <Type>0</Type>
+      <Min>3</Min>
+      <Max>255</Max>
+      <Default>4</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>AEEBD61B8F7C0EE35D488607F798CA72</GUID>
+    <Name>Rectangle</Name>
+    <Code>float4 data1:register(c1);
+float4 data2:register(c2);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float dc=(1+data2.x)/2; 
+ float2 c=data1.xy-t+0.5/255.0f;
+ float2 d=abs(c/data1.zw/dc); 
+ float l=1-saturate(sqrt(pow(d.x,2/data2.x)+pow(d.y,2/data2.x))); 
+ return pow(abs(l+0.5),1/data2.y*10);
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>X1</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y1</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>X2</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y2</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>Chamfer</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  
+    <Parameter>
+      <Name>Falloff</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>389234C7AC6DF7C91E95C5FC7C59CD34</GUID>
+    <Name>ReMap</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D Tex2:register(t1);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 uv = Tex2.Sample(sm,t);
+ return Textur.SampleLevel(sm,uv.xy,0);
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>2</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable></texturefilter>
+
+  <texturefilter>
+    <GUID>C04016CFF84460CF565CAA51C0E728EE</GUID>
+    <Name>Replace Alpha</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D Textur2:register(t1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 c=Textur.Sample(sm,t);
+ float4 c2=Textur2.Sample(sm,t);
+
+ return float4(c.xyz,c2.x);
+}</Code>
+    <Type>1</Type>
+    <PassCount>1</PassCount>
+    <InputCount>2</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable></texturefilter>
+
+  <texturefilter>
+    <GUID>38B05423B059B345938B2FEB8E2E7264</GUID>
+    <Name>Rotozoom</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float2 cntr=data1.zw;
+
+ float z=0.25/(data1.y*255/256.0f);
+ float2 t2=(t-cntr*255/256.0f);
+ float l=data1.x*255/256.0f*3.14159265*2;
+
+ float2 dpr=float2(cos(l),sin(l));
+
+ t=float2(t2.x*dpr.x+t2.y*dpr.y,t2.y*dpr.x-t2.x*dpr.y)*z+0.5;
+
+ return Textur.Sample(sm,t);
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Rotation</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  
+    <Parameter>
+      <Name>Zoom</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>64</Default></Parameter>
+  
+    <Parameter>
+      <Name>X Center</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>128</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Center</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>128</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>7C8019B349DA1F18D6B360CC7A4B277C</GUID>
+    <Name>Scale</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+float4 data2:register(c2);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 c=Textur.Sample(sm,t);
+
+ float4 Min=data1;
+ float4 Max=data2;
+
+ c=lerp(Min,Max,c);
+
+ return c;
+}</Code>
+    <Type>3</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Minimum Color</Name>
+      <Type>2</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>Maximum Color</Name>
+      <Type>2</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>54E4C4E135ADDA97E17CD7057086D4E8</GUID>
+    <Name>Scatter</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 PassData:register(c0);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 color=0;
+ if (PassData.x+0.5&gt;=data1.x*255)
+ {
+	color=Textur.Sample(sm,t)*4.0f;
+ }
+ else
+ {
+	float stepsize=data1.y;
+	color+=Textur.Sample(sm,float2(t.x-stepsize,t.y));
+	color+=Textur.Sample(sm,float2(t.x+stepsize,t.y));
+	color+=Textur.Sample(sm,float2(t.x,t.y-stepsize));
+	color+=Textur.Sample(sm,float2(t.x,t.y+stepsize));
+ }
+
+ return color/4.0f;
+}</Code>
+    <Type>2</Type>
+    <PassCount>11</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Iterations</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>11</Max>
+      <Default>1</Default></Parameter>
+  
+    <Parameter>
+      <Name>Distance</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>29F3126C8532A4562909B2B715B6813E</GUID>
+    <Name>Shade</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D DataMap:register(t1);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float f=DataMap.Sample(sm,t)[(int)(data1.x*256)];
+ float4 c=Textur.Sample(sm,t);
+ if (f&lt;0.5) c*=f*2;
+ else c=lerp(c,1,(f-0.5)*2);
+ return c;
+}</Code>
+    <Type>3</Type>
+    <PassCount>1</PassCount>
+    <InputCount>2</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Control Channel</Name>
+      <Type>3</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>DAC0AE7813EAE6BA09A8045F71523B2D</GUID>
+    <Name>SinCol</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float4 c=Textur.Sample(sm,t);
+ float4 c2=abs(sin(c*data1.y*256*3.14159265));
+
+ int Channel=data1.x*256;
+
+ if (Channel==0) c.x=c2.x;
+ if (Channel==1) c.y=c2.y;
+ if (Channel==2) c.z=c2.z;
+ if (Channel==3) c.w=c2.w;
+
+ return c;
+}</Code>
+    <Type>3</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Control Channel</Name>
+      <Type>3</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  
+    <Parameter>
+      <Name>Amount</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>1</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>4869D5A131DFC16FFC29EFD391714382</GUID>
+    <Name>Sinedist</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D s:register(t0);
+float4 d:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	t+=float2( cos(d.x*3.14159265*256*2*t.y)*d.y,
+		cos(d.z*3.14159265*256*2*t.x)*d.w);
+
+	return s.Sample(sm,t);
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>X Count</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>1</Default></Parameter>
+  
+    <Parameter>
+      <Name>X Amplitude</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>24</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Count</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>1</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Amplitude</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>24</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>BDFC449886C9303D387A1E9FCEB74833</GUID>
+    <Name>SmoothStep</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	return smoothstep(0,data1.x,Textur.Sample(sm,t));
+}</Code>
+    <Type>1</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Power</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>743EC986A0A46B1C288ADFB64F131C23</GUID>
+    <Name>Solid Color</Name>
+    <Code>float4 data1:register(c1);
+
+float4 p(float4 p:TEXCOORD0) : SV_TARGET0
+{
+ return data1;
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>New Parameter</Name>
+      <Type>2</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>4B9DA80A5BC5C46466CC2E850E65B292</GUID>
+    <Name>Spline</Name>
+    <Code>SamplerState cs:register(s1);
+Texture2D Curves:register(t0);
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ return Curves.Sample(cs,t);
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <LookupType>3</LookupType>
+  
+    <Minifiable>1</Minifiable></texturefilter>
+
+  <texturefilter>
+    <GUID>2715D5D2B1AF57A28976C8784BEB3FB3</GUID>
+    <Name>Sprinkle</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D noise:register(t1);
+float4 PassData:register(c0);
+float4 data1:register(c1);
+
+float4 GetNoise(float2 tin)
+{
+	return noise.Load(int3(fmod(tin*256*(max(1,PassData.x)*(1+PassData.y)),256),0));
+}
+
+float2 GetUV(float2 t, float4 r)
+{
+	float s = lerp(data1.y,data1.z,r.z);
+	
+	float sf = sin(r.w*6);
+	float cf = cos(r.w*6);
+	float2 t2 = (t-r.xy)/s;
+	t2=float2(t2.x*cf-t2.y*sf,t2.y*cf+t2.x*sf);
+	
+	return saturate(t2+0.5);
+}
+
+float4 p( float2 tt:TEXCOORD0 ) : SV_TARGET0
+{
+	float4 r = 0;
+	
+	for (int x=0; x&lt;data1.x*255; x++)
+	{
+	  for (int a=0; a&lt;3; a++)
+	   for (int b=0; b&lt;3; b++)
+		{
+		float2 t=GetUV(tt+float2(a,b)-1,GetNoise(x/255.));
+		float4 v=Textur.Sample(sm,t);
+        r = lerp(r,v,v.a);
+		}
+	}
+	
+	return r;
+}</Code>
+    <Type>1</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>1</NeedsRandSeed>
+  
+    <LookupType>4</LookupType>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Quantity</Name>
+      <Type>0</Type>
+      <Min>1</Min>
+      <Max>255</Max>
+      <Default>10</Default></Parameter>
+  
+    <Parameter>
+      <Name>Minimum Size</Name>
+      <Type>0</Type>
+      <Min>1</Min>
+      <Max>255</Max>
+      <Default>1</Default></Parameter>
+  
+    <Parameter>
+      <Name>Maximum Size</Name>
+      <Type>0</Type>
+      <Min>1</Min>
+      <Max>255</Max>
+      <Default>255</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>2578CABBE41C0B2F486AE25D11F88423</GUID>
+    <Name>SubPlasma</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D noise:register(t1);
+float4 PassData:register(c0);
+float4 data1:register(c1);
+
+float4 GetNoise(float2 tin)
+{
+	return noise.Load(int3(fmod(tin*256*(max(1,PassData.x)*(1+PassData.y)),256),0));
+}
+
+float4 CatmullRom(float4 v0, float4 v1, float4 v2, float4 v3, float t)
+{ 
+ float4 P = (v3 - v2) - (v0 - v1);
+ float4 Q = (v0 - v1) - P;
+ float4 R =  v2 - v0;
+ float4 r = (((P*t)+Q)*t+R)*t + v1;
+ return r;
+}
+
+float4 p( float2 tt:TEXCOORD0 ) : SV_TARGET0
+{
+ float Step=1/(pow(2.0f,data1.x*255.0f+1));
+
+ float2 t=tt;
+ float2 tpart=t%Step;
+ t=(t-tpart);
+
+ float4 n=GetNoise(t);
+
+ if (PassData.x&gt;0)
+ {
+  float2 s=float2(Step,0);
+  if (PassData.x+0.5&gt;=2) s=float2(0,Step);
+  float4 v[4];
+  for (int x=0; x&lt;4; x++)
+   v[x]=Textur.Sample(sm,tt+s*x);
+
+  float k=tpart.x;
+  if (PassData.x+0.5&gt;=2) k=tpart.y;
+  
+  if (!(data1.y&gt;0))
+  	n=CatmullRom(v[0],v[1],v[2],v[3],k/Step);
+  else n=lerp(v[1],v[2],k/Step);
+ }
+
+ return n;
+}</Code>
+    <Type>0</Type>
+    <PassCount>3</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>1</NeedsRandSeed>
+  
+    <LookupType>4</LookupType>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Density</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>11</Max>
+      <Default>3</Default></Parameter>
+  
+    <Parameter>
+      <Name>Linear</Name>
+      <Type>1</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>17C8685B8902A0F1DF8367B6119C5DB6</GUID>
+    <Name>Text</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ return Textur.Sample(sm,t);
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <LookupType>2</LookupType>
+  
+    <Minifiable>1</Minifiable></texturefilter>
+
+  <texturefilter>
+    <GUID>3123710457D98941287248E4BE10D618</GUID>
+    <Name>Tiles</Name>
+    <Code>float4 data:register(c1);
+
+float DrawRect(float2 t, float4 rect)
+{
+	rect.xz-=floor(rect.x);
+	return (all(t&gt;rect.xy) &amp;&amp; all(t&lt;rect.zw)) || (all(t+float2(1,0)&gt;rect.xy) &amp;&amp; all(t+float2(1,0)&lt;rect.zw));
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+	int2 c=data.xy*255;
+	float cnt=c.x*c.y;
+	float2 s=1.0/c;
+	float border = min(s.x,s.y)*data.w;
+	
+	float col=0;
+	
+	float2 pos=0;
+	
+	int brickCount=1;
+	
+	for (int y=0; y&lt;c.y; y++)
+	{
+		for (int x=0; x&lt;c.x; x++)
+		{
+			col+= DrawRect(t,float4(pos+border,pos+s-border))*(brickCount/cnt);
+			pos.x+=s.x;
+			brickCount++;
+		}
+		pos.x+=data.z*s.x;
+		pos.y+=s.y;
+	}
+	
+	return col;
+}</Code>
+    <Type>0</Type>
+    <PassCount>1</PassCount>
+    <InputCount>0</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>X Count</Name>
+      <Type>0</Type>
+      <Min>1</Min>
+      <Max>255</Max>
+      <Default>3</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Count</Name>
+      <Type>0</Type>
+      <Min>1</Min>
+      <Max>255</Max>
+      <Default>7</Default></Parameter>
+  
+    <Parameter>
+      <Name>Offset</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>Border</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>128</Max>
+      <Default>10</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>275747D801F268A95FBFA1B4294076EA</GUID>
+    <Name>To Polar</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float2 rect2polar(float2 t)
+{
+	float y=saturate(length(t-0.5)*2);
+	float x=atan2(t.x-0.5,t.y-0.5)/3.14159265/2.0;
+	return float2(x,y);
+}
+
+float2 polar2rect(float2 t)
+{
+	float r=(t.y)/2.0;
+	float p=(t.x)*3.14159265*2;
+	return r*float2(sin(p),cos(p))+0.5;
+}
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float2 u=t;
+ if (data1.y!=0) u.y=1-u.y;
+ if (data1.x==0) u=rect2polar(u);
+ else u=polar2rect(u);
+
+ return Textur.SampleLevel(sm,u,0);
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Polar -&gt; Rect</Name>
+      <Type>1</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  
+    <Parameter>
+      <Name>Flip y</Name>
+      <Type>1</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>5991AF84E2A68B22C341B55B5B8784CF</GUID>
+    <Name>Translate</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 PassData:register(c0);
+float4 data1:register(c1);
+
+float4 p(float2 p:TEXCOORD0) : SV_TARGET0
+{
+ float2 uv=p;
+ float2x2 mat;
+
+ if (data1.x&gt;0)
+ {
+   float f=3.14159265/4.0f;
+   uv=mul(float2x2(cos(f),-sin(f),sin(f),cos(f))/sqrt(2),(uv-0.5f)*2.0)/2.0f+0.5f;
+ } 
+
+ return Textur.Sample(sm,uv+data1.yz*255/256.0f);
+}</Code>
+    <Type>1</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Rotate45</Name>
+      <Type>1</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  
+    <Parameter>
+      <Name>X Offset</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Offset</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>83CFD1468ED7650077C6401142C9A58C</GUID>
+    <Name>Turbulence</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+Texture2D DataMap:register(t1);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float f=DataMap.Sample(sm,t)[(int)(data1.x*256)]*3.14159265*2;
+ t+=float2(cos(f),sin(f))*data1.y;
+
+ return Textur.Sample(sm,t);
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>2</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Control Channel</Name>
+      <Type>3</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  
+    <Parameter>
+      <Name>Amount</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>A059CB1111751978FA49DB67BD0553CC</GUID>
+    <Name>Twirl</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float2 cntr=(data1.zw*255/256.0f)+0.5;
+
+ float2 t2=(t-cntr);
+ if (t2.x&lt;=-0.5) t2.x+=1;
+ if (t2.y&lt;=-0.5) t2.y+=1;
+
+ float r=max(0,1-length(t2)*2/(data1.y*255/256.0f));
+ r=r*r;
+ r=r*r; 
+ float l=r*3.14159265*2*((data1.x*255/256.0f)-0.5)*10;
+
+ float2 dpr=float2(cos(l),sin(l));
+
+ t=float2(t2.x*dpr.x+t2.y*dpr.y,t2.y*dpr.x-t2.x*dpr.y)+cntr;
+
+ return Textur.Sample(sm,t);
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>Rotation</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>64</Default></Parameter>
+  
+    <Parameter>
+      <Name>Radius</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>127</Default></Parameter>
+  
+    <Parameter>
+      <Name>X Position</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  
+    <Parameter>
+      <Name>Y Position</Name>
+      <Type>0</Type>
+      <Min>0</Min>
+      <Max>255</Max>
+      <Default>0</Default></Parameter>
+  </texturefilter>
+
+  <texturefilter>
+    <GUID>AD8210B48E4E3D9A1A24E5A726D0C339</GUID>
+    <Name>Mirror</Name>
+    <Code>SamplerState sm:register(s0);
+Texture2D Textur:register(t0);
+float4 data1:register(c1);
+
+float4 p( float2 t:TEXCOORD0 ) : SV_TARGET0
+{
+ float2 t2 = 0.5-abs(t-0.5);
+ return Textur.Sample(sm,float2(data1.x?t.x:t2.x,!data1.x?t.y:t2.y));
+}</Code>
+    <Type>2</Type>
+    <PassCount>1</PassCount>
+    <InputCount>1</InputCount>
+    <NeedsRandSeed>0</NeedsRandSeed>
+  
+    <Minifiable>1</Minifiable>
+    <Parameter>
+      <Name>axis</Name>
+      <Type>1</Type>
+      <Min>0</Min>
+      <Max>255</Max></Parameter>
+  </texturefilter>
+</apExProject>

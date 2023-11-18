@@ -1,0 +1,86 @@
+button
+{
+	width:115px;
+	border:1px;
+}
+
+#timeline
+{
+	margin:1px;	
+	top:17px;
+}
+
+#toolbox
+{
+	margin:1px;
+	top:1px;
+	height:15px;
+	bottom:auto;
+	child-layout:horizontal;
+	child-align-y:center;
+	child-spacing:1px;
+}
+
+#toolbox label
+{
+	height:12px;
+}
+
+#eventtext
+{
+	width:90px;
+}
+
+#high1
+{
+	width:95px;
+}
+
+#high2
+{
+	width:111px;
+}
+
+#bpmtext
+{
+	width:50px;
+}
+
+#toolbox button
+{
+	height:15px;
+}
+
+#eventselector
+{
+	width:140px;
+}
+
+#loadsong
+{
+	width:80px;
+}
+
+#playsong
+{
+	width:80px;
+}
+
+#toolbox textbox
+{
+	height: 15px;
+	border: 1px;
+	padding-left:1px;
+	width: 20px;
+}
+
+#bpminput
+{
+	width: 42px;
+}
+
+#timestamp
+{
+	width:70px;
+}
+

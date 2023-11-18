@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="SceneSplineEditor">
+	<list id="splinelist" multiselect="1"/>
+	<splineeditorphx id="splineeditor" limited="0" gridx="8"/>
+	<box id="toolbox">
+		<button id="autokey" text="AutoKey"/>
+		<button id="snaptogrid" text="Snap To Grid"/>
+		<box/>
+		<box/>
+		<label  text="Waveform: "/>
+		<dropdown id="waveform" text="Snap To Grid">
+			<listitem name="None"/>
+			<listitem name="Sinus"/>
+			<listitem name="Square"/>
+			<listitem name="Sawtooth"/>
+			<listitem name="Triangle"/>
+			<listitem name="Noise"/>
+		</dropdown>
+		<label  text="Amplitude: "/>
+		<textbox id="amplitude" singleline="1" password="0"/>
+		<label  text="Frequency: "/>
+		<textbox id="frequency" singleline="1" password="0"/>
+		<button id="multiplicative" text="Multiplicative"/>
+		<trackbar id="randseed" text="Randseed"/>
+		<label  text="|"/>
+		<button id="limitsubscene" text="Limit Subscene Time Keys"/>
+	</box>
+  </gui>
+</guidescriptor>

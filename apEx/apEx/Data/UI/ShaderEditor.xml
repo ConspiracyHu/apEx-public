@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="ShaderEditor">
+	<box>
+		<label text="F5 to compile"/>
+	</box>
+	<textboxhlsl id="shadercode" linenums="1"/>
+	<box class="hbox">
+		<textbox id="shadererror"/>
+		<textbox id="shaderheader"/>
+	</box>
+  </gui>
+</guidescriptor>

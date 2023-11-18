@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+	<gui id="TreeSpeciesEditor">
+		<box id="mainbox">
+			<box id="treelistbox">
+				<box id="newdelbox">
+					<button id="newbutton" text="New Species"/>
+					<button id="delbutton" text="Delete Species"/>
+				</box>
+				<list id="treelist"/>
+			</box>
+			<box id="treebox" text="General">
+				<box id="treedatabox" class="treedata">
+					<fieldset id="treeshapebox" text="Tree Shape">
+						<box class="treedata">
+							<box class="floatinput">
+								<label text="Shape: "/>
+								<dropdown id="treeshape">
+									<listitem name="Conical"/>
+									<listitem name="Spherical"/>
+									<listitem name="Hemispherical"/>
+									<listitem name="Cylindrical"/>
+									<listitem name="Tapered Cylindrical"/>
+									<listitem name="Flame"/>
+									<listitem name="Inverse Conical"/>
+									<listitem name="Tend Flame"/>
+								</dropdown>
+							</box>
+							<trackbar id="levelcount" minimum="0" maximum="4" text="Level Count"/>
+							<box class="floatinput">
+								<label text="Global Scale: "/>
+								<textbox id="scale" singleline="1"/>
+							</box>
+							<trackbar id="basesize" text="Base Size"/>
+							<trackbar id="basesplits" minimum="0" maximum="15" text="Base Splits"/>
+							<trackbar id="ratiopower" minimum="-127" maximum="127" text="Ratio Power"/>
+							<trackbar id="attractionup" minimum="-127" maximum="127" text="Attraction Up"/>
+						</box>
+					</fieldset>
+					<fieldset id="lobebox" text="Trunk Radius">
+						<box class="treedata">
+							<trackbar id="ratio" text="Ratio"/>
+							<trackbar id="flare" text="Flare"/>
+							<trackbar id="lobes" text="Lobes"/>
+							<box class="floatinput">
+								<label text="Lobe Depth: "/>
+								<textbox id="lobedepth" singleline="1"/>
+							</box>
+							<box class="floatinput">
+								<label text="Scale: "/>
+								<textbox id="0scale" singleline="1"/>
+							</box>
+							<box class="floatinput">
+								<label text="Scale Variation: "/>
+								<textbox id="0scalev" singleline="1"/>
+							</box>
+						</box>
+					</fieldset>
+					<fieldset id="leafbox" text="Leaves">
+						<box class="treedata">
+							<trackbar id="leaves" minimum="-255" maximum="255" text="Leaves"/>
+							<box class="floatinput">
+								<label text="Leaf Scale: "/>
+								<textbox id="leafscale" singleline="1"/>
+							</box>
+							<box class="floatinput">
+								<label text="Leaf Scale X: "/>
+								<textbox id="leafscalex" singleline="1"/>
+							</box>
+							<trackbar id="leafbend" text="Leaf Bend"/>
+							<box class="floatinput">
+								<label text="Stem Length: "/>
+								<textbox id="leafstemlength" singleline="1"/>
+							</box>
+							<box class="floatinput">
+								<label text="Distribution: "/>
+								<dropdown id="leafdistrib">
+									<listitem name="Conical"/>
+									<listitem name="Spherical"/>
+									<listitem name="Hemispherical"/>
+									<listitem name="Cylindrical"/>
+									<listitem name="Tapered Cylindrical"/>
+									<listitem name="Flame"/>
+									<listitem name="Inverse Conical"/>
+									<listitem name="Tend Flame"/>
+								</dropdown>
+							</box>
+						</box>
+					</fieldset>
+					<fieldset id="pruning" text="Pruning">
+						<box class="treedata">
+							<trackbar id="pruneratio" text="Prune Ratio"/>
+							<trackbar id="prunewidth" text="Prune Width"/>
+							<trackbar id="prunewidthpeak" text="Prune Width Peak"/>
+							<box class="floatinput">
+								<label text="Power Low: "/>
+								<textbox id="prunepowerlow" singleline="1"/>
+							</box>
+							<box class="floatinput">
+								<label text="Power High: "/>
+								<textbox id="prunepowerhigh" singleline="1"/>
+							</box>
+						</box>
+					</fieldset>
+					<fieldset id="qualitybox" text="Quality">
+						<box class="treedata">
+							<trackbar id="leafquality" text="Leaf Quality"/>
+							<trackbar id="smooth" text="Smooth"/>
+						</box>
+					</fieldset>
+				</box>
+			</box>
+			<fieldset id="l1box" text="Trunk">
+				<box id="level1box" class="treedata">
+					<fieldset id="lengthandtaper" text="Length and Taper">
+						<box class="treedata">
+							<box class="floatinput">
+								<label text="Length: "/>
+								<textbox  id="l1length" singleline="1"/>
+							</box>
+							<box class="floatinput">
+								<label text="Length Chaos: "/>
+								<textbox  id="l1lengthv" singleline="1"/>
+							</box>
+							<trackbar id="l1ntaper" text="Taper"/>
+						</box>
+					</fieldset>
+					<fieldset id="curvature" text="Curvature">
+						<box class="treedata">
+							<trackbar id="l1curveres" text="Curve Resolution"/>
+							<trackbar id="l1curve" minimum="-720" maximum="720" text="Curve"/>
+							<trackbar id="l1curvev" minimum="-90" maximum="720" text="Curve V"/>
+							<trackbar id="l1curveback" minimum="-720" maximum="720" text="Curveback"/>
+						</box>
+					</fieldset>
+					<fieldset id="lengthandtaper" text="Splitting">
+						<box class="treedata">
+							<box class="floatinput">
+								<label text="Split Count: "/>
+								<textbox  id="l1nsegsplits" singleline="1"/>
+							</box>
+							<trackbar id="l1nsplitangle" text="Split Angle"/>
+							<trackbar id="l1nsplitanglev" text="Split Angle V"/>
+						</box>
+					</fieldset>
+					<fieldset id="branching" text="Branching">
+						<box class="treedata">
+							<trackbar id="l1downangle" minimum="-180" maximum="180" text="Down Angle"/>
+							<trackbar id="l1downanglev" minimum="-180" maximum="180" text="Down Angle V"/>
+							<trackbar id="l1rotate" minimum="-360" maximum="360" text="Rotate"/>
+							<trackbar id="l1rotatev" minimum="-360" maximum="360" text="Rotate V"/>
+							<trackbar id="l1nbranches" text="Branch Count"/>
+							<trackbar id="l1nbranchdist" text="Branch Dist"/>
+						</box>
+					</fieldset>
+				</box>
+			</fieldset>
+			<fieldset id="l2box" text="Level 1">
+				<box id="level2box" class="treedata">
+					<fieldset id="lengthandtaper" text="Length and Taper">
+						<box class="treedata">
+							<box class="floatinput">
+								<label text="Length: "/>
+								<textbox  id="l2length" singleline="1"/>
+							</box>
+							<box class="floatinput">
+								<label text="Length Chaos: "/>
+								<textbox  id="l2lengthv" singleline="1"/>
+							</box>
+							<trackbar id="l2ntaper" text="Taper"/>
+						</box>
+					</fieldset>
+					<fieldset id="curvature" text="Curvature">
+						<box class="treedata">
+							<trackbar id="l2curveres" text="Curve Resolution"/>
+							<trackbar id="l2curve" minimum="-720" maximum="720" text="Curve"/>
+							<trackbar id="l2curvev" minimum="-90" maximum="720" text="Curve V"/>
+							<trackbar id="l2curveback" minimum="-720" maximum="720" text="Curveback"/>
+						</box>
+					</fieldset>
+					<fieldset id="lengthandtaper" text="Splitting">
+						<box class="treedata">
+							<box class="floatinput">
+								<label text="Split Count: "/>
+								<textbox  id="l2nsegsplits" singleline="1"/>
+							</box>
+							<trackbar id="l2nsplitangle" text="Split Angle"/>
+							<trackbar id="l2nsplitanglev" text="Split Angle V"/>
+						</box>
+					</fieldset>
+					<fieldset id="branching" text="Branching">
+						<box class="treedata">
+							<trackbar id="l2downangle" minimum="-180" maximum="180" text="Down Angle"/>
+							<trackbar id="l2downanglev" minimum="-180" maximum="180" text="Down Angle V"/>
+							<trackbar id="l2rotate" minimum="-360" maximum="360" text="Rotate"/>
+							<trackbar id="l2rotatev" minimum="-360" maximum="360" text="Rotate V"/>
+							<trackbar id="l2nbranches" text="Branch Count"/>
+							<trackbar id="l2nbranchdist" text="Branch Dist"/>
+						</box>
+					</fieldset>
+				</box>
+			</fieldset>
+			<fieldset id="l3box" text="Level 2">
+				<box id="level3box" class="treedata">
+					<fieldset id="lengthandtaper" text="Length and Taper">
+						<box class="treedata">
+							<box class="floatinput">
+								<label text="Length: "/>
+								<textbox  id="l3length" singleline="1"/>
+							</box>
+							<box class="floatinput">
+								<label text="Length Chaos: "/>
+								<textbox  id="l3lengthv" singleline="1"/>
+							</box>
+							<trackbar id="l3ntaper" text="Taper"/>
+						</box>
+					</fieldset>
+					<fieldset id="curvature" text="Curvature">
+						<box class="treedata">
+							<trackbar id="l3curveres" text="Curve Resolution"/>
+							<trackbar id="l3curve" minimum="-720" maximum="720" text="Curve"/>
+							<trackbar id="l3curvev" minimum="-90" maximum="720" text="Curve V"/>
+							<trackbar id="l3curveback" minimum="-720" maximum="720" text="Curveback"/>
+						</box>
+					</fieldset>
+					<fieldset id="lengthandtaper" text="Splitting">
+						<box class="treedata">
+							<box class="floatinput">
+								<label text="Split Count: "/>
+								<textbox  id="l3nsegsplits" singleline="1"/>
+							</box>
+							<trackbar id="l3nsplitangle" text="Split Angle"/>
+							<trackbar id="l3nsplitanglev" text="Split Angle V"/>
+						</box>
+					</fieldset>
+					<fieldset id="branching" text="Branching">
+						<box class="treedata">
+							<trackbar id="l3downangle" minimum="-180" maximum="180" text="Down Angle"/>
+							<trackbar id="l3downanglev" minimum="-180" maximum="180" text="Down Angle V"/>
+							<trackbar id="l3rotate" minimum="-360" maximum="360" text="Rotate"/>
+							<trackbar id="l3rotatev" minimum="-360" maximum="360" text="Rotate V"/>
+							<trackbar id="l3nbranches" text="Branch Count"/>
+							<trackbar id="l3nbranchdist" text="Branch Dist"/>
+						</box>
+					</fieldset>
+				</box>
+			</fieldset>
+			<fieldset id="l4box" text="Level 3">
+				<box id="level4box" class="treedata">
+					<fieldset id="lengthandtaper" text="Length and Taper">
+						<box class="treedata">
+							<box class="floatinput">
+								<label text="Length: "/>
+								<textbox  id="l4length" singleline="1"/>
+							</box>
+							<box class="floatinput">
+								<label text="Length Chaos: "/>
+								<textbox  id="l4lengthv" singleline="1"/>
+							</box>
+							<trackbar id="l4ntaper" text="Taper"/>
+						</box>
+					</fieldset>
+					<fieldset id="curvature" text="Curvature">
+						<box class="treedata">
+							<trackbar id="l4curveres" text="Curve Resolution"/>
+							<trackbar id="l4curve" minimum="-720" maximum="720" text="Curve"/>
+							<trackbar id="l4curvev" minimum="-90" maximum="720" text="Curve V"/>
+							<trackbar id="l4curveback" minimum="-720" maximum="720" text="Curveback"/>
+						</box>
+					</fieldset>
+					<fieldset id="lengthandtaper" text="Splitting">
+						<box class="treedata">
+							<box class="floatinput">
+								<label text="Split Count: "/>
+								<textbox  id="l4nsegsplits" singleline="1"/>
+							</box>
+							<trackbar id="l4nsplitangle" text="Split Angle"/>
+							<trackbar id="l4nsplitanglev" text="Split Angle V"/>
+						</box>
+					</fieldset>
+					<fieldset id="branching" text="Branching">
+						<box class="treedata">
+							<trackbar id="l4downangle" minimum="-180" maximum="180" text="Down Angle"/>
+							<trackbar id="l4downanglev" minimum="-180" maximum="180" text="Down Angle V"/>
+							<trackbar id="l4rotate" minimum="-360" maximum="360" text="Rotate"/>
+							<trackbar id="l4rotatev" minimum="-360" maximum="360" text="Rotate V"/>
+							<trackbar id="l4nbranches" text="Branch Count"/>
+							<trackbar id="l4nbranchdist" text="Branch Dist"/>
+						</box>
+					</fieldset>
+				</box>
+			</fieldset>
+		</box>
+	</gui>
+</guidescriptor>

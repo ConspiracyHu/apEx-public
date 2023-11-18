@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="TimelineEditor">
+	<box id="toolbox">
+		<label text="Event To Create:" id="eventtext"/>
+		<dropdown id="eventselector"/>
+		<button text="Load Song" id="loadsong"/>
+		<button text="Play" id="playsong"/>
+		<button text="Generate Everything" id="generateall"/>
+		<label text="Grid-BPM:" id="bpmtext"/>
+		<textbox id="bpminput" singleline="1" password="0"/>
+		<label text="Primary Highlight:" id="high1"/>
+		<textbox id="highlightpri" singleline="1" password="0"/>
+		<label text="Secondary Highlight:" id="high2"/>
+		<textbox id="highlightsec" singleline="1" password="0"/>
+		<label text="timestamp" id="timestamp"/>
+	</box>
+	<timelineeditorphx id="timeline"/>
+  </gui>
+</guidescriptor>

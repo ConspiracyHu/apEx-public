@@ -1,0 +1,34 @@
+.mainbox
+{
+	margin:1px;
+	child-layout:vertical;
+	child-fill-x:true;
+	child-spacing:1px;
+}
+
+.aspectbox
+{
+	child-layout:horizontal;
+	child-fill-y:true;
+	child-spacing:1px;
+	child-align-x:center;
+	height:15px;
+}
+
+.aspecttext
+{
+	width:5px;
+}
+
+label
+{
+	height:12px;
+}
+
+textbox
+{
+	height:15px;
+	border:1px;
+	padding-left:2px;
+	width:30px;
+}

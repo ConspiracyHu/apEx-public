@@ -1,0 +1,238 @@
+label
+{
+	width:100%;
+	height:15px;
+}
+
+#parameterlist
+{
+	margin: 1px;
+	child-layout: vertical;
+	child-spacing: 1px;
+	child-fill-x: true;
+	overflow-y:auto;
+}
+
+.parambox
+{
+	width:100%;
+	child-layout: vertical;
+	child-spacing: 1px;
+}
+
+.parambox trackbar
+{
+	width: 100%;
+	height: 17px;
+}
+
+.byteparam
+{
+	height:17px;
+}
+
+.boolparam
+{
+	height: 37px;
+	child-align-x: center;
+}
+
+.boolparam button
+{
+	width: 150px;
+}
+
+.rgbaparam
+{
+	child-align-x:center;
+	height: 104px;
+}
+
+.rgbaparam button
+{
+	width: 150px;
+}
+
+.channelselector
+{
+	child-layout: horizontal;
+	child-align-x: center;
+	child-spacing: 1px;
+	height: 16px;
+	width:100%;
+}
+
+.channelparam button
+{
+	width: 40px;
+	height: 16px;
+}
+
+.listparam
+{
+	height: 80px;
+	child-align-x: center;
+}
+
+.listparam list
+{
+	height: 100%-16px;
+	width: 150px;
+}
+
+#GradientType
+{
+	height: 90px;
+}
+
+#Filter
+{
+	height: 138px;
+}
+
+.submain
+{
+	margin:0px;
+	child-layout:vertical;
+	child-spacing:1px;
+	child-align-x: center;
+}
+
+.subeditorlist
+{
+	width:100%;
+	height:20%;
+}
+
+#subparamtype
+{
+	height:62px;
+}
+
+#subbox button
+{
+	width: 40%;
+	height: 16px;
+}
+
+#removetarget
+{
+	width: 60%;
+	height: 16px;
+}
+
+.greytext
+{
+	font-color:#80808080;
+}
+
+#loadbox
+{
+	margin:0px;
+	child-layout:vertical;
+	child-align-x:center;
+}
+
+#loadbox button
+{
+	height:16px;
+	width:120px;
+}
+
+.submain trackbar
+{
+	width:100%-2px;
+	height: 17px;
+}
+
+#textdatabox
+{
+	top:0px;
+	width:100%;
+	height:138px;
+	child-layout:vertical;
+	child-align-x:center;
+	child-fill-y:false;
+	child-spacing:1px;
+}
+
+#textdatabox list
+{
+	height:18px;
+}
+
+#textdatabox textbox
+{
+	width:100%-2px;
+	padding:1px;
+	border:1px;
+	height:16px;
+	text-transform:none;
+}
+
+#textdatabox button
+{
+	width:100px;
+	height:15px;
+}
+
+#textdatabox dropdown
+{
+	width:150px;
+	height:15px;
+}
+
+#splinebox
+{
+	padding:2px;
+	width:100%;
+	height:100%;
+	child-layout:vertical;
+	child-align-x:center;
+	child-fill-y:false;
+	child-spacing:1px;
+}
+
+splineeditorphx
+{
+	height:100%;
+	border:1px;
+}
+
+.textlookup
+{
+	height:136px;
+}
+
+.splinelookup
+{
+	margin:0px;
+}
+
+.imglookup
+{
+	height:16px;
+}
+
+#splinehorizontal
+{
+	margin:0px;
+	child-fill-x:true;
+	child-fill-y:true;
+	child-layout:horizontal;
+	child-spacing:1px;
+}
+
+#splinevertical
+{
+	width:16px;
+	child-layout:vertical;
+	child-spacing:1px;
+	child-align-y:center;
+}
+
+#splinevertical button
+{
+	width:15px;
+	height:15px;
+}

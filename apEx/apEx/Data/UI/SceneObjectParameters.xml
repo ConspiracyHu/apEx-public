@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="SceneObjectParameters">
+	<button id="resetpos" text="Reset Transform"/>
+	<box id="parambox" class="modelparambox"/>
+  </gui>
+  <guitemplate id="model" class="">
+	<box class="buttonlist">
+		<button id="swapmodel" text="Select Model" class="dropdown"/>
+		<button id="modellocator" text="->" class=""/>
+	</box>
+  </guitemplate>
+  <guitemplate id="subscene" class="">
+	<label text="Subscenes are selected per clip!"/>
+	<box class="buttonlist">
+		<button id="swapscene" text="Select Scene For Clip" class="dropdown"/>
+		<button id="scenelocator" text="->" class=""/>
+	</box>
+  </guitemplate>
+  <guitemplate id="light" class="">
+	<button id="dotlight" text="Point Light"/>
+	<button id="lighttarget" text="Select Spotlight Target" class="dropdown"/>
+    <box class="labeltext">
+		<label text="shadow width"/>
+		<textbox id="orthox" singleline="1"/>
+    </box>
+    <box class="labeltext">
+		<label text="shadow height"/>
+		<textbox id="orthoy" singleline="1"/>
+    </box>
+  </guitemplate>
+  <guitemplate id="camera" class="">
+	<button id="camtarget" text="Select Camera Target" class="dropdown"/>
+	<trackbar id="camcenterx" minimum="-127" maximum="127" default="0"/>
+	<trackbar id="camcentery" minimum="-127" maximum="127" default="0"/>
+  </guitemplate>
+  <guitemplate id="emittergravity" class="">
+	<button id="directionalgravity" text="Directional"/>
+  </guitemplate>
+  <guitemplate id="emitterdrag" class="">
+	<button id="limitedaffector" text="Box Shaped"/>
+  </guitemplate>
+  <guitemplate id="emitterturbulence" class="">
+	<button id="limitedaffector" text="Box Shaped"/>
+    <box class="labeltext">
+		<label text="Frequency"/>
+		<textbox id="turbulencefrequency" singleline="1"/>
+    </box>
+	<label text="Turbulence RandSeed is selected per clip!"/>
+	<trackbar id="turbulencerandseed" minimum="0" maximum="255" default="0"/>
+  </guitemplate>
+  <guitemplate id="emittercpu" class="">
+	<dropdown id="emittershape" text="Emitter Shape">
+		<listitem name="Box Shape"/>
+		<listitem name="Sphere Shape"/>
+	</dropdown>
+	<trackbar id="innerradius" minimum="0" maximum="255" default="127"/>
+	<trackbar id="particlebuffer" minimum="1" maximum="16" default="10"/>
+	<button id="agingparticles" text="Aging Particles"/>
+	<button id="randomrotate" text="Random Rotate"/>
+	<button id="mirrorrotation" text="Rotate both ways"/>
+	<trackbar id="startcount" minimum="0" maximum="255" default="127"/>
+	<trackbar id="randseed" minimum="0" maximum="255" default="0"/>
+	<button id="sortparticle" text="Z-Sort"/>
+	<button id="forcetarget" text="Select Force Target" class="dropdown"/>
+	<label text="Model to emit"/>
+	<box class="buttonlist">
+		<button id="modellist" class="dropdown"/>
+		<button id="modellocator" text="->" class=""/>
+	</box>
+	<label text="Scene to emit"/>
+	<box class="buttonlist">
+		<button id="scenelist" class="dropdown"/>
+		<button id="scenelocator" text="->" class=""/>
+	</box>
+	<button id="rotatetodir" text="Rotate to direction"/>
+	<label text="Material"/>
+	<button id="emittermaterial" text="Select Material" class="dropdown"/>
+  </guitemplate>
+  <guitemplate id="logicobject" class="">
+	<dropdown id="logictype" text="Object Type">
+		<listitem name="Wall"/>
+		<listitem name="Hitbox"/>
+		<listitem name="SpawnPoint"/>
+		<listitem name="Exit"/>
+		<listitem name="Lever"/>
+		<listitem name="Pickup"/>
+	</dropdown>
+	<trackbar id="logicdata" minimum="0" maximum="255" default="0"/>
+  </guitemplate>
+  <guitemplate id="texturetemplate" class="parambox textureselect">
+	<label id="paramname" text="paramname"/>
+	<box class="buttonlist">
+		<button id="textureselector" text="Select Texture" class="dropdown"/>
+		<button id="texturelocator" text="->" class=""/>
+	</box>
+  </guitemplate>
+  <guitemplate id="blendtemplate" class="parambox blendselect">
+	<label id="paramname" text="paramname"/>
+	<box id="blendbox">
+		<box class="blendlist">
+			<label text="Source Factor"/>
+			<dropdown id="srcblend">
+				<listitem name="Zero"/>
+				<listitem name="One"/>
+				<listitem name="Src Color"/>
+				<listitem name="1-Src Color"/>
+				<listitem name="Src Alpha"/>
+				<listitem name="1-Src Alpha"/>
+				<listitem name="Dst Alpha"/>
+				<listitem name="1-Dst ALpha"/>
+				<listitem name="Dst Color"/>
+				<listitem name="1-Dst Color"/>
+			</dropdown>
+		</box>
+		<box class="blendlist">
+			<label text="Dest Factor"/>
+			<dropdown id="dstblend">
+				<listitem name="Zero"/>
+				<listitem name="One"/>
+				<listitem name="Src Color"/>
+				<listitem name="1-Src Color"/>
+				<listitem name="Src Alpha"/>
+				<listitem name="1-Src Alpha"/>
+				<listitem name="Dst Alpha"/>
+				<listitem name="1-Dst ALpha"/>
+				<listitem name="Dst Color"/>
+				<listitem name="1-Dst Color"/>
+			</dropdown>
+		</box>
+	</box>
+  </guitemplate>
+  <guitemplate id="floattemplate" class="parambox floatselect">
+	<trackbar id="float" minimum="0" maximum="255"/>
+  </guitemplate>
+  <guitemplate id="prioritytemplate" class="parambox floatselect">
+	<trackbar id="renderpriority" minimum="0" maximum="255"/>
+  </guitemplate>
+  <guitemplate id="colortemplate" class="parambox colorselect">
+	<label id="paramname" text="paramname"/>
+	<trackbar id="red" minimum="0" maximum="255"/>
+	<trackbar id="green" minimum="0" maximum="255"/>
+	<trackbar id="blue" minimum="0" maximum="255"/>
+	<trackbar id="alpha" minimum="0" maximum="255"/>
+  </guitemplate>
+  <guitemplate id="culltemplate" class="parambox cullselect">
+	<label id="paramname" text="paramname"/>
+	<dropdown id="culllist">
+		<listitem name="No Culling"/>
+		<listitem name="Cull Front Faces"/>
+		<listitem name="Cull Back Faces"/>
+	</dropdown>
+  </guitemplate>
+  <guitemplate id="filltemplate" class="parambox fillselect">
+	<button id="wireframe" text="Wireframe"/>
+  </guitemplate>
+  <guitemplate id="zfuncttemplate" class="parambox zfunctselect">
+	<label id="paramname" text="paramname"/>
+	<dropdown id="zfunctlist">
+		<listitem name="Never"/>
+		<listitem name="Less"/>
+		<listitem name="Equal"/>
+		<listitem name="Less Equal"/>
+		<listitem name="Greater"/>
+		<listitem name="Not Equal"/>
+		<listitem name="Greater Equal"/>
+		<listitem name="Always"/>
+	</dropdown>
+  </guitemplate>
+  <guitemplate id="zmodetemplate" class="parambox zmodeselect">
+	<box id="blendbox" class="zmodebox">
+		<button id="zenable" text="Depth Test"/>
+		<button id="zwrite" text="Z Write"/>
+	</box>
+  </guitemplate>
+</guidescriptor>

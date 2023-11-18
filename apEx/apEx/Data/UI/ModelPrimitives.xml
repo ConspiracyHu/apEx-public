@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="ModelPrimitives">
+	<box>
+		<button id="newcube" text="New Cube"/>
+		<button id="newplane" text="New Plane"/>
+		<button id="newsphere" text="New Sphere"/>
+		<button id="newgeosphere" text="New GeoSphere"/>
+		<button id="newcylinder" text="New Cylinder"/>
+		<button id="newcone" text="New Cone"/>
+		<button id="newtext" text="New Text"/>
+		<button id="newtree" text="New Tree" class="experimental"/>
+		<button id="newleaves" text="New Leaves" class="experimental"/>
+		<box class="padder"/>
+		<button id="newarc" text="New Arc" class="loftable"/>
+		<button id="newline" text="New Line" class="loftable"/>
+		<button id="newspline" text="New Spline" class="loftable"/>
+		<box class="padder"/>
+		<button id="newloft" text="New Loft"/>
+		<button id="newscatter" text="New Scatter"/>
+		<button id="clone" text="Clone"/>
+		<button id="bake" text="Bake to New Object"/>
+		<box class="padder"/>
+		<button id="uvmap" text="UVMap" class="filter"/>
+		<button id="tint" text="Tint Mesh" class="filter"/>
+		<button id="tintshape" text="Tint Mesh With Shape" class="filter"/>
+		<button id="mapxform" text="MapXForm" class="filter"/>
+		<button id="meshsmooth" text="MeshSmooth" class="filter"/>
+		<button id="replicate" text="Replicate" class="filter"/>
+		<button id="smoothgroup" text="SmoothGroup" class="filter"/>
+		<button id="bevel" text="Bevel" class="filter"/>
+		<button id="normaldeform" text="Normal Deform" class="filter"/>
+		<button id="csgfilter" text="CSG" class="filter"/>
+		<button id="greeble" text="Greeble" class="filter"/>
+		<box class="padder"/>
+		<box class="padder"/>
+		<box class="padder"/>
+		<button id="newstored" text="Editable Mesh" class="experimental"/>
+		<box class="padder"/>
+		<button id="marchingmesh" text="Marched"/>
+		<button id="isosphere" text="IsoSphere"/>
+		<button id="isoscube" text="IsoCube"/>
+        <box class="padder"/>
+		<button id="merge" text="Create Pre-Merge objects"/>
+	</box>
+  </gui>
+</guidescriptor>

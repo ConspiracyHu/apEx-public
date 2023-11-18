@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="SceneList">
+    <box id="buttonbox">
+      <button id="newscene" text="New"/>
+      <button id="copyscene" text="Copy"/>
+      <button id="deletescene" text="Delete"/>
+    </box>
+    <list id="scenelist"/>
+  </gui>
+</guidescriptor>

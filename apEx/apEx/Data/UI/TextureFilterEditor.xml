@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="TextureFilterEditor">
+
+    <box id="tfhbox">
+      <box>
+        <label id="labfilters" text="Filters"/>
+        <box class="buttonbox">
+          <button id="newfilter" text="New"/>
+          <button id="deletefilter" text="Delete"/>
+        </box>
+        <list id="filterlist"/>
+      </box>
+
+      <box>
+        <label id="labfilterdata" text="Filter Data"/>
+        <list id="filtertype">
+          <listitem name="Generator"/>
+          <listitem name="Layer"/>
+          <listitem name="Distortion"/>
+          <listitem name="Color"/>
+        </list>
+        <trackbar id="filterinputcount" minimum="0" maximum="3" default="0"/>
+        <trackbar id="filterpasscount" minimum="1" maximum="11" default="1"/>
+        <button id="filterrandom" text="Has Random"/>
+        <button id="minifiable" text="Minifiable"/>
+      </box>
+
+      <box>
+        <label id="labparams" text="Parameters"/>
+        <box class="buttonbox">
+          <button id="newparam" text="New"/>
+          <button id="deleteparam" text="Delete"/>
+        </box>
+        <list id="paramlist"/>
+      </box>
+
+      <box>
+        <label id="labparamdata" text="Parameter Data"/>
+        <list id="paramtype">
+          <listitem name="Byte"/>
+          <listitem name="Boolean"/>
+          <listitem name="RGBA Color"/>
+          <listitem name="Channel"/>
+          <listitem name="List"/>
+        </list>
+        <box id="paramdatabox">
+          <box id="byteparams">
+            <trackbar id="parammin" minimum="0" maximum="255" default="0"/>
+            <trackbar id="parammax" minimum="0" maximum="255" default="255"/>
+            <trackbar id="paramdef" minimum="0" maximum="255" default="127"/>
+          </box>
+          <box id="boolparams">
+          </box>
+          <box id="rgbaparams">
+          </box>
+          <box id="channelparams">
+          </box>
+          <box id="listparams">
+            <list id="listelements"/>
+            <box class="buttonbox">
+              <button id="addparamlistelement" text="Add"/>
+              <button id="deleteparamlistelement" text="Delete"/>
+            </box>
+          </box>
+        </box>
+      </box>
+    </box>
+
+    <textboxhlsl id="filtercode" linenumbers="1"/>
+    <textbox id="compileroutput"/>
+    <textbox id="minioutput"/>
+  </gui>
+</guidescriptor>

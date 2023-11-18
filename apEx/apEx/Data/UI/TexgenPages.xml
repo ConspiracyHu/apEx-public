@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="TexgenPages">
+    <box id="buttonbox">
+      <button id="newpage" text="New"/>
+      <button id="deletepage" text="Delete"/>
+    </box>
+    <list id="pagelist"/>
+	<trackbar id="xres" minimum="1" maximum="13" default="8"/>
+	<trackbar id="yres" minimum="1" maximum="13" default="8" />
+    <button id="hdr" text="HDR Textures"/>
+  </gui>
+</guidescriptor>

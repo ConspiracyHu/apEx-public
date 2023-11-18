@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="MinimalPlayer.cpp" />
+    <ClCompile Include="MusicPlayer.cpp" />
+    <ClCompile Include="SetupDialog.cpp" />
+    <ClCompile Include="WindowHandler.cpp" />
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Adultery.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\AllPass.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\AllPassDelay.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\BiquadFilter.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Cathedral.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Chamber.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Comb.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Crusher.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\DelayBuffer.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Device.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\CriticalSection.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\DirectSoundRenderThread.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Echo.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Envelope.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Falcon.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\GmDls.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Helpers.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\IPlayer.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Leveller.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\MxcsrFlagGuard.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\PreRenderPlayer.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\RealtimePlayer.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\ResampleBuffer.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\SamplePlayer.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Scissor.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Slaughter.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Smasher.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\SongRenderer.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\src\SongRenderer.Track.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Specimen.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\StateVariableFilter.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\SynthDevice.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Thunder.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Libraries\WaveSabre\WaveSabreCore\src\Twister.cpp">
+      <Filter>WaveSabre</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Libraries\MVX\mvx.h" />
+    <ClInclude Include="MinimalPlayer.h" />
+    <ClInclude Include="MusicPlayer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SetupDialog.h" />
+    <ClInclude Include="WindowHandler.h" />
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Adultery.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\AllPass.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\AllPassDelay.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\BiquadFilter.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Cathedral.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Chamber.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Comb.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Crusher.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\DelayBuffer.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Device.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\CriticalSection.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\DirectSoundRenderThread.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Echo.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Envelope.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Falcon.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\GmDls.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Helpers.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\IPlayer.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Leveller.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\MxcsrFlagGuard.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\PreRenderPlayer.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\RealtimePlayer.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\ResampleBuffer.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\SamplePlayer.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Scissor.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Slaughter.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Smasher.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib\SongRenderer.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Specimen.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\StateVariableFilter.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\SynthDevice.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Thunder.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore\Twister.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabreCore.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\WaveSabre\WaveSabrePlayerLib.h">
+      <Filter>WaveSabre</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MinimalPlayer.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CNSLogo.ico" />
+    <None Include="Data\asm.bat" />
+    <None Include="Data\precalc.64k" />
+    <None Include="Data\release.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="WaveSabre">
+      <UniqueIdentifier>{bc64f0a1-987e-4fad-8b3b-3f31aae04996}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\MVX\MVXLibrary.lib" />
+  </ItemGroup>
+</Project>

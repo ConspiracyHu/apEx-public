@@ -1,0 +1,370 @@
+<Layouts>
+  <workbench Name="Empty"/>
+
+  <workbench Name="Default Texture Generator">
+    <window typename="TexgenPages" type="20" x1="0" y1="0" x2="150" y2="256"/>
+    <window typename="ModelView" type="9" x1="150" y1="0" x2="406" y2="256" cameramode="26" maximized="0" nx1="150" ny1="0" nx2="406" ny2="256" mx1="150" my1="0" mx2="406" my2="256"/>
+    <window typename="ModelList" type="5" x1="406" y1="0" x2="556" y2="256"/>
+    <window typename="Help" type="29" x1="556" y1="0" x2="2085" y2="256"/>
+    <window typename="TexgenPreview" type="22" x1="2085" y1="0" x2="2341" y2="256" maximized="0" nx1="2085" ny1="0" nx2="2341" ny2="256" mx1="10" my1="10" mx2="200" my2="200"/>
+    <window typename="TexgenOpParameters" type="21" x1="2341" y1="0" x2="2597" y2="256"/>
+    <window typename="TextureFilterEditor" type="18" x1="2597" y1="0" x2="3710" y2="2059"/>
+    <window typename="TexgenMain" type="19" x1="0" y1="256" x2="2597" y2="2059"/>
+  </workbench>
+
+  <workbench Name="Default Material Editor">
+    <window typename="ShaderEditor" type="3" x1="2474" y1="0" x2="3710" y2="2059"/>
+    <window typename="ModelPrimitives" type="8" x1="0" y1="1685" x2="166" y2="2059"/>
+    <window typename="ModelList" type="5" x1="0" y1="0" x2="166" y2="85"/>
+    <window typename="ModelParameters" type="7" x1="0" y1="85" x2="166" y2="166"/>
+    <window typename="ModelMaterial" type="6" x1="0" y1="166" x2="166" y2="1685"/>
+    <window typename="RenderTargetEditor" type="33" x1="166" y1="1809" x2="414" y2="2059"/>
+    <window typename="MaterialEditor" type="1" x1="414" y1="1809" x2="2474" y2="2059"/>
+    <window typename="SceneSplineEditor" type="16" x1="166" y1="1659" x2="2359" y2="1809"/>
+    <window typename="SceneClips" type="11" x1="2359" y1="1659" x2="2474" y2="1809"/>
+    <window typename="SceneList" type="13" x1="2359" y1="0" x2="2474" y2="85"/>
+    <window typename="SceneObjectParameters" type="14" x1="2359" y1="85" x2="2474" y2="1353"/>
+    <window typename="ScenePrimitives" type="15" x1="2359" y1="1353" x2="2474" y2="1659"/>
+    <window typename="ModelView" type="9" x1="166" y1="0" x2="1262" y2="829" cameramode="26" maximized="0" nx1="166" ny1="0" nx2="1262" ny2="829" mx1="166" my1="0" mx2="2359" my2="1659"/>
+    <window typename="ModelView" type="9" x1="166" y1="829" x2="1262" y2="1659" cameramode="26" maximized="0" nx1="166" ny1="829" nx2="1262" ny2="1659" mx1="166" my1="0" mx2="2359" my2="1659"/>
+    <window typename="SceneView" type="17" x1="1262" y1="0" x2="2359" y2="829" cameramode="26" maximized="0" nx1="1262" ny1="0" nx2="2359" ny2="829" mx1="166" my1="0" mx2="2359" my2="1659"/>
+    <window typename="SceneView" type="17" x1="1262" y1="829" x2="2359" y2="1659" cameramode="26" maximized="0" nx1="1262" ny1="829" nx2="2359" ny2="1659" mx1="166" my1="0" mx2="2359" my2="1659"/>
+  </workbench>
+
+  <workbench Name="Default Modeler">
+    <window typename="ModelView" type="9" x1="0" y1="0" x2="1484" y2="1029" cameramode="22" maximized="0" nx1="0" ny1="0" nx2="1484" ny2="1029" mx1="0" my1="0" mx2="2968" my2="2059"/>
+    <window typename="ModelView" type="9" x1="1484" y1="0" x2="2968" y2="1029" cameramode="21" maximized="0" nx1="1484" ny1="0" nx2="2968" ny2="1029" mx1="0" my1="0" mx2="2968" my2="2059"/>
+    <window typename="ModelView" type="9" x1="0" y1="1029" x2="1484" y2="2059" cameramode="24" maximized="0" nx1="0" ny1="1029" nx2="1484" ny2="2059" mx1="0" my1="0" mx2="2968" my2="2059"/>
+    <window typename="ModelView" type="9" x1="1484" y1="1029" x2="2968" y2="2059" cameramode="26" maximized="0" nx1="1484" ny1="1029" nx2="2968" ny2="2059" mx1="0" my1="0" mx2="2968" my2="2059"/>
+    <window typename="ModelMaterial" type="6" x1="2968" y1="1235" x2="3710" y2="2059"/>
+    <window typename="ModelList" type="5" x1="2968" y1="0" x2="3339" y2="411"/>
+    <window typename="ModelParameters" type="7" x1="2968" y1="411" x2="3339" y2="1235"/>
+    <window typename="ModelPrimitives" type="8" x1="3339" y1="0" x2="3710" y2="823"/>
+    <window typename="ModelGraph" type="4" x1="3339" y1="823" x2="3710" y2="1235"/>
+  </workbench>
+
+  <workbench Name="Default Keyframer">
+    <window typename="SceneSplineEditor" type="16" x1="0" y1="1544" x2="3710" y2="2059"/>
+    <window typename="SceneView" type="17" x1="742" y1="0" x2="2226" y2="772" cameramode="22" maximized="0" nx1="742" ny1="0" nx2="2226" ny2="772" mx1="742" my1="0" mx2="3710" my2="1544"/>
+    <window typename="SceneView" type="17" x1="2226" y1="0" x2="3710" y2="772" cameramode="21" maximized="0" nx1="2226" ny1="0" nx2="3710" ny2="772" mx1="742" my1="0" mx2="3710" my2="1544"/>
+    <window typename="SceneView" type="17" x1="742" y1="772" x2="2226" y2="1544" cameramode="24" maximized="0" nx1="742" ny1="772" nx2="2226" ny2="1544" mx1="742" my1="0" mx2="3710" my2="1544"/>
+    <window typename="SceneView" type="17" x1="2226" y1="772" x2="3710" y2="1544" cameramode="26" maximized="0" nx1="2226" ny1="772" nx2="3710" ny2="1544" mx1="742" my1="0" mx2="3710" my2="1544"/>
+    <window typename="SceneList" type="13" x1="0" y1="0" x2="371" y2="411"/>
+    <window typename="SceneClips" type="11" x1="0" y1="411" x2="371" y2="823"/>
+    <window typename="ScenePrimitives" type="15" x1="0" y1="823" x2="371" y2="1544"/>
+    <window typename="SceneGraph" type="12" x1="371" y1="0" x2="742" y2="514"/>
+    <window typename="SceneObjectParameters" type="14" x1="371" y1="514" x2="742" y2="1544"/>
+  </workbench>
+
+  <workbench Name="Default Video Editor">
+    <window typename="TimelinePreview" type="27" x1="0" y1="0" x2="2968" y2="1669"/>
+    <window typename="TimelineEventParams" type="25" x1="2968" y1="686" x2="3710" y2="1669"/>
+    <window typename="TimelineEditor" type="24" x1="0" y1="1669" x2="2597" y2="2059"/>
+    <window typename="TimelineEventSplines" type="26" x1="2597" y1="1669" x2="3710" y2="2059"/>
+    <window typename="ProjectSettings" type="10" x1="2968" y1="0" x2="3710" y2="686"/>
+  </workbench>
+
+  <workbench Name="UI Editor">
+    <window typename="ConsoleWindow" type="30" x1="0" y1="690" x2="1920" y2="941"/>
+    <window typename="XMLEditor" type="31" x1="0" y1="0" x2="480" y2="690"/>
+    <window typename="CSSEditor" type="32" x1="480" y1="0" x2="960" y2="690"/>
+  </workbench>
+
+  <workbench Name="Overview">
+    <docker Vertical="1" contentSize="100" areaSize="200">
+      <docker Vertical="0" contentSize="1851" areaSize="3705">
+        <docker Vertical="0" contentSize="762" areaSize="1848">
+          <window typename="TexgenMain" type="19" x1="0" y1="0" x2="764" y2="1029"/>
+        
+          <docker Vertical="0" contentSize="166" areaSize="917">
+            <docker Vertical="1" contentSize="223" areaSize="1022">
+              <window typename="TexgenPages" type="20" x1="0" y1="0" x2="196" y2="224"/>
+            
+              <window typename="TexgenOpParameters" type="21" x1="0" y1="229" x2="196" y2="1029"/>
+            </docker>
+          
+            <docker Vertical="1" contentSize="487" areaSize="1022">
+              <window typename="TexgenPreview" type="22" x1="0" y1="0" x2="883" y2="490" maximized="0" nx1="0" ny1="0" nx2="883" ny2="490" mx1="10" my1="10" mx2="200" my2="200"/>
+            
+              <window typename="TexgenPreview" type="22" x1="0" y1="495" x2="883" y2="1029" maximized="0" nx1="0" ny1="495" nx2="883" ny2="1029" mx1="10" my1="10" mx2="200" my2="200"/>
+            </docker>
+          </docker>
+        </docker>
+      
+        <docker Vertical="0" contentSize="158" areaSize="1848">
+          <docker Vertical="1" contentSize="468" areaSize="1022">
+            <docker Vertical="1" contentSize="137" areaSize="465">
+              <window typename="ModelList" type="5" x1="0" y1="0" x2="158" y2="138"/>
+            
+              <window typename="ModelGraph" type="4" x1="0" y1="143" x2="158" y2="471"/>
+            </docker>
+          
+            <window typename="ModelPrimitives" type="8" x1="0" y1="476" x2="158" y2="1029"/>
+          </docker>
+        
+          <docker Vertical="0" contentSize="941" areaSize="1685">
+            <docker Vertical="0" contentSize="180" areaSize="837">
+              <docker Vertical="1" contentSize="330" areaSize="1024">
+                <window typename="ModelParameters" type="7" x1="0" y1="0" x2="202" y2="331"/>
+              
+                <window typename="ModelMaterial" type="6" x1="0" y1="336" x2="202" y2="1029"/>
+              </docker>
+            
+              <docker Vertical="1" contentSize="100" areaSize="200">
+                <window typename="ModelView" type="9" x1="0" y1="0" x2="736" y2="514" cameramode="20" maximized="0" nx1="0" ny1="0" nx2="736" ny2="514" mx1="10" my1="10" mx2="200" my2="200"/>
+              
+                <window typename="ModelView" type="9" x1="0" y1="519" x2="736" y2="1029" cameramode="24" maximized="0" nx1="0" ny1="519" nx2="736" ny2="1029" mx1="10" my1="10" mx2="200" my2="200"/>
+              </docker>
+            </docker>
+          
+            <docker Vertical="1" contentSize="100" areaSize="200">
+              <window typename="ModelView" type="9" x1="0" y1="0" x2="741" y2="514" cameramode="22" maximized="0" nx1="0" ny1="0" nx2="741" ny2="514" mx1="10" my1="10" mx2="200" my2="200"/>
+            
+              <window typename="ModelView" type="9" x1="0" y1="519" x2="741" y2="1029" cameramode="26" maximized="0" nx1="0" ny1="519" nx2="741" ny2="1029" mx1="10" my1="10" mx2="200" my2="200"/>
+            </docker>
+          </docker>
+        </docker>
+      </docker>
+    
+      <docker Vertical="0" contentSize="1851" areaSize="3705">
+        <docker Vertical="0" contentSize="158" areaSize="1847">
+          <docker Vertical="1" contentSize="134" areaSize="1022">
+            <window typename="SceneList" type="13" x1="0" y1="0" x2="158" y2="134"/>
+          
+            <docker Vertical="1" contentSize="603" areaSize="883">
+              <docker Vertical="1" contentSize="293" areaSize="436">
+                <window typename="SceneGraph" type="12" x1="0" y1="0" x2="158" y2="406"/>
+              
+                <window typename="SceneClips" type="11" x1="0" y1="411" x2="158" y2="605"/>
+              </docker>
+            
+              <window typename="ScenePrimitives" type="15" x1="0" y1="610" x2="158" y2="886"/>
+            </docker>
+          </docker>
+        
+          <docker Vertical="1" contentSize="839" areaSize="1022">
+            <docker Vertical="0" contentSize="197" areaSize="1685">
+              <window typename="SceneObjectParameters" type="14" x1="0" y1="0" x2="197" y2="841"/>
+            
+              <docker Vertical="0" contentSize="100" areaSize="200">
+                <docker Vertical="1" contentSize="100" areaSize="200">
+                  <window typename="SceneView" type="17" x1="0" y1="0" x2="744" y2="420" cameramode="24" maximized="0" nx1="0" ny1="0" nx2="744" ny2="420" mx1="10" my1="10" mx2="200" my2="200"/>
+                
+                  <window typename="SceneView" type="17" x1="0" y1="425" x2="744" y2="841" cameramode="26" maximized="0" nx1="0" ny1="425" nx2="744" ny2="841" mx1="10" my1="10" mx2="200" my2="200"/>
+                </docker>
+              
+                <docker Vertical="1" contentSize="418" areaSize="836">
+                  <window typename="SceneView" type="17" x1="0" y1="0" x2="739" y2="420" cameramode="22" maximized="0" nx1="0" ny1="0" nx2="739" ny2="420" mx1="10" my1="10" mx2="200" my2="200"/>
+                
+                  <window typename="SceneView" type="17" x1="0" y1="425" x2="739" y2="841" cameramode="27" maximized="0" nx1="0" ny1="425" nx2="739" ny2="841" mx1="10" my1="10" mx2="200" my2="200"/>
+                </docker>
+              </docker>
+            </docker>
+          
+            <window typename="SceneSplineEditor" type="16" x1="0" y1="846" x2="1690" y2="1025"/>
+          </docker>
+        </docker>
+      
+        <docker Vertical="1" contentSize="839" areaSize="1022">
+          <window typename="TimelinePreview" type="27" x1="0" y1="0" x2="1852" y2="841"/>
+        
+          <docker Vertical="0" contentSize="1339" areaSize="1848">
+            <docker Vertical="0" contentSize="734" areaSize="919">
+              <window typename="TimelineEditor" type="24" x1="0" y1="0" x2="1071" y2="179"/>
+            
+              <window typename="TimelineEventParams" type="25" x1="1076" y1="0" x2="1341" y2="179"/>
+            </docker>
+          
+            <window typename="TimelineEventSplines" type="26" x1="1346" y1="0" x2="1852" y2="179"/>
+          </docker>
+        </docker>
+      </docker>
+    </docker>
+  </workbench>
+
+  <workbench Name="Zoom's Texture Generator">
+    <window typename="TexgenPages" type="20" x1="0" y1="0" x2="181" y2="361"/>
+    <window typename="TexgenOpParameters" type="21" x1="1035" y1="0" x2="1528" y2="361"/>
+    <window typename="TexgenMain" type="19" x1="181" y1="0" x2="1035" y2="361"/>
+    <window typename="TimelinePreview" type="27" x1="0" y1="361" x2="1528" y2="941"/>
+    <window typename="TexgenPreview" type="22" x1="1528" y1="0" x2="2048" y2="532" maximized="0" nx1="1528" ny1="0" nx2="2048" ny2="532" mx1="10" my1="10" mx2="200" my2="200"/>
+    <window typename="ModelView" type="9" x1="1713" y1="532" x2="2314" y2="941" cameramode="26" maximized="0" nx1="1713" ny1="532" nx2="2314" ny2="941" mx1="10" my1="10" mx2="200" my2="200"/>
+    <window typename="ModelList" type="5" x1="1528" y1="532" x2="1713" y2="941"/>
+  </workbench>
+
+  <workbench Name="Zoom's Material Editor">
+    <window typename="ModelList" type="5" x1="0" y1="0" x2="166" y2="417"/>
+    <window typename="ModelMaterial" type="6" x1="966" y1="0" x2="1220" y2="417"/>
+    <window typename="ModelView" type="9" x1="332" y1="0" x2="966" y2="417" cameramode="26" maximized="0" nx1="332" ny1="0" nx2="966" ny2="417" mx1="166" my1="0" mx2="1165" my2="586"/>
+    <window typename="ModelGraph" type="4" x1="166" y1="0" x2="332" y2="417"/>
+    <window typename="MaterialEditor" type="1" x1="1220" y1="0" x2="2047" y2="417"/>
+    <window typename="ShaderEditor" type="3" x1="2047" y1="0" x2="2536" y2="941"/>
+    <window typename="RenderTargetEditor" type="33" x1="1431" y1="417" x2="2047" y2="941"/>
+    <window typename="TimelineEditor" type="24" x1="791" y1="417" x2="1431" y2="941"/>
+    <window typename="TimelinePreview" type="27" x1="0" y1="417" x2="791" y2="941"/>
+  </workbench>
+
+  <workbench Name="Zoom's Modeler">
+    <window typename="ModelView" type="9" x1="0" y1="0" x2="711" y2="493" cameramode="22" maximized="0" nx1="0" ny1="0" nx2="711" ny2="493" mx1="0" my1="0" mx2="1536" my2="986"/>
+    <window typename="ModelView" type="9" x1="1433" y1="0" x2="2131" y2="493" cameramode="21" maximized="0" nx1="1433" ny1="0" nx2="2131" ny2="493" mx1="0" my1="0" mx2="1536" my2="986"/>
+    <window typename="ModelView" type="9" x1="711" y1="0" x2="1433" y2="493" cameramode="24" maximized="0" nx1="711" ny1="0" nx2="1433" ny2="493" mx1="0" my1="0" mx2="1536" my2="986"/>
+    <window typename="ModelView" type="9" x1="1016" y1="492" x2="2131" y2="939" cameramode="26" maximized="0" nx1="1016" ny1="492" nx2="2131" ny2="939" mx1="0" my1="0" mx2="1536" my2="986"/>
+    <window typename="ModelMaterial" type="6" x1="2350" y1="416" x2="2536" y2="941"/>
+    <window typename="ModelList" type="5" x1="2131" y1="0" x2="2350" y2="213"/>
+    <window typename="ModelPrimitives" type="8" x1="2350" y1="0" x2="2536" y2="416"/>
+    <window typename="ModelGraph" type="4" x1="2131" y1="213" x2="2350" y2="400"/>
+    <window typename="TimelinePreview" type="27" x1="0" y1="492" x2="1016" y2="939"/>
+    <window typename="ModelParameters" type="7" x1="2131" y1="400" x2="2350" y2="939"/>
+  </workbench>
+
+  <workbench Name="Zoom's Keyframer">
+    <window typename="SceneView" type="17" x1="931" y1="0" x2="1478" y2="461" cameramode="22" maximized="0" nx1="931" ny1="0" nx2="1478" ny2="461" mx1="384" my1="0" mx2="1920" my2="739"/>
+    <window typename="SceneView" type="17" x1="384" y1="461" x2="931" y2="941" cameramode="20" maximized="0" nx1="384" ny1="461" nx2="931" ny2="941" mx1="384" my1="0" mx2="1920" my2="739"/>
+    <window typename="SceneView" type="17" x1="384" y1="0" x2="931" y2="461" cameramode="24" maximized="0" nx1="384" ny1="0" nx2="931" ny2="461" mx1="384" my1="0" mx2="1920" my2="739"/>
+    <window typename="SceneList" type="13" x1="0" y1="0" x2="192" y2="415"/>
+    <window typename="SceneClips" type="11" x1="192" y1="0" x2="384" y2="133"/>
+    <window typename="ScenePrimitives" type="15" x1="0" y1="415" x2="192" y2="939"/>
+    <window typename="SceneGraph" type="12" x1="192" y1="133" x2="384" y2="461"/>
+    <window typename="SceneObjectParameters" type="14" x1="192" y1="461" x2="384" y2="941"/>
+    <window typename="SceneSplineEditor" type="16" x1="931" y1="461" x2="1810" y2="939"/>
+    <window typename="SceneView" type="17" x1="1810" y1="461" x2="2532" y2="939" cameramode="27" maximized="0" nx1="1810" ny1="461" nx2="2532" ny2="939" mx1="10" my1="10" mx2="200" my2="200"/>
+    <window typename="TimelinePreview" type="27" x1="1478" y1="0" x2="2532" y2="461"/>
+  </workbench>
+
+  <workbench Name="Zoom's Video Editor">
+    <window typename="TimelinePreview" type="27" x1="0" y1="0" x2="1685" y2="728"/>
+    <window typename="TimelineEventParams" type="25" x1="1685" y1="0" x2="2198" y2="357"/>
+    <window typename="TimelineEditor" type="24" x1="0" y1="728" x2="2532" y2="939"/>
+    <window typename="TimelineEventSplines" type="26" x1="1685" y1="357" x2="2536" y2="728"/>
+    <window typename="ProjectSettings" type="10" x1="2198" y1="0" x2="2532" y2="357"/>
+  </workbench>
+
+  <workbench Name="Material Editor v2">
+    <docker Vertical="0" contentSize="2707" areaSize="3705">
+      <docker Vertical="1" contentSize="1752" areaSize="2054">
+        <docker Vertical="0" contentSize="273" areaSize="2845">
+          <docker Vertical="1" contentSize="537" areaSize="1644">
+            <docker Vertical="0" contentSize="117" areaSize="247">
+              <docker Vertical="1" contentSize="198" areaSize="533">
+                <window typename="ModelList" type="5" x1="0" y1="0" x2="123" y2="212"/>
+              
+                <window typename="ModelGraph" type="4" x1="0" y1="217" x2="123" y2="573"/>
+              </docker>
+            
+              <window typename="ModelPrimitives" type="8" x1="128" y1="0" x2="260" y2="573"/>
+            </docker>
+          
+            <docker Vertical="1" contentSize="284" areaSize="1101">
+              <window typename="ModelParameters" type="7" x1="0" y1="0" x2="260" y2="303"/>
+            
+              <window typename="ModelMaterial" type="6" x1="0" y1="308" x2="260" y2="1178"/>
+            </docker>
+          </docker>
+        
+          <docker Vertical="0" contentSize="2325" areaSize="2567">
+            <docker Vertical="1" contentSize="818" areaSize="1799">
+              <docker Vertical="0" contentSize="100" areaSize="200">
+                <window typename="ModelView" type="9" x1="0" y1="0" x2="1107" y2="798" cameramode="26" maximized="0" nx1="0" ny1="0" nx2="1107" ny2="798" mx1="10" my1="10" mx2="200" my2="200"/>
+              
+                <window typename="ModelView" type="9" x1="1112" y1="0" x2="2214" y2="798" cameramode="26" maximized="0" nx1="1112" ny1="0" nx2="2214" ny2="798" mx1="10" my1="10" mx2="200" my2="200"/>
+              </docker>
+            
+              <docker Vertical="0" contentSize="768" areaSize="1667">
+                <docker Vertical="1" contentSize="718" areaSize="946">
+                  <window typename="SceneView" type="17" x1="0" y1="0" x2="1020" y2="723" cameramode="26" maximized="0" nx1="0" ny1="0" nx2="1020" ny2="723" mx1="10" my1="10" mx2="200" my2="200"/>
+                
+                  <window typename="SceneSplineEditor" type="16" x1="0" y1="728" x2="1020" y2="953"/>
+                </docker>
+              
+                <docker Vertical="1" contentSize="704" areaSize="984">
+                  <docker Vertical="0" contentSize="974" areaSize="1136">
+                    <window typename="TimelinePreview" type="27" x1="0" y1="0" x2="1019" y2="681"/>
+                  
+                    <window typename="TimelineEventParams" type="25" x1="1024" y1="0" x2="1189" y2="681"/>
+                  </docker>
+                
+                  <docker Vertical="0" contentSize="1145" areaSize="1333">
+                    <window typename="TimelineEditor" type="24" x1="0" y1="0" x2="1021" y2="267"/>
+                  
+                    <window typename="TimelineEventSplines" type="26" x1="1026" y1="0" x2="1189" y2="267"/>
+                  </docker>
+                </docker>
+              </docker>
+            </docker>
+          
+            <docker Vertical="1" contentSize="918" areaSize="1460">
+              <docker Vertical="1" contentSize="225" areaSize="916">
+                <window typename="SceneList" type="13" x1="0" y1="0" x2="226" y2="271"/>
+              
+                <docker Vertical="1" contentSize="498" areaSize="866">
+                  <docker Vertical="1" contentSize="100" areaSize="200">
+                    <window typename="SceneClips" type="11" x1="0" y1="0" x2="226" y2="238"/>
+                  
+                    <window typename="SceneGraph" type="12" x1="0" y1="243" x2="226" y2="476"/>
+                  </docker>
+                
+                  <window typename="ScenePrimitives" type="15" x1="0" y1="481" x2="226" y2="828"/>
+                </docker>
+              </docker>
+            
+              <window typename="SceneObjectParameters" type="14" x1="0" y1="1109" x2="226" y2="1756"/>
+            </docker>
+          </docker>
+        </docker>
+      
+        <docker Vertical="0" contentSize="883" areaSize="2135">
+          <window typename="RenderTargetEditor" type="33" x1="0" y1="0" x2="1120" y2="298"/>
+        
+          <window typename="MaterialEditor" type="1" x1="1125" y1="0" x2="2710" y2="298"/>
+        </docker>
+      </docker>
+    
+      <window typename="ShaderEditor" type="3" x1="2715" y1="0" x2="3710" y2="2059"/>
+    </docker>
+  </workbench>
+
+  <workbench Name="Texture Generator Modern">
+    <docker Vertical="0" contentSize="1439" areaSize="1887">
+      <docker Vertical="0" contentSize="243" areaSize="1437">
+        <docker Vertical="1" contentSize="100" areaSize="200">
+          <docker Vertical="1" contentSize="100" areaSize="200">
+            <window typename="TexgenPages" type="20" x1="0" y1="0" x2="243" y2="188"/>
+          
+            <docker Vertical="0" contentSize="100" areaSize="200">
+              <window typename="ModelList" type="5" x1="0" y1="0" x2="119" y2="189"/>
+            
+              <window typename="SceneList" type="13" x1="124" y1="0" x2="243" y2="189"/>
+            </docker>
+          </docker>
+        
+          <window typename="TexgenOpParameters" type="21" x1="0" y1="387" x2="243" y2="1002"/>
+        </docker>
+      
+        <docker Vertical="1" contentSize="489" areaSize="997">
+          <docker Vertical="0" contentSize="405" areaSize="1189">
+            <window typename="TexgenMain" type="19" x1="0" y1="0" x2="406" y2="491"/>
+          
+            <docker Vertical="0" contentSize="414" areaSize="778">
+              <window typename="ModelView" type="9" x1="0" y1="0" x2="416" y2="491" cameramode="26" maximized="0" nx1="0" ny1="0" nx2="416" ny2="491" mx1="150" my1="0" mx2="406" my2="256"/>
+            
+              <window typename="SceneView" type="17" x1="421" y1="0" x2="783" y2="491" cameramode="26" maximized="0" nx1="421" ny1="0" nx2="783" ny2="491" mx1="10" my1="10" mx2="200" my2="200"/>
+            </docker>
+          </docker>
+        
+          <docker Vertical="0" contentSize="557" areaSize="1189">
+            <window typename="TexgenPreview" type="22" x1="0" y1="0" x2="559" y2="506" maximized="0" nx1="0" ny1="0" nx2="559" ny2="506" mx1="10" my1="10" mx2="200" my2="200"/>
+          
+            <docker Vertical="1" contentSize="329" areaSize="438">
+              <window typename="TimelinePreview" type="27" x1="0" y1="0" x2="630" y2="380"/>
+            
+              <window typename="TimelineEditor" type="24" x1="0" y1="385" x2="630" y2="506"/>
+            </docker>
+          </docker>
+        </docker>
+      </docker>
+    
+      <window typename="TextureFilterEditor" type="18" x1="1447" y1="0" x2="1892" y2="1002"/>
+    </docker>
+  </workbench>
+
+</Layouts>

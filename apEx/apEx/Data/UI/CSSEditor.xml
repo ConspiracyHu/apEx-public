@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<guidescriptor>
+  <gui id="CSSEditor">
+    <textbox id="csseditor"></textbox>
+  </gui>
+</guidescriptor>
